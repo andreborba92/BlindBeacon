@@ -52,6 +52,7 @@ public class BeaconsAdapter extends ArrayAdapter<Beacon> {
             itemHolder = (ItemHolder) rowView.getTag();
         }
 
+        //ToDo: Adicionar Id3 (minor), manter RSS e colocar distancia
         itemHolder.id1.setText(String.valueOf(myBeacons.get(position).getId1()));
         itemHolder.id2.setText(String.valueOf(myBeacons.get(position).getId2()));
         itemHolder.id3.setText(String.valueOf(myBeacons.get(position).getRssi()));
