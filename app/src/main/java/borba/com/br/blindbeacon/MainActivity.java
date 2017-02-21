@@ -34,9 +34,9 @@ public class MainActivity extends Activity {
     }
 
     public void onClickBeaconFinder(View v){
-//        Intent in = new Intent(this, BeaconFinderActivity.class);
-//        startActivity(in);
-        Toast.makeText(this, "Teste do toast", Toast.LENGTH_SHORT).show();
+        Intent in = new Intent(this, BeaconFinderActivity.class);
+        startActivity(in);
+        //Toast.makeText(this, "Teste do toast", Toast.LENGTH_SHORT).show();
     }
 
     public void onClickSelecionarPredio(View v){

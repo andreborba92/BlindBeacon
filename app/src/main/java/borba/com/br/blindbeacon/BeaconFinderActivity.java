@@ -2,8 +2,10 @@ package borba.com.br.blindbeacon;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.RemoteException;
+import android.view.View;
 import android.widget.ListView;
 
 import org.altbeacon.beacon.Beacon;
@@ -25,6 +27,7 @@ public class BeaconFinderActivity extends Activity implements BeaconConsumer {
     private BeaconManager beaconManager;
     private ListView lvMyBeacons;
     ArrayList<Beacon> MyBeacons;
+    private Region beaconScanRegion;
     Context ctx;
 
     @Override
@@ -41,6 +44,7 @@ public class BeaconFinderActivity extends Activity implements BeaconConsumer {
 
         lvMyBeacons = (ListView)findViewById(R.id.lvMyBeacons);
         MyBeacons = new ArrayList<>();
+        beaconScanRegion = new Region("myRangingUniqueIdaa", null, null, null);
 
 //        lvMyBeacons.setAdapter( new BeaconsAdapter(this,R.layout.list_item_beacon, MyBeacons));
 
@@ -60,22 +64,19 @@ public class BeaconFinderActivity extends Activity implements BeaconConsumer {
                 if (beacons.size() > 0) {
                     Beacon teste = beacons.iterator().next();
 
-                    if(!MyBeacons.contains(teste)) {
+                    if (!MyBeacons.contains(teste)) {
                         MyBeacons.add(teste);
-                    }
-                    else
-                    {
+                    } else {
                         int index = MyBeacons.indexOf(teste);
                         MyBeacons.remove(index);
-                        MyBeacons.add(index,teste);
+                        MyBeacons.add(index, teste);
                     }
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            lvMyBeacons.setAdapter( new BeaconsAdapter(ctx,R.layout.list_item_beacon, MyBeacons));
+                            lvMyBeacons.setAdapter(new BeaconsAdapter(ctx, R.layout.list_item_beacon, MyBeacons));
                         }
                     });
-
 
 
                 }
@@ -84,7 +85,7 @@ public class BeaconFinderActivity extends Activity implements BeaconConsumer {
         });
 
         try {
-            beaconManager.startRangingBeaconsInRegion(new Region("myRangingUniqueIdaa", null, null, null));
+            beaconManager.startRangingBeaconsInRegion(beaconScanRegion);
 
 
         } catch (RemoteException e) {    }
@@ -100,5 +101,18 @@ public class BeaconFinderActivity extends Activity implements BeaconConsumer {
     public void onStop() {
         super.onStop();
 
+    }
+
+    public void onClickPararScan(View v) throws RemoteException {
+        beaconManager.stopRangingBeaconsInRegion(beaconScanRegion);
+
+    }
+
+    public void onClickReiniciarScan(View v){
+        try {
+            beaconManager.startRangingBeaconsInRegion(beaconScanRegion);
+
+
+        } catch (RemoteException e) {    }
     }
 }

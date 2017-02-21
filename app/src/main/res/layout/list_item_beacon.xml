@@ -6,8 +6,19 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/tvID1"
-        android:text="tvID1"
+        android:text="Unique Id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:fontFamily="sans-serif"
+        android:paddingBottom="3dp"
+        android:textAllCaps="true"
+        android:textSize="15sp"
+        />
+
+    <TextView
+        android:id="@+id/tvUID"
+        android:text="tvUID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
@@ -18,8 +29,19 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/tvID2"
-        android:text="tvID2"
+        android:text="Major Id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:fontFamily="sans-serif"
+        android:paddingBottom="3dp"
+        android:textAllCaps="true"
+        android:textSize="15sp"
+        />
+
+    <TextView
+        android:id="@+id/tvMajorID"
+        android:text="tvMajorID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
@@ -29,17 +51,73 @@
         android:textSize="15sp"
         android:textStyle="bold" />
 
-
     <TextView
-        android:id="@+id/tvID3"
-        android:text="tvID3"
+        android:text="Minor Id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:fontFamily="sans-serif"
         android:paddingBottom="3dp"
         android:textAllCaps="true"
-        android:textSize="15sp" />
+        android:textSize="15sp"
+        />
+
+    <TextView
+        android:id="@+id/tvMinorId"
+        android:text="tvMinorId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:fontFamily="sans-serif"
+        android:paddingBottom="3dp"
+        android:textAllCaps="true"
+        android:textSize="15sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:text="RSSI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:fontFamily="sans-serif"
+        android:paddingBottom="3dp"
+        android:textAllCaps="true"
+        android:textSize="15sp"
+        />
+
+    <TextView
+        android:id="@+id/tvRSSI"
+        android:text="tvRSSI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:fontFamily="sans-serif"
+        android:paddingBottom="3dp"
+        android:textAllCaps="true"
+        android:textSize="15sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:text="Distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:fontFamily="sans-serif"
+        android:paddingBottom="3dp"
+        android:textAllCaps="true"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:id="@+id/tvDistance"
+        android:text="tvDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:fontFamily="sans-serif"
+        android:paddingBottom="3dp"
+        android:textAllCaps="true"
+        android:textSize="15sp"
+        android:textStyle="bold"/>
 
 
 </LinearLayout>

@@ -43,9 +43,11 @@ public class BeaconsAdapter extends ArrayAdapter<Beacon> {
 
             rowView = inflater.inflate(resourceID, parent, false);
 
-            itemHolder.id1 = (TextView) rowView.findViewById(R.id.tvID1);
-            itemHolder.id2 = (TextView) rowView.findViewById(R.id.tvID2);
-            itemHolder.id3 = (TextView) rowView.findViewById(R.id.tvID3);
+            itemHolder.uniqueID = (TextView) rowView.findViewById(R.id.tvUID);
+            itemHolder.majorID = (TextView) rowView.findViewById(R.id.tvMajorID);
+            itemHolder.minorID = (TextView) rowView.findViewById(R.id.tvMinorId);
+            itemHolder.rssi = (TextView) rowView.findViewById(R.id.tvRSSI);
+            itemHolder.distance = (TextView) rowView.findViewById(R.id.tvDistance);
 
             rowView.setTag(itemHolder);
         } else {
@@ -53,17 +55,18 @@ public class BeaconsAdapter extends ArrayAdapter<Beacon> {
         }
 
         //ToDo: Adicionar Id3 (minor), manter RSS e colocar distancia
-        itemHolder.id1.setText(String.valueOf(myBeacons.get(position).getId1()));
-        itemHolder.id2.setText(String.valueOf(myBeacons.get(position).getId2()));
-        itemHolder.id3.setText(String.valueOf(myBeacons.get(position).getRssi()));
-
+        itemHolder.uniqueID.setText(String.valueOf(myBeacons.get(position).getId1()));
+        itemHolder.majorID.setText(String.valueOf(myBeacons.get(position).getId2()));
+        itemHolder.minorID.setText(String.valueOf(myBeacons.get(position).getId3()));
+        itemHolder.rssi.setText(String.valueOf(myBeacons.get(position).getRssi()));
+        itemHolder.distance.setText(String.valueOf(myBeacons.get(position).getDistance()));
 
         return rowView;
     }
 
 
     private static class ItemHolder {
-        TextView id1, id2, id3;
+        TextView uniqueID, majorID, minorID, rssi, distance;
     }
 }
 
