@@ -2,6 +2,7 @@ package borba.com.br.blindbeacon;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -53,10 +54,14 @@ public class SelecionarPredioActivity extends Activity {
                 // ListView Clicked item value
                 String  itemValue = (String) lvPredios.getItemAtPosition(position);
 
-                // Show Alert
-                Toast.makeText(getApplicationContext(),
-                        "Position :" + itemPosition + "  ListItem : " + itemValue, Toast.LENGTH_LONG)
-                        .show();
+                Intent in = new Intent(ctx, SelecionarDestinoActivity.class);
+                in.putExtra("predio_selecionado", itemValue);
+                startActivity(in);
+
+//                // Show Alert
+//                Toast.makeText(getApplicationContext(),
+//                        "Position :" + itemPosition + "  ListItem : " + itemValue, Toast.LENGTH_LONG)
+//                        .show();
 
             }
 

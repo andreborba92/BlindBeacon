@@ -37,6 +37,7 @@
         <activity android:name="borba.com.br.blindbeacon.BeaconFinderActivity" />
         <activity android:name="borba.com.br.blindbeacon.SelecionarPredioActivity" />
         <activity android:name="borba.com.br.blindbeacon.AjudaActivity" />
+        <activity android:name="borba.com.br.blindbeacon.SelecionarDestinoActivity" />
 
         <!--
      ATTENTION: This was auto-generated to add Google Play services to your project for
