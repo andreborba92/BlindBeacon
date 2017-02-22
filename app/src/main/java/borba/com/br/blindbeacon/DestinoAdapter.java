@@ -40,23 +40,18 @@ public class DestinoAdapter extends ArrayAdapter<Destino> {
 
             rowView = inflater.inflate(resourceID, parent, false);
 
-            Log.w("TAG_BORBA", "ENTREI 1");
-
             itemHolder.nome = (TextView) rowView.findViewById(R.id.tvNomeDestino);
             itemHolder.categoria = (TextView) rowView.findViewById(R.id.tvCategoriaDestino);
             itemHolder.distancia = (TextView) rowView.findViewById(R.id.tvDistanciaDestino);
 
             rowView.setTag(itemHolder);
         } else {
-            Log.w("TAG_BORBA", "ENTREI 2");
             itemHolder = (ItemHolder) rowView.getTag();
         }
 
-        Log.w("TAG_BORBA", itemHolder.toString());
-
         itemHolder.nome.setText(String.valueOf(meusDestinos.get(position).getNome()));
         itemHolder.categoria.setText(String.valueOf(meusDestinos.get(position).getCategoria()));
-        itemHolder.distancia.setText(String.valueOf(meusDestinos.get(position).getDistancia()));
+        itemHolder.distancia.setText(String.valueOf(meusDestinos.get(position).getDistancia()) + " m");
 
         return rowView;
     }

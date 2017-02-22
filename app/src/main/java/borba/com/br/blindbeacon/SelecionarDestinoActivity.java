@@ -36,8 +36,8 @@ public class SelecionarDestinoActivity extends Activity {
         listaDestinos.add(new Destino("Sala 1","Sala de Matematica","Sala de Aula",1));
         listaDestinos.add(new Destino("Sala 2","Sala de Física","Sala de Aula",5));
         listaDestinos.add(new Destino("Banheiro Masculino","Banheiro","Banheiro",120));
-        listaDestinos.add(new Destino("Auditório","Eventos","Auditorio",215));
-        listaDestinos.add(new Destino("Xerox","Aberto 24h","Utilizade",25));
+        listaDestinos.add(new Destino("Auditório","Eventos","Auditório",215));
+        listaDestinos.add(new Destino("Xerox","Aberto 24h","Utilidade",25));
         listaDestinos.add(new Destino("Sala 4","Sala de História","Sala de Aula",42));
 
         lvDestinos.setAdapter(new DestinoAdapter(ctx, R.layout.list_item_destino, listaDestinos));
