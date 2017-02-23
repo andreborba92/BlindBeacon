@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\Meus Documentos\Documentos\Projetos\Projeto TCC - Blind Beacon\BlindBeacon\app\src\main\AndroidManifest.xml:2:1-38:12
+ADDED from E:\Meus Documentos\Documentos\Projetos\Projeto TCC - Blind Beacon\BlindBeacon\app\src\main\AndroidManifest.xml:2:1-39:12
 	xmlns:android
 		ADDED from E:\Meus Documentos\Documentos\Projetos\Projeto TCC - Blind Beacon\BlindBeacon\app\src\main\AndroidManifest.xml:2:11-69
 	package
@@ -40,7 +40,7 @@ ADDED from E:\Meus Documentos\Documentos\Projetos\Projeto TCC - Blind Beacon\Bli
 	android:name
 		ADDED from E:\Meus Documentos\Documentos\Projetos\Projeto TCC - Blind Beacon\BlindBeacon\app\src\main\AndroidManifest.xml:9:22-73
 application
-ADDED from E:\Meus Documentos\Documentos\Projetos\Projeto TCC - Blind Beacon\BlindBeacon\app\src\main\AndroidManifest.xml:12:5-36:19
+ADDED from E:\Meus Documentos\Documentos\Projetos\Projeto TCC - Blind Beacon\BlindBeacon\app\src\main\AndroidManifest.xml:12:5-37:19
 MERGED from [com.android.support:appcompat-v7:23.3.0] E:\Meus Documentos\Documentos\Projetos\Projeto TCC - Blind Beacon\BlindBeacon\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-vector-drawable:23.3.0] E:\Meus Documentos\Documentos\Projetos\Projeto TCC - Blind Beacon\BlindBeacon\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
 MERGED from [com.android.support:support-v4:23.3.0] E:\Meus Documentos\Documentos\Projetos\Projeto TCC - Blind Beacon\BlindBeacon\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
@@ -92,13 +92,17 @@ activity#borba.com.br.blindbeacon.SelecionarDestinoActivity
 ADDED from E:\Meus Documentos\Documentos\Projetos\Projeto TCC - Blind Beacon\BlindBeacon\app\src\main\AndroidManifest.xml:29:9-63
 	android:name
 		ADDED from E:\Meus Documentos\Documentos\Projetos\Projeto TCC - Blind Beacon\BlindBeacon\app\src\main\AndroidManifest.xml:29:19-60
+activity#borba.com.br.blindbeacon.DetalhesDestinoActivity
+ADDED from E:\Meus Documentos\Documentos\Projetos\Projeto TCC - Blind Beacon\BlindBeacon\app\src\main\AndroidManifest.xml:30:9-61
+	android:name
+		ADDED from E:\Meus Documentos\Documentos\Projetos\Projeto TCC - Blind Beacon\BlindBeacon\app\src\main\AndroidManifest.xml:30:19-58
 meta-data#com.google.android.gms.version
-ADDED from E:\Meus Documentos\Documentos\Projetos\Projeto TCC - Blind Beacon\BlindBeacon\app\src\main\AndroidManifest.xml:33:9-35:69
+ADDED from E:\Meus Documentos\Documentos\Projetos\Projeto TCC - Blind Beacon\BlindBeacon\app\src\main\AndroidManifest.xml:34:9-36:69
 MERGED from [com.google.android.gms:play-services-basement:8.1.0] E:\Meus Documentos\Documentos\Projetos\Projeto TCC - Blind Beacon\BlindBeacon\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\AndroidManifest.xml:21:9-23:69
 	android:name
-		ADDED from E:\Meus Documentos\Documentos\Projetos\Projeto TCC - Blind Beacon\BlindBeacon\app\src\main\AndroidManifest.xml:34:13-58
+		ADDED from E:\Meus Documentos\Documentos\Projetos\Projeto TCC - Blind Beacon\BlindBeacon\app\src\main\AndroidManifest.xml:35:13-58
 	android:value
-		ADDED from E:\Meus Documentos\Documentos\Projetos\Projeto TCC - Blind Beacon\BlindBeacon\app\src\main\AndroidManifest.xml:35:13-66
+		ADDED from E:\Meus Documentos\Documentos\Projetos\Projeto TCC - Blind Beacon\BlindBeacon\app\src\main\AndroidManifest.xml:36:13-66
 uses-sdk
 INJECTED from E:\Meus Documentos\Documentos\Projetos\Projeto TCC - Blind Beacon\BlindBeacon\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.3.0] E:\Meus Documentos\Documentos\Projetos\Projeto TCC - Blind Beacon\BlindBeacon\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:21:5-23:78

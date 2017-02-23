@@ -57,12 +57,6 @@ public class SelecionarPredioActivity extends Activity {
                 Intent in = new Intent(ctx, SelecionarDestinoActivity.class);
                 in.putExtra("predio_selecionado", itemValue);
                 startActivity(in);
-
-//                // Show Alert
-//                Toast.makeText(getApplicationContext(),
-//                        "Position :" + itemPosition + "  ListItem : " + itemValue, Toast.LENGTH_LONG)
-//                        .show();
-
             }
 
         });

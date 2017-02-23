@@ -4,8 +4,12 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 
@@ -30,7 +34,6 @@ public class SelecionarDestinoActivity extends Activity {
 
         Intent intent = getIntent();
         predioSelecionado = intent.getStringExtra("predio_selecionado");
-        Toast.makeText(ctx, predioSelecionado,  Toast.LENGTH_SHORT).show();
 
         //Montagem da Lista
         listaDestinos.add(new Destino("Sala 1","Sala de Matematica","Sala de Aula",1));
@@ -41,6 +44,33 @@ public class SelecionarDestinoActivity extends Activity {
         listaDestinos.add(new Destino("Sala 4","Sala de História","Sala de Aula",42));
 
         lvDestinos.setAdapter(new DestinoAdapter(ctx, R.layout.list_item_destino, listaDestinos));
+
+        // ListView Item Click Listener
+        lvDestinos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view,
+                                    int position, long id) {
+
+                // ListView Clicked item index
+                int itemPosition = position;
+
+                // ListView Clicked item value
+                Destino itemValue = (Destino) lvDestinos.getItemAtPosition(position);
+
+                //ToDo Desconmentar
+                Gson myGson = new Gson();
+
+                Intent in = new Intent(ctx, DetalhesDestinoActivity.class);
+                in.putExtra("PredioSelecionado", predioSelecionado);
+                in.putExtra("DestinoSelecionado", myGson.toJson(itemValue));
+
+                //Toast.makeText(ctx, myGson.toJson(itemValue), Toast.LENGTH_SHORT).show();
+
+                startActivity(in);
+            }
+
+        });
     }
 
     @Override
