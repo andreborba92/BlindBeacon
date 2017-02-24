@@ -58,7 +58,6 @@ public class SelecionarDestinoActivity extends Activity {
                 // ListView Clicked item value
                 Destino itemValue = (Destino) lvDestinos.getItemAtPosition(position);
 
-                //ToDo Desconmentar
                 Gson myGson = new Gson();
 
                 Intent in = new Intent(ctx, DetalhesDestinoActivity.class);
