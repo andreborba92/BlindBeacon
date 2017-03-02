@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "E:\\Meus Documentos\\Documentos\\Projetos\\Projeto TCC - Blind Beacon\\BlindBeacon\\app\\build\\intermediates\\res\\merged\\debug\\values-v18\\values-v18.xml",
+        "outputFile": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v18\\values-v18.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 99
                 },
                 "from": {
-                    "file": "E:\\Meus Documentos\\Documentos\\Projetos\\Projeto TCC - Blind Beacon\\BlindBeacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values-v18\\values-v18.xml",
+                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values-v18\\values-v18.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,

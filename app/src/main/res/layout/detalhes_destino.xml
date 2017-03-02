@@ -15,61 +15,162 @@
         android:paddingBottom="3dp"
         android:textAllCaps="true"
         android:textSize="15sp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="30dp"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/tvNomeDestino"
-        android:text="Nome Destino"
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:textAlignment="center"
-        android:fontFamily="sans-serif"
-        android:paddingBottom="3dp"
-        android:textAllCaps="true"
-        android:textSize="13sp"
-        android:layout_marginBottom="10dp"
-        android:textStyle="bold" />
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/tvDescricaoDestino"
-        android:text="Descrição Destino"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:textAlignment="center"
-        android:fontFamily="sans-serif"
-        android:paddingBottom="3dp"
-        android:textAllCaps="true"
-        android:textSize="12sp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="25dp" />
+        <TextView
+            android:id="@+id/tvLabelDestino"
+            android:text="Destino Selecionado:"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:textAlignment="viewStart"
+            android:fontFamily="sans-serif"
+            android:paddingBottom="3dp"
+            android:paddingLeft="5dp"
+            android:textAllCaps="true"
+            android:textSize="13sp"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"/>
 
-    <TextView
-        android:id="@+id/tvCategoriaDestino"
-        android:text="Categoria Destino"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:textAlignment="center"
-        android:fontFamily="sans-serif"
-        android:paddingBottom="3dp"
-        android:textAllCaps="true"
-        android:textSize="12sp"
-        android:layout_marginBottom="10dp"/>
 
-    <TextView
-        android:id="@+id/tvDistanciaDestino"
-        android:text="Distância Destino"
+        <TextView
+            android:id="@+id/tvNomeDestino"
+            android:text="Nome Destino"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:textAlignment="viewStart"
+            android:fontFamily="sans-serif"
+            android:paddingBottom="3dp"
+            android:paddingLeft="5dp"
+            android:textAllCaps="true"
+            android:textSize="13sp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvLabelDescricao"
+            android:text="Descrição:"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:textAlignment="viewStart"
+            android:fontFamily="sans-serif"
+            android:paddingBottom="3dp"
+            android:paddingLeft="5dp"
+            android:textAllCaps="true"
+            android:textSize="13sp"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/tvDescricaoDestino"
+            android:text="Descrição Destino"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:textAlignment="viewStart"
+            android:fontFamily="sans-serif"
+            android:paddingBottom="3dp"
+            android:paddingLeft="5dp"
+            android:textAllCaps="true"
+            android:textSize="12sp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvLabelCategoria"
+            android:text="Categoria:"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:textAlignment="viewStart"
+            android:fontFamily="sans-serif"
+            android:paddingBottom="3dp"
+            android:paddingLeft="5dp"
+            android:textAllCaps="true"
+            android:textSize="13sp"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/tvCategoriaDestino"
+            android:text="Categoria Destino"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:textAlignment="viewStart"
+            android:fontFamily="sans-serif"
+            android:paddingBottom="3dp"
+            android:paddingLeft="5dp"
+            android:textAllCaps="true"
+            android:textSize="12sp"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvLabelDistancia"
+            android:text="Distância:"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:textAlignment="viewStart"
+            android:fontFamily="sans-serif"
+            android:paddingBottom="3dp"
+            android:paddingLeft="5dp"
+            android:textAllCaps="true"
+            android:textSize="13sp"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/tvDistanciaDestino"
+            android:text="Distância Destino"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:textAlignment="viewStart"
+            android:fontFamily="sans-serif"
+            android:paddingBottom="3dp"
+            android:paddingLeft="5dp"
+            android:textAllCaps="true"
+            android:textSize="12sp"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"/>
+    </LinearLayout>
+
+    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:textAlignment="center"
-        android:fontFamily="sans-serif"
-        android:paddingBottom="3dp"
-        android:textAllCaps="true"
-        android:textSize="12sp"
-        android:layout_marginBottom="10dp"/>
+        android:id="@+id/buttonNavegarDestino"
+        android:text="Navegar"
+        android:onClick="onClickNavegarDestino"/>
 
 </LinearLayout>
