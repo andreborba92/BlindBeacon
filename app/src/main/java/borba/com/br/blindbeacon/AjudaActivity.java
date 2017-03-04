@@ -1,6 +1,7 @@
 package borba.com.br.blindbeacon;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
@@ -17,16 +18,20 @@ import java.util.Locale;
  */
 public class AjudaActivity extends Activity {
 
-    public Button btnTTS;
+    public Button btnTTS, buttonTeste;
     public TextToSpeech tts1;
     public String textoParaTTS;
+    Context ctx;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ajuda);
 
+        ctx = this;
+
         this.btnTTS = (Button) findViewById(R.id.btnTTS);
+        this.buttonTeste = (Button) findViewById(R.id.btnTeste);
         this.textoParaTTS = "Olá, bem vindo ao aplicativo. Para ouvir uma ação, clique uma vez. Para executar uma ação, clique duas vezes.";
 
         tts1=new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -37,7 +42,30 @@ public class AjudaActivity extends Activity {
                 }
             }
         });
+
+        SetClickListeners();
     }
+
+    public void SetClickListeners(){
+
+        buttonTeste.setOnClickListener(new Button.OnClickListener() {
+            public void onClick(View v)
+            {
+                Toast.makeText(ctx, "One click", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        buttonTeste.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+
+                Toast.makeText(ctx, "Long Press", Toast.LENGTH_SHORT).show();
+
+                return true;
+            }
+        });
+
+    };
 
     public void onClickBtnTTS(View v){
         String toSpeak = textoParaTTS;

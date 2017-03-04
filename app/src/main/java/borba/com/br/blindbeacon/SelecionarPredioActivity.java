@@ -30,6 +30,7 @@ public class SelecionarPredioActivity extends Activity {
 
         ctx = this;
         lvPredios = (ListView)findViewById(R.id.lvPredios);
+        lvPredios.setLongClickable(true);
 
         String[] values = {"Predio Centro A","Predio Centro B","Predio Centro C","Predio Centro D"};
 
@@ -54,11 +55,28 @@ public class SelecionarPredioActivity extends Activity {
                 // ListView Clicked item value
                 String  itemValue = (String) lvPredios.getItemAtPosition(position);
 
+                Toast.makeText(ctx, "One click: " + itemValue, Toast.LENGTH_SHORT).show();
+            }
+
+        });
+
+        lvPredios.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view,
+                                           int position, long id) {
+
+                // ListView Clicked item index
+                int itemPosition = position;
+
+                // ListView Clicked item value
+                String  itemValue = (String) lvPredios.getItemAtPosition(position);
+
                 Intent in = new Intent(ctx, SelecionarDestinoActivity.class);
                 in.putExtra("predio_selecionado", itemValue);
                 startActivity(in);
-            }
 
+                return true;
+            }
         });
 
     }

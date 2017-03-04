@@ -11,4 +11,10 @@
         android:onClick="onClickBtnTTS"
         android:id="@+id/btnTTS"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Teste click"
+        android:id="@+id/btnTeste"/>
+
 </LinearLayout>
