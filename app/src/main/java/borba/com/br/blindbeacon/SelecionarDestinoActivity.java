@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -12,6 +13,7 @@ import android.widget.Toast;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 /**
  * Created by André Borba on 21/02/2017.
@@ -21,6 +23,7 @@ public class SelecionarDestinoActivity extends Activity {
     private ListView lvDestinos;
     private String predioSelecionado;
     ArrayList<Destino> listaDestinos;
+    public TextToSpeech tts1;
     Context ctx;
 
     @Override
@@ -45,12 +48,43 @@ public class SelecionarDestinoActivity extends Activity {
 
         lvDestinos.setAdapter(new DestinoAdapter(ctx, R.layout.list_item_destino, listaDestinos));
 
+        //Preparação do TTS
+        tts1=new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                if(status != TextToSpeech.ERROR) {
+                    tts1.setLanguage(Locale.getDefault());
+                }
+            }
+        });
+
         // ListView Item Click Listener
         lvDestinos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
+
+                // ListView Clicked item index
+                int itemPosition = position;
+
+                // ListView Clicked item value
+                Destino itemValue = (Destino) lvDestinos.getItemAtPosition(position);
+
+                String textoTTS = "Você selecionou o destino: " + itemValue.getNome() + ". Este destino é da categoria: " +
+                        itemValue.getCategoria() + ". Sua descrição é: " + itemValue.getDescricao() +
+                        ". A distância até o destino é de: " + itemValue.getDistancia() + " metros";
+
+                tts1.speak(textoTTS, TextToSpeech.QUEUE_FLUSH, null);
+
+            }
+
+        });
+
+        lvDestinos.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view,
+                                           int position, long id) {
 
                 // ListView Clicked item index
                 int itemPosition = position;
@@ -67,8 +101,9 @@ public class SelecionarDestinoActivity extends Activity {
                 //Toast.makeText(ctx, myGson.toJson(itemValue), Toast.LENGTH_SHORT).show();
 
                 startActivity(in);
-            }
 
+                return true;
+            }
         });
     }
 

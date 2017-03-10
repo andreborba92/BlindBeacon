@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -12,6 +13,7 @@ import android.widget.Toast;
 
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 /**
  * Created by André Borba on 20/09/2016.
@@ -20,6 +22,7 @@ public class SelecionarPredioActivity extends Activity {
 
     private ListView lvPredios;
     ArrayList<String> listPredios;
+    public TextToSpeech tts1;
     Context ctx;
 
     @Override
@@ -41,6 +44,15 @@ public class SelecionarPredioActivity extends Activity {
         // Assign adapter to ListView
         lvPredios.setAdapter(adapter);
 
+        //Preparação do TTS
+        tts1=new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                if(status != TextToSpeech.ERROR) {
+                    tts1.setLanguage(Locale.getDefault());
+                }
+            }
+        });
 
         // ListView Item Click Listener
         lvPredios.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -55,7 +67,7 @@ public class SelecionarPredioActivity extends Activity {
                 // ListView Clicked item value
                 String  itemValue = (String) lvPredios.getItemAtPosition(position);
 
-                Toast.makeText(ctx, "One click: " + itemValue, Toast.LENGTH_SHORT).show();
+                tts1.speak("Você clicou em: " + itemValue, TextToSpeech.QUEUE_FLUSH, null);
             }
 
         });
