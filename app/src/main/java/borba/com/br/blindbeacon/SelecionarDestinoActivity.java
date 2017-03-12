@@ -103,6 +103,7 @@ public class SelecionarDestinoActivity extends Activity {
                 startActivity(in);
 
                 return true;
+                //nos q testa
             }
         });
     }
