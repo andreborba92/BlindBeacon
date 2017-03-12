@@ -44,14 +44,14 @@ public class DetalhesDestinoActivity extends Activity {
         tvnomeDestino = (TextView) this.findViewById(R.id.tvNomeDestino);
         tvnomePredio = (TextView) this.findViewById(R.id.tvNomePredio);
         tvcategoriaDestino = (TextView) this.findViewById(R.id.tvCategoriaDestino);
-        tvdescricaoDestino = (TextView) this.findViewById(R.id.tvDescricaoDestino);
+        //tvdescricaoDestino = (TextView) this.findViewById(R.id.tvDescricaoDestino);
         tvdistanciaDestino = (TextView) this.findViewById(R.id.tvDistanciaDestino);
 
         //Set Text
         tvnomeDestino.setText(destino.getNome());
         tvnomePredio.setText(predioSelecionado);
         tvcategoriaDestino.setText(destino.getCategoria());
-        tvdescricaoDestino.setText(destino.getDescricao());
+        //tvdescricaoDestino.setText(destino.getDescricao());
         tvdistanciaDestino.setText(String.valueOf(destino.getDistancia()) + " m");
 
         tts1=new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {

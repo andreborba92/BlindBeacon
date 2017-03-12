@@ -5,13 +5,13 @@ package borba.com.br.blindbeacon;
  */
 public class Destino {
     private String nome;
-    private String descricao;
+    //private String descricao;
     private String categoria;
     private int distancia;
 
-    public Destino(String nome, String descricao, String categoria, int distancia){
+    public Destino(String nome,  String categoria, int distancia){
         this.nome = nome;
-        this.descricao = descricao;
+        //this.descricao = descricao;
         this.categoria = categoria;
         this.distancia = distancia;
     }
@@ -24,13 +24,13 @@ public class Destino {
         this.nome = nome;
     }
 
-    public String getDescricao() {
-        return descricao;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
+//    public String getDescricao() {
+//        return descricao;
+//    }
+//
+//    public void setDescricao(String descricao) {
+//        this.descricao = descricao;
+//    }
 
     public String getCategoria() {
         return categoria;

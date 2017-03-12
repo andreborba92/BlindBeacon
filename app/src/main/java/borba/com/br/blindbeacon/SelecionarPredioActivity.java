@@ -35,7 +35,7 @@ public class SelecionarPredioActivity extends Activity {
         lvPredios = (ListView)findViewById(R.id.lvPredios);
         lvPredios.setLongClickable(true);
 
-        String[] values = {"Predio Centro A","Predio Centro B","Predio Centro C","Predio Centro D"};
+        String[] values = {"Centro D06","Centro D07","Centro D08"};
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1, android.R.id.text1, values);

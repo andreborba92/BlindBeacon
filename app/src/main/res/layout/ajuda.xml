@@ -6,15 +6,31 @@
 
     <Button
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
+        android:layout_marginBottom="20dp"
         android:text="Ouvir novamente"
         android:onClick="onClickBtnTTS"
         android:id="@+id/btnTTS"/>
 
     <Button
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Teste click"
-        android:id="@+id/btnTeste"/>
+        android:layout_height="100dp"
+        android:layout_marginBottom="20dp"
+        android:text="Sobre Funcionalidades"
+        android:id="@+id/btnAjudaFuncionaldades"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginBottom="20dp"
+        android:text="Sobre Navegação"
+        android:id="@+id/btnAjudaNavegacao"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginBottom="20dp"
+        android:text="Sobre Obstáculos"
+        android:id="@+id/btnAjudaObstaculos"/>
 
 </LinearLayout>

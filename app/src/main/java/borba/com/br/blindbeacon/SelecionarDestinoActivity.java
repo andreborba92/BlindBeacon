@@ -39,12 +39,15 @@ public class SelecionarDestinoActivity extends Activity {
         predioSelecionado = intent.getStringExtra("predio_selecionado");
 
         //Montagem da Lista
-        listaDestinos.add(new Destino("Sala 1","Sala de Matematica","Sala de Aula",1));
-        listaDestinos.add(new Destino("Sala 2","Sala de Física","Sala de Aula",5));
-        listaDestinos.add(new Destino("Banheiro Masculino","Banheiro","Banheiro",120));
-        listaDestinos.add(new Destino("Auditório","Eventos","Auditório",215));
-        listaDestinos.add(new Destino("Xerox","Aberto 24h","Utilidade",25));
-        listaDestinos.add(new Destino("Sala 4","Sala de História","Sala de Aula",42));
+        listaDestinos.add(new Destino("Sala 1", "Sala de Aula",1));
+        listaDestinos.add(new Destino("Sala 2", "Sala de Aula",5));
+        listaDestinos.add(new Destino("Banheiro Masculino", "Banheiro",120));
+        listaDestinos.add(new Destino("Auditório", "Auditório",215));
+        listaDestinos.add(new Destino("Xerox", "Utilidade",25));
+        listaDestinos.add(new Destino("Sala 4", "Sala de Aula",42));
+
+        //ToDo: Do banco de dados virão destinos da categoria obstáculo. Eles não devem ser exibidos,
+        // apenas notificados quando estão próximos
 
         lvDestinos.setAdapter(new DestinoAdapter(ctx, R.layout.list_item_destino, listaDestinos));
 
@@ -72,11 +75,10 @@ public class SelecionarDestinoActivity extends Activity {
                 Destino itemValue = (Destino) lvDestinos.getItemAtPosition(position);
 
                 String textoTTS = "Você selecionou o destino: " + itemValue.getNome() + ". Este destino é da categoria: " +
-                        itemValue.getCategoria() + ". Sua descrição é: " + itemValue.getDescricao() +
+                        itemValue.getCategoria() +
                         ". A distância até o destino é de: " + itemValue.getDistancia() + " metros";
 
                 tts1.speak(textoTTS, TextToSpeech.QUEUE_FLUSH, null);
-
             }
 
         });
@@ -103,7 +105,6 @@ public class SelecionarDestinoActivity extends Activity {
                 startActivity(in);
 
                 return true;
-                //nos q testa
             }
         });
     }
