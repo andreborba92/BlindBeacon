@@ -73,7 +73,7 @@ public class DetalhesDestinoActivity extends Activity {
         //Intent in = new Intent(this, BeaconFinderActivity.class);
         //startActivity(in);
 
-        tts1.speak("Vamos navegar", TextToSpeech.QUEUE_FLUSH, null);
+        tts1.speak("Este é o botão: navegar. Pressione para começar a navegação.", TextToSpeech.QUEUE_FLUSH, null);
     }
 
 }

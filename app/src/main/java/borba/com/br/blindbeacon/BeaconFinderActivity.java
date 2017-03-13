@@ -5,8 +5,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.RemoteException;
+import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import org.altbeacon.beacon.Beacon;
 import org.altbeacon.beacon.BeaconConsumer;
@@ -37,6 +39,12 @@ public class BeaconFinderActivity extends Activity implements BeaconConsumer {
         beaconManager = BeaconManager.getInstanceForApplication(this);
         // To detect proprietary beacons, you must add a line like below corresponding to your beacon
         // type.  Do a web search for "setBeaconLayout" to get the proper expression.
+
+        //Setting tempos de duração dos scans. 2 segundos entre scan
+        //beaconManager.setForegroundBetweenScanPeriod(30L);
+        //ToDo: Notificar via áudio a mudança de distância a cada X pulsos ou a cada X distancia alterada
+        beaconManager.setForegroundScanPeriod(2000L);
+
         beaconManager.getBeaconParsers().add(new BeaconParser().setBeaconLayout("m:2-3=0215,i:4-19,i:20-21,i:22-23,p:24-24,d:25-25"));
         beaconManager.bind(this);
         ctx = this;
@@ -67,6 +75,8 @@ public class BeaconFinderActivity extends Activity implements BeaconConsumer {
                     if (!MyBeacons.contains(teste)) {
                         MyBeacons.add(teste);
                     } else {
+                        Log.w("TAG_BEACON_ADD",String.valueOf(teste.getId2()) + ". Dist: " + teste.getDistance());
+
                         int index = MyBeacons.indexOf(teste);
                         MyBeacons.remove(index);
                         MyBeacons.add(index, teste);

@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import org.altbeacon.beacon.Beacon;
 
+import java.text.DecimalFormat;
 import java.util.Collection;
 import java.util.List;
 
@@ -58,7 +59,13 @@ public class BeaconsAdapter extends ArrayAdapter<Beacon> {
         itemHolder.majorID.setText(String.valueOf(myBeacons.get(position).getId2()));
         itemHolder.minorID.setText(String.valueOf(myBeacons.get(position).getId3()));
         itemHolder.rssi.setText(String.valueOf(myBeacons.get(position).getRssi()));
-        itemHolder.distance.setText(String.valueOf(myBeacons.get(position).getDistance()));
+
+        //Formatação da distância de double para duas casas decimais
+        DecimalFormat df = new DecimalFormat("#.##");
+        String distanciaFormatada = df.format(myBeacons.get(position).getDistance()) + " metros";
+
+        //itemHolder.distance.setText(String.valueOf(myBeacons.get(position).getDistance()));
+        itemHolder.distance.setText(distanciaFormatada);
 
         return rowView;
     }
