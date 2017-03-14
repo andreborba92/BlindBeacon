@@ -31,6 +31,7 @@ public class BeaconFinderActivity extends Activity implements BeaconConsumer {
     ArrayList<Beacon> MyBeacons;
     private Region beaconScanRegion;
     Context ctx;
+    public DestinosDB _destinosDB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +44,7 @@ public class BeaconFinderActivity extends Activity implements BeaconConsumer {
         //Setting tempos de duração dos scans. 2 segundos entre scan
         //beaconManager.setForegroundBetweenScanPeriod(30L);
         //ToDo: Notificar via áudio a mudança de distância a cada X pulsos ou a cada X distancia alterada
-        beaconManager.setForegroundScanPeriod(2000L);
+        beaconManager.setForegroundScanPeriod(4000L);
 
         beaconManager.getBeaconParsers().add(new BeaconParser().setBeaconLayout("m:2-3=0215,i:4-19,i:20-21,i:22-23,p:24-24,d:25-25"));
         beaconManager.bind(this);
@@ -53,6 +54,8 @@ public class BeaconFinderActivity extends Activity implements BeaconConsumer {
         lvMyBeacons = (ListView)findViewById(R.id.lvMyBeacons);
         MyBeacons = new ArrayList<>();
         beaconScanRegion = new Region("myRangingUniqueIdaa", null, null, null);
+
+        _destinosDB = new DestinosDB();
 
 //        lvMyBeacons.setAdapter( new BeaconsAdapter(this,R.layout.list_item_beacon, MyBeacons));
 
@@ -72,10 +75,24 @@ public class BeaconFinderActivity extends Activity implements BeaconConsumer {
                 if (beacons.size() > 0) {
                     Beacon teste = beacons.iterator().next();
 
+                    //Log.w("TAG_BEACON_ADD", "vou buscar o UID: " + String.valueOf(teste.getId1()));
+
+                    BeaconDestinoViewModel vm = _destinosDB.getPontoByUUID(String.valueOf(teste.getId1()));
+
+                    if(vm == null)
+                        return;
+
+                    if(vm.getCategoria().equals("obstaculo")){
+                        Log.w("TAG_BEACON_ADD", "Obstáculo localizado: " + String.valueOf(teste.getId1()) +
+                        "Distancia: " + teste.getDistance());
+                        return;
+                    }
+
                     if (!MyBeacons.contains(teste)) {
                         MyBeacons.add(teste);
                     } else {
-                        Log.w("TAG_BEACON_ADD",String.valueOf(teste.getId2()) + ". Dist: " + teste.getDistance());
+                        Log.w("TAG_BEACON_ADD","UUID: "+String.valueOf(teste.getId1())+"; ID2: "+ String.valueOf(teste.getId2()) +
+                                ". Dist: " + teste.getDistance());
 
                         int index = MyBeacons.indexOf(teste);
                         MyBeacons.remove(index);
