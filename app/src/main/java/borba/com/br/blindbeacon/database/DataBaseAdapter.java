@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import borba.com.br.blindbeacon.models.LogApp;
 
 public class DataBaseAdapter {
-    private final String logTable = DataBaseHandler.LOG_TABLE_NAME;
+    private final String logTable = "";
     private SQLiteDatabase database;
     private final DataBaseHandler dbHandler;
 
@@ -85,32 +85,32 @@ public class DataBaseAdapter {
     private LogApp cursorToLog(Cursor cursor) {
         final LogApp logApp = new LogApp();
 
-        logApp.setData(cursor.getString(cursor
-                .getColumnIndex(DataBaseHandler.LOG_DATA)));
-
-        logApp.setMensagem(cursor.getString(cursor
-                .getColumnIndex(DataBaseHandler.LOG_MENSAGEM)));
-
-        logApp.setDetalhes(cursor.getString(cursor
-                .getColumnIndex(DataBaseHandler.LOG_DETALHES)));
-
-        logApp.setExcecao(cursor.getString(cursor
-                .getColumnIndex(DataBaseHandler.LOG_EXCECAO)));
-
-        logApp.setOrigem(cursor.getString(cursor
-                .getColumnIndex(DataBaseHandler.LOG_ORIGEM)));
-
-        logApp.setPlataformaOperacional(cursor.getString(cursor
-                .getColumnIndex(DataBaseHandler.LOG_PLATAFORMA)));
-
-        logApp.setTipo(cursor.getString(cursor
-                .getColumnIndex(DataBaseHandler.LOG_TIPO)));
-
-        logApp.setUrlRequisicao(cursor.getString(cursor
-                .getColumnIndex(DataBaseHandler.LOG_URL_REQUSICAO)));
-
-        logApp.setVersaoApp(cursor.getString(cursor
-                .getColumnIndex(DataBaseHandler.LOG_VERSAO_APP)));
+//        logApp.setData(cursor.getString(cursor
+//                .getColumnIndex(DataBaseHandler.LOG_DATA)));
+//
+//        logApp.setMensagem(cursor.getString(cursor
+//                .getColumnIndex(DataBaseHandler.LOG_MENSAGEM)));
+//
+//        logApp.setDetalhes(cursor.getString(cursor
+//                .getColumnIndex(DataBaseHandler.LOG_DETALHES)));
+//
+//        logApp.setExcecao(cursor.getString(cursor
+//                .getColumnIndex(DataBaseHandler.LOG_EXCECAO)));
+//
+//        logApp.setOrigem(cursor.getString(cursor
+//                .getColumnIndex(DataBaseHandler.LOG_ORIGEM)));
+//
+//        logApp.setPlataformaOperacional(cursor.getString(cursor
+//                .getColumnIndex(DataBaseHandler.LOG_PLATAFORMA)));
+//
+//        logApp.setTipo(cursor.getString(cursor
+//                .getColumnIndex(DataBaseHandler.LOG_TIPO)));
+//
+//        logApp.setUrlRequisicao(cursor.getString(cursor
+//                .getColumnIndex(DataBaseHandler.LOG_URL_REQUSICAO)));
+//
+//        logApp.setVersaoApp(cursor.getString(cursor
+//                .getColumnIndex(DataBaseHandler.LOG_VERSAO_APP)));
 
         return logApp;
     }
@@ -121,16 +121,16 @@ public class DataBaseAdapter {
      */
     public void addLog(final LogApp logApp) {
         final ContentValues values = new ContentValues();
-
-        values.put(DataBaseHandler.LOG_DATA, logApp.getData());
-        values.put(DataBaseHandler.LOG_DETALHES, logApp.getDetalhes());
-        values.put(DataBaseHandler.LOG_EXCECAO, logApp.getExcecao());
-        values.put(DataBaseHandler.LOG_MENSAGEM, logApp.getMensagem());
-        values.put(DataBaseHandler.LOG_ORIGEM, logApp.getOrigem());
-        values.put(DataBaseHandler.LOG_TIPO, logApp.getTipo());
-        values.put(DataBaseHandler.LOG_URL_REQUSICAO, logApp.getUrlRequisicao());
-        values.put(DataBaseHandler.LOG_VERSAO_APP, logApp.getVersaoApp());
-        values.put(DataBaseHandler.LOG_PLATAFORMA, logApp.getPlataformaOperacional());
+//
+//        values.put(DataBaseHandler.LOG_DATA, logApp.getData());
+//        values.put(DataBaseHandler.LOG_DETALHES, logApp.getDetalhes());
+//        values.put(DataBaseHandler.LOG_EXCECAO, logApp.getExcecao());
+//        values.put(DataBaseHandler.LOG_MENSAGEM, logApp.getMensagem());
+//        values.put(DataBaseHandler.LOG_ORIGEM, logApp.getOrigem());
+//        values.put(DataBaseHandler.LOG_TIPO, logApp.getTipo());
+//        values.put(DataBaseHandler.LOG_URL_REQUSICAO, logApp.getUrlRequisicao());
+//        values.put(DataBaseHandler.LOG_VERSAO_APP, logApp.getVersaoApp());
+//        values.put(DataBaseHandler.LOG_PLATAFORMA, logApp.getPlataformaOperacional());
 
         database = dbHandler.getWritableDatabase();
 

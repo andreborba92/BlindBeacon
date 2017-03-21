@@ -17,9 +17,16 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
+import borba.com.br.blindbeacon.database.DataBaseHandler;
+import borba.com.br.blindbeacon.datamodels.PredioDataModel;
+import borba.com.br.blindbeacon.models.PredioModel;
+
 public class MainActivity extends Activity {
 
     Context ctx;
+    public DataBaseHandler dbHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +55,25 @@ public class MainActivity extends Activity {
             Log.w("TAG_BEACON_ADD", "Não possui. Vai solicitar");
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 0);
         }
+
+        //Carrega dependências
+        Log.w("TAG_BEACON_ADD", "Vai iniciar Database");
+        this.dbHandler = new DataBaseHandler(this);
+        Log.w("TAG_BEACON_ADD", "Startou Database");
+
+//        PredioDataModel pdm = new PredioDataModel(this);
+//        ArrayList<PredioModel> predios = pdm.getAllPredios();
+//        Log.w("TAG_BEACON_ADD", "Count: " + predios.size());
+//        Log.w("TAG_BEACON_ADD", "Count: " + predios.get(0).getNome());
+
+//        PredioModel pp = new PredioModel();
+//        pp.setId(1);
+//        pp.setNome("aa");
+//        pp.setDescricao("xxx");
+//
+//        pdm.addPredio(pp);
+
+        Log.w("TAG_BEACON_ADD", "add log");
 
         //Verifica GPS Ativo
         LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
