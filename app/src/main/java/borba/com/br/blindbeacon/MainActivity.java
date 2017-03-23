@@ -62,7 +62,7 @@ public class MainActivity extends Activity {
         Log.w("TAG_BEACON_ADD", "Startou Database");
 
 //        PredioDataModel pdm = new PredioDataModel(this);
-//        ArrayList<PredioModel> predios = pdm.getAllPredios();
+//        ArrayList<PredioModel> predios = pdm.getAll();
 //        Log.w("TAG_BEACON_ADD", "Count: " + predios.size());
 //        Log.w("TAG_BEACON_ADD", "Count: " + predios.get(0).getNome());
 

@@ -11,25 +11,23 @@ import com.google.gson.JsonObject;
 import java.util.ArrayList;
 
 import borba.com.br.blindbeacon.database.DataBaseHandler;
-import borba.com.br.blindbeacon.models.LogApp;
-import borba.com.br.blindbeacon.models.PredioModel;
+import borba.com.br.blindbeacon.models.CategoriaModel;
 
 /**
- * Created by andre on 20/03/2017.
+ * Created by andre on 22/03/2017.
  */
 
-public class PredioDataModel {
+public class CategoriaDataModel {
     // Declaracao da tabela de Predios
-    public final String TABLE_NAME = "predio";
-    private final String PREDIO_ID = "Id";
-    private final String PREDIO_NOME = "Nome";
-    private final String PREDIO_DESCRICAO = "Descricao";
+    public final String TABLE_NAME = "categoria";
+    private final String CATEGORIA_ID = "Id";
+    private final String CATEGORIA_NOME = "Nome";
 
     //Instacias da base
     private SQLiteDatabase database;
     private final DataBaseHandler dbHandler;
 
-    public PredioDataModel(final Context context){
+    public CategoriaDataModel(final Context context){
         dbHandler = new DataBaseHandler(context);
     }
 
@@ -40,18 +38,17 @@ public class PredioDataModel {
     }
 
     public String getCreateScript(){
-        String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME + "(" + PREDIO_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                PREDIO_NOME + " TEXT, " + PREDIO_DESCRICAO + " TEXT)" ;
+        String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME + "(" + CATEGORIA_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                CATEGORIA_NOME + " TEXT)" ;
 
         return CREATE_TABLE;
     }
 
-    public void addPredio(PredioModel model){
+    public void addTipoDestino(CategoriaModel model){
         final ContentValues values = new ContentValues();
 
-        values.put(PREDIO_ID, model.getId());
-        values.put(PREDIO_NOME, model.getNome());
-        values.put(PREDIO_DESCRICAO, model.getDescricao());
+        values.put(CATEGORIA_ID, model.getId());
+        values.put(CATEGORIA_NOME, model.getNome());
 
         database = dbHandler.getWritableDatabase();
 
@@ -64,7 +61,7 @@ public class PredioDataModel {
         closeDataBaseConnection();
     }
 
-    public ArrayList<PredioModel> getAll(){
+    public ArrayList<CategoriaModel> getAllCategoria(){
         final String query = "SELECT * FROM " + TABLE_NAME;
         database = dbHandler.getReadableDatabase();
         Cursor cursor = null;
@@ -74,21 +71,21 @@ public class PredioDataModel {
         } catch (final Exception e) {
             e.printStackTrace();
         }
-        final ArrayList<PredioModel> list = cursorToArrayList(cursor);
+        final ArrayList<CategoriaModel> categoria = cursorToArrayList(cursor);
 
         closeDataBaseConnection();
-        return list;
+        return categoria;
     }
 
-    private ArrayList<PredioModel> cursorToArrayList(final Cursor cursor) {
-        final ArrayList<PredioModel> list = new ArrayList<PredioModel>();
+    private ArrayList<CategoriaModel> cursorToArrayList(final Cursor cursor) {
+        final ArrayList<CategoriaModel> categoriaList = new ArrayList<CategoriaModel>();
 
         if (cursor != null && cursor.getCount() != 0) {
             if (cursor.moveToFirst()) {
                 do {
-                    final PredioModel dado = cursorToData(cursor);
+                    final CategoriaModel categoria = cursorToData(cursor);
 
-                    list.add(dado);
+                    categoriaList.add(categoria);
 
                 } while (cursor.moveToNext());
             }
@@ -98,27 +95,23 @@ public class PredioDataModel {
             cursor.close();
         }
 
-        return list;
+        return categoriaList;
     }
 
-    private PredioModel cursorToData(Cursor cursor) {
-        final PredioModel model = new PredioModel();
+    private CategoriaModel cursorToData(Cursor cursor) {
+        final CategoriaModel model = new CategoriaModel();
 
         model.setId(cursor.getInt(cursor
-                .getColumnIndex(PREDIO_ID)));
+                .getColumnIndex(CATEGORIA_ID)));
 
         model.setNome(cursor.getString(cursor
-                .getColumnIndex(PREDIO_NOME)));
-
-        model.setDescricao(cursor.getString(cursor
-                .getColumnIndex(PREDIO_DESCRICAO)));
+                .getColumnIndex(CATEGORIA_NOME)));
 
         return model;
     }
 
-    private JsonObject createJsonObject(PredioModel model) {
+    private JsonObject createJsonObject(CategoriaModel model) {
         Gson g = new Gson();
         return g.fromJson(g.toJson(model), JsonObject.class);
     }
-
 }
