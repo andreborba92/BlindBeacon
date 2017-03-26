@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
@@ -11,6 +12,8 @@ import com.google.gson.JsonObject;
 import java.util.ArrayList;
 
 import borba.com.br.blindbeacon.database.DataBaseHandler;
+import borba.com.br.blindbeacon.enums.CategoriaEnum;
+import borba.com.br.blindbeacon.enums.TipoDestinoEnum;
 import borba.com.br.blindbeacon.models.DestinoModel;
 
 /**
@@ -35,6 +38,46 @@ public class DestinoDataModel {
         dbHandler = new DataBaseHandler(context);
     }
 
+    public void LoadWithFakeData(){
+        Log.w("Database", "DestinoDataModel - Start Fake Data");
+
+        //public DestinoModel( int IdPredio, int IdTipoDestino, int IdCategoria, String Nome, String Descricao ){
+        this.addDestino(new DestinoModel(1, TipoDestinoEnum.DESTINO.getValue(), CategoriaEnum.SALA_DE_AULA.getValue(),
+                "Sala 110", "descrição"));
+
+        this.addDestino(new DestinoModel(1, TipoDestinoEnum.DESTINO.getValue(), CategoriaEnum.SALA_DE_AULA.getValue(),
+                "Sala 120", "descrição"));
+
+        this.addDestino(new DestinoModel(1, TipoDestinoEnum.DESTINO.getValue(), CategoriaEnum.SALA_DE_AULA.getValue(),
+                "Sala 150", "descrição"));
+
+        this.addDestino(new DestinoModel(1, TipoDestinoEnum.DESTINO.getValue(), CategoriaEnum.SALA_DE_AULA.getValue(),
+                "Sala 170", "descrição"));
+
+        this.addDestino(new DestinoModel(1, TipoDestinoEnum.DESTINO.getValue(), CategoriaEnum.SECRETARIA.getValue(),
+                "Secretaria Geral", "descrição"));
+
+        this.addDestino(new DestinoModel(1, TipoDestinoEnum.DESTINO.getValue(), CategoriaEnum.BANHEIRO.getValue(),
+                "Banheiro Masculino", "descrição"));
+
+        this.addDestino(new DestinoModel(1, TipoDestinoEnum.DESTINO.getValue(), CategoriaEnum.XEROX.getValue(),
+                "Xerox número 4", "descrição"));
+
+        this.addDestino(new DestinoModel(1, TipoDestinoEnum.OBSTACULO.getValue(), CategoriaEnum.OUTRO.getValue(),
+                "Degrau", "descrição"));
+
+        this.addDestino(new DestinoModel(1, TipoDestinoEnum.OBSTACULO.getValue(), CategoriaEnum.OUTRO.getValue(),
+                "Degrau", "descrição"));
+
+        this.addDestino(new DestinoModel(1, TipoDestinoEnum.CONEXAO.getValue(), CategoriaEnum.OUTRO.getValue(),
+                "Corredor", "descrição"));
+
+        this.addDestino(new DestinoModel(1, TipoDestinoEnum.CONEXAO.getValue(), CategoriaEnum.OUTRO.getValue(),
+                "Corredor", "descrição"));
+
+        Log.w("Database", "DestinoDataModel - End Fake Data");
+    }
+
     private void closeDataBaseConnection() {
         if (database.isOpen()) {
             database.close();
@@ -52,7 +95,7 @@ public class DestinoDataModel {
     public void addDestino(DestinoModel model){
         final ContentValues values = new ContentValues();
 
-        values.put(DESTINO_ID, model.getIdDestino());
+        //values.put(DESTINO_ID, model.getIdDestino());
         values.put(DESTINO_NOME, model.getNome());
         values.put(DESTINO_DESCRICAO, model.getDescricao());
         values.put(DESTINO_IdPredio, model.getIdPredio());

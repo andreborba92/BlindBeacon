@@ -59,4 +59,13 @@ public class DestinoModel {
     public DestinoModel(){
 
     }
+
+    public DestinoModel( int IdPredio, int IdTipoDestino, int IdCategoria, String Nome, String Descricao ){
+        //this.IdDestino = IdDestino;
+        this.IdPredio= IdPredio;
+        this.IdTipoDestino= IdTipoDestino;
+        this.IdCategoria= IdCategoria;
+        this.Nome= Nome;
+        this.Descricao= Descricao;
+    }
 }

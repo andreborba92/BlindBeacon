@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
@@ -11,6 +12,7 @@ import com.google.gson.JsonObject;
 import java.util.ArrayList;
 
 import borba.com.br.blindbeacon.database.DataBaseHandler;
+import borba.com.br.blindbeacon.enums.TipoDestinoEnum;
 import borba.com.br.blindbeacon.models.TipoDestinoModel;
 
 /**
@@ -31,6 +33,16 @@ public class TipoDestinoDataModel {
         dbHandler = new DataBaseHandler(context);
     }
 
+    public void LoadWithFakeData(){
+        Log.w("Database", "TipoDestinoDataModel - Start Fake Data");
+
+        this.addTipoDestino(new TipoDestinoModel(TipoDestinoEnum.DESTINO.getValue(), TipoDestinoEnum.DESTINO.toString()));
+        this.addTipoDestino(new TipoDestinoModel(TipoDestinoEnum.CONEXAO.getValue(), TipoDestinoEnum.CONEXAO.toString()));
+        this.addTipoDestino(new TipoDestinoModel(TipoDestinoEnum.OBSTACULO.getValue(), TipoDestinoEnum.OBSTACULO.toString()));
+
+        Log.w("Database", "TipoDestinoDataModel - End Fake Data");
+    }
+
     private void closeDataBaseConnection() {
         if (database.isOpen()) {
             database.close();
@@ -38,7 +50,7 @@ public class TipoDestinoDataModel {
     }
 
     public String getCreateScript(){
-        String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME + "(" + TIPODESTINO_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+        String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME + "(" + TIPODESTINO_ID + " INTEGER PRIMARY KEY, " +
                 TIPODESTINO_NOME + " TEXT)" ;
 
         return CREATE_TABLE;

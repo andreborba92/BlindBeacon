@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
@@ -11,6 +12,7 @@ import com.google.gson.JsonObject;
 import java.util.ArrayList;
 
 import borba.com.br.blindbeacon.database.DataBaseHandler;
+import borba.com.br.blindbeacon.enums.CategoriaEnum;
 import borba.com.br.blindbeacon.models.CategoriaModel;
 
 /**
@@ -31,6 +33,20 @@ public class CategoriaDataModel {
         dbHandler = new DataBaseHandler(context);
     }
 
+    public void LoadWithFakeData(){
+        Log.w("Database", "CategoriaDataModel - Start Fake Data");
+
+        this.addCategoria(new CategoriaModel(CategoriaEnum.SALA_DE_AULA.getValue(), CategoriaEnum.SALA_DE_AULA.toString()));
+        this.addCategoria(new CategoriaModel(CategoriaEnum.BANHEIRO.getValue(), CategoriaEnum.BANHEIRO.toString()));
+        this.addCategoria(new CategoriaModel(CategoriaEnum.XEROX.getValue(), CategoriaEnum.XEROX.toString()));
+        this.addCategoria(new CategoriaModel(CategoriaEnum.AUDITORIO.getValue(), CategoriaEnum.AUDITORIO.toString()));
+        this.addCategoria(new CategoriaModel(CategoriaEnum.CAFE.getValue(), CategoriaEnum.CAFE.toString()));
+        this.addCategoria(new CategoriaModel(CategoriaEnum.SECRETARIA.getValue(), CategoriaEnum.SECRETARIA.toString()));
+        this.addCategoria(new CategoriaModel(CategoriaEnum.OUTRO.getValue(), CategoriaEnum.OUTRO.toString()));
+
+        Log.w("Database", "CategoriaDataModel - End Fake Data");
+    }
+
     private void closeDataBaseConnection() {
         if (database.isOpen()) {
             database.close();
@@ -38,13 +54,13 @@ public class CategoriaDataModel {
     }
 
     public String getCreateScript(){
-        String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME + "(" + CATEGORIA_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+        String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME + "(" + CATEGORIA_ID + " INTEGER PRIMARY KEY, " +
                 CATEGORIA_NOME + " TEXT)" ;
 
         return CREATE_TABLE;
     }
 
-    public void addTipoDestino(CategoriaModel model){
+    public void addCategoria(CategoriaModel model){
         final ContentValues values = new ContentValues();
 
         values.put(CATEGORIA_ID, model.getId());
@@ -61,7 +77,7 @@ public class CategoriaDataModel {
         closeDataBaseConnection();
     }
 
-    public ArrayList<CategoriaModel> getAllCategoria(){
+    public ArrayList<CategoriaModel> getAll(){
         final String query = "SELECT * FROM " + TABLE_NAME;
         database = dbHandler.getReadableDatabase();
         Cursor cursor = null;

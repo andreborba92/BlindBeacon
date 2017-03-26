@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
@@ -32,6 +33,12 @@ public class BeaconDataModel {
 
     public BeaconDataModel(final Context context){
         dbHandler = new DataBaseHandler(context);
+    }
+
+    public void LoadWithFakeData(){
+        Log.w("Database", "BeaconDataModel - Start Fake Data");
+
+        Log.w("Database", "BeaconDataModel - End Fake Data");
     }
 
     private void closeDataBaseConnection() {

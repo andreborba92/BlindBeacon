@@ -7,7 +7,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="aff2b81b3bcb60aebf031b294fd12a7137b3bb6b">
+        sha1="0b2e6df683381989cd1b574d6bef71e263e55cb8">
         <dex dex="C:\Users\andre\Documents\Projetos\Meu GitHub\App Blind Beacon\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_766cda84002ef008916571cba579efd79914534a\classes.dex" />
     </item>
     <item
@@ -21,21 +21,21 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\andre\Documents\Projetos\Meu GitHub\App Blind Beacon\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="7bfa101a2a5cf3c1e429902057607d796bf8ce21">
-        <dex dex="C:\Users\andre\Documents\Projetos\Meu GitHub\App Blind Beacon\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_cc83f66b72719a1846046ae4c78edc75c6f6ef29\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\andre\Documents\Projetos\Meu GitHub\App Blind Beacon\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
         sha1="23be6993826b8fd88bbc8d14928bb3b8960d3d4e">
         <dex dex="C:\Users\andre\Documents\Projetos\Meu GitHub\App Blind Beacon\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-23.3.0_33e02b08a2f6f6ea5834c4e3f3e3df535a15048b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\andre\Documents\Projetos\Meu GitHub\App Blind Beacon\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="22024c04ece8603457dc9a081eac60fce21da413">
+        <dex dex="C:\Users\andre\Documents\Projetos\Meu GitHub\App Blind Beacon\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_cc83f66b72719a1846046ae4c78edc75c6f6ef29\classes.dex" />
     </item>
     <item
         is-multidex="true"

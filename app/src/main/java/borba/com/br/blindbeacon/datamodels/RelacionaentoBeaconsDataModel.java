@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
@@ -22,9 +23,9 @@ public class RelacionaentoBeaconsDataModel {
     public final String TABLE_NAME = "relacionamentoBeacon";
     private final String RELACIONAMENTOBEACON_ID = "IdRelacionamentoBeacon";
     private final String RELACIONAMENTOBEACON_UniqueId = "UniqueId";
-    private final String RELACIONAMENTOBEACON_UniqueIdRelacionamento = "MajorId";
-    private final String RELACIONAMENTOBEACON_Orientacao = "MinorId";
-    private final String RELACIONAMENTOBEACON_Distancia = "Descricao";
+    private final String RELACIONAMENTOBEACON_UniqueIdRelacionamento = "UniqueIdRelacionamento";
+    private final String RELACIONAMENTOBEACON_Orientacao = "Orientacao";
+    private final String RELACIONAMENTOBEACON_Distancia = "Distancia";
 
     //Instacias da base
     private SQLiteDatabase database;
@@ -32,6 +33,12 @@ public class RelacionaentoBeaconsDataModel {
 
     public RelacionaentoBeaconsDataModel(final Context context){
         dbHandler = new DataBaseHandler(context);
+    }
+
+    public void LoadWithFakeData(){
+        Log.w("Database", "RelacionaentoBeaconsDataModel - Start Fake Data");
+
+        Log.w("Database", "RelacionaentoBeaconsDataModel - End Fake Data");
     }
 
     private void closeDataBaseConnection() {
@@ -43,7 +50,7 @@ public class RelacionaentoBeaconsDataModel {
     public String getCreateScript(){
         String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME + "(" + RELACIONAMENTOBEACON_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 RELACIONAMENTOBEACON_UniqueId + " TEXT, " + RELACIONAMENTOBEACON_UniqueIdRelacionamento + " TEXT, " + RELACIONAMENTOBEACON_Orientacao + " TEXT, " +
-                RELACIONAMENTOBEACON_Distancia + " NUMERIC)";
+                RELACIONAMENTOBEACON_Distancia + " REAL)";
 
         return CREATE_TABLE;
     }
@@ -51,7 +58,7 @@ public class RelacionaentoBeaconsDataModel {
     public void addDestino(RelacionamentoBeaconsModel model){
         final ContentValues values = new ContentValues();
 
-        values.put(RELACIONAMENTOBEACON_ID, model.getIdRelacionamentoBeacon());
+        //values.put(RELACIONAMENTOBEACON_ID, model.getIdRelacionamentoBeacon());
         values.put(RELACIONAMENTOBEACON_UniqueId, model.getUniqueId());
         values.put(RELACIONAMENTOBEACON_UniqueIdRelacionamento, model.getUniqueIdRelacionamento());
         values.put(RELACIONAMENTOBEACON_Orientacao, model.getOrientacao());

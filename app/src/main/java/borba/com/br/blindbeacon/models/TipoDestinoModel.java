@@ -26,4 +26,9 @@ public class TipoDestinoModel {
 
     public TipoDestinoModel(){
     }
+
+    public TipoDestinoModel(int id, String nome){
+        this.Id = id;
+        this.Nome = nome;
+    }
 }

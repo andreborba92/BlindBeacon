@@ -57,23 +57,15 @@ public class MainActivity extends Activity {
         }
 
         //Carrega dependências
-        Log.w("TAG_BEACON_ADD", "Vai iniciar Database");
-        this.dbHandler = new DataBaseHandler(this);
-        Log.w("TAG_BEACON_ADD", "Startou Database");
+          Log.w("Database", "Vai iniciar Database");
+          this.dbHandler = new DataBaseHandler(this);
+//          Log.w("Database", "Database - Start Fake Data");
+//          this.dbHandler.LoadWithFakeData();
+//        Log.w("Database", "Database - End Fake Data");
 
-//        PredioDataModel pdm = new PredioDataModel(this);
-//        ArrayList<PredioModel> predios = pdm.getAll();
-//        Log.w("TAG_BEACON_ADD", "Count: " + predios.size());
-//        Log.w("TAG_BEACON_ADD", "Count: " + predios.get(0).getNome());
-
-//        PredioModel pp = new PredioModel();
-//        pp.setId(1);
-//        pp.setNome("aa");
-//        pp.setDescricao("xxx");
-//
-//        pdm.addPredio(pp);
-
-        Log.w("TAG_BEACON_ADD", "add log");
+          Log.w("Database", "Database - Start Data Test");
+          this.dbHandler.TestFakeData();
+          Log.w("Database", "Database - End Data Test");
 
         //Verifica GPS Ativo
         LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);

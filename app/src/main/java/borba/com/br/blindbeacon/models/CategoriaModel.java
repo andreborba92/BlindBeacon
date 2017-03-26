@@ -26,4 +26,9 @@ public class CategoriaModel {
 
     public CategoriaModel(){
     }
+
+    public CategoriaModel(int id, String nome){
+        this.Id = id;
+        this.Nome = nome;
+    }
 }
