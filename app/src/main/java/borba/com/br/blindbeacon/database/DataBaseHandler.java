@@ -121,7 +121,7 @@ public class DataBaseHandler extends SQLiteOpenHelper {
         ArrayList<TipoDestinoModel> listTipoDestino = _tipoDestinoDataModel.getAll();
         ArrayList<CategoriaModel> listcategorias = _categoriaDataModel.getAll();
         ArrayList<PredioModel> listPredio = _predioDataModel.getAll();
-        ArrayList<DestinoModel> listDestino = _destinoDataModel.getAll();
+        ArrayList<DestinoModel> listDestino = _destinoDataModel.getAll(1);
 
         Log.w("Database", "Quantidade Tipo Destino: " + listTipoDestino.size());
         Log.w("Database", "Quantidade Categoria: " + listcategorias.size());

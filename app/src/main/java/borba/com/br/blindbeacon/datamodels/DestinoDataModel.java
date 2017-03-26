@@ -95,7 +95,7 @@ public class DestinoDataModel {
     public void addDestino(DestinoModel model){
         final ContentValues values = new ContentValues();
 
-        //values.put(DESTINO_ID, model.getIdDestino());
+        values.put(DESTINO_ID, model.getIdDestino());
         values.put(DESTINO_NOME, model.getNome());
         values.put(DESTINO_DESCRICAO, model.getDescricao());
         values.put(DESTINO_IdPredio, model.getIdPredio());
@@ -113,7 +113,7 @@ public class DestinoDataModel {
         closeDataBaseConnection();
     }
 
-    public ArrayList<DestinoModel> getAll(){
+    public ArrayList<DestinoModel> getAll(int idPredio){
         final String query = "SELECT * FROM " + TABLE_NAME;
         database = dbHandler.getReadableDatabase();
         Cursor cursor = null;
@@ -123,13 +123,29 @@ public class DestinoDataModel {
         } catch (final Exception e) {
             e.printStackTrace();
         }
-        final ArrayList<DestinoModel> list = cursorToArrayList(cursor);
+        final ArrayList<DestinoModel> list = cursorToArrayList(cursor, false, idPredio);
 
         closeDataBaseConnection();
         return list;
     }
 
-    private ArrayList<DestinoModel> cursorToArrayList(final Cursor cursor) {
+    public ArrayList<DestinoModel> getAll_ApenasDestinos(int idPredio){
+        final String query = "SELECT * FROM " + TABLE_NAME;
+        database = dbHandler.getReadableDatabase();
+        Cursor cursor = null;
+
+        try {
+            cursor = database.rawQuery(query, null);
+        } catch (final Exception e) {
+            e.printStackTrace();
+        }
+        final ArrayList<DestinoModel> list = cursorToArrayList(cursor, true, idPredio);
+
+        closeDataBaseConnection();
+        return list;
+    }
+
+    private ArrayList<DestinoModel> cursorToArrayList(final Cursor cursor, boolean apenasDestinos, int idPredio) {
         final ArrayList<DestinoModel> list = new ArrayList<DestinoModel>();
 
         if (cursor != null && cursor.getCount() != 0) {
@@ -137,7 +153,15 @@ public class DestinoDataModel {
                 do {
                     final DestinoModel dado = cursorToData(cursor);
 
-                    list.add(dado);
+                    if(dado.getIdPredio() != idPredio)
+                        continue;
+
+                    if(apenasDestinos){
+                        if( dado.getIdTipoDestino() == TipoDestinoEnum.DESTINO.getValue())
+                            list.add(dado);
+                    }
+                    else
+                        list.add(dado);
 
                 } while (cursor.moveToNext());
             }

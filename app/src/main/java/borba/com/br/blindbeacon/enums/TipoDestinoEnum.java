@@ -25,4 +25,18 @@ public enum TipoDestinoEnum { //destino, conexão, obstáculo
     public int getValue(){
         return intValue;
     }
+
+    public static TipoDestinoEnum getTipoDestinoById(int id) {
+
+        switch (id) {
+            case 1:
+                return TipoDestinoEnum.DESTINO;
+            case 2:
+                return TipoDestinoEnum.CONEXAO;
+            case 3:
+                return TipoDestinoEnum.OBSTACULO;
+            default:
+                return TipoDestinoEnum.CONEXAO;
+        }
+    }
 }

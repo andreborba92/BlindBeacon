@@ -63,9 +63,9 @@ public class MainActivity extends Activity {
 //          this.dbHandler.LoadWithFakeData();
 //        Log.w("Database", "Database - End Fake Data");
 
-          Log.w("Database", "Database - Start Data Test");
-          this.dbHandler.TestFakeData();
-          Log.w("Database", "Database - End Data Test");
+//          Log.w("Database", "Database - Start Data Test");
+//          this.dbHandler.TestFakeData();
+//          Log.w("Database", "Database - End Data Test");
 
         //Verifica GPS Ativo
         LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);

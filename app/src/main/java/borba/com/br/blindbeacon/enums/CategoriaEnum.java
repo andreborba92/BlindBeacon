@@ -29,4 +29,24 @@ public enum CategoriaEnum { //sala de aula, banheiro, xerox, auditório, café, 
     public int getValue(){
         return intValue;
     }
+
+    public static CategoriaEnum getCategoriaById(int id){
+
+        switch (id){
+            case 1:
+                return CategoriaEnum.SALA_DE_AULA;
+            case 2:
+                return CategoriaEnum.BANHEIRO;
+            case 3:
+                return CategoriaEnum.XEROX;
+            case 4:
+                return CategoriaEnum.AUDITORIO;
+            case 5:
+                return CategoriaEnum.CAFE;
+            case 6:
+                return CategoriaEnum.SECRETARIA;
+            default:
+                return CategoriaEnum.OUTRO;
+        }
+    }
 }

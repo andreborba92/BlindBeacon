@@ -15,12 +15,15 @@ import com.google.gson.Gson;
 import java.util.ArrayList;
 import java.util.Locale;
 
+import borba.com.br.blindbeacon.enums.CategoriaEnum;
+import borba.com.br.blindbeacon.models.DestinoModel;
+
 /**
  * Created by André Borba on 22/02/2017.
  */
 public class DetalhesDestinoActivity extends Activity {
 
-    private Destino destino;
+    private DestinoModel destino;
     private String predioSelecionado;
     Context ctx;
     TextView tvnomeDestino, tvnomePredio, tvcategoriaDestino, tvdescricaoDestino, tvdistanciaDestino;
@@ -38,7 +41,7 @@ public class DetalhesDestinoActivity extends Activity {
         String serializedDestino = i.getStringExtra("DestinoSelecionado");
 
         Gson myGson = new Gson();
-        destino = myGson.fromJson(serializedDestino, Destino.class);
+        destino = myGson.fromJson(serializedDestino, DestinoModel.class);
 
         //Atribuição dos Text View
         tvnomeDestino = (TextView) this.findViewById(R.id.tvNomeDestino);
@@ -50,9 +53,9 @@ public class DetalhesDestinoActivity extends Activity {
         //Set Text
         tvnomeDestino.setText(destino.getNome());
         tvnomePredio.setText(predioSelecionado);
-        tvcategoriaDestino.setText(destino.getCategoria());
+        tvcategoriaDestino.setText(CategoriaEnum.getCategoriaById(destino.getIdCategoria()).toString());
         //tvdescricaoDestino.setText(destino.getDescricao());
-        tvdistanciaDestino.setText(String.valueOf(destino.getDistancia()) + " m");
+        tvdistanciaDestino.setText(String.valueOf(destino.getDistanciaAproximada()) + " m");
 
         tts1=new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             @Override

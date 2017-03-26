@@ -15,6 +15,10 @@ import com.google.gson.Gson;
 import java.util.ArrayList;
 import java.util.Locale;
 
+import borba.com.br.blindbeacon.datamodels.DestinoDataModel;
+import borba.com.br.blindbeacon.enums.CategoriaEnum;
+import borba.com.br.blindbeacon.models.DestinoModel;
+
 /**
  * Created by André Borba on 21/02/2017.
  */
@@ -22,7 +26,7 @@ public class SelecionarDestinoActivity extends Activity {
 
     private ListView lvDestinos;
     private String predioSelecionado;
-    ArrayList<Destino> listaDestinos;
+    ArrayList<DestinoModel> listaDestinos;
     public TextToSpeech tts1;
     Context ctx;
 
@@ -33,21 +37,18 @@ public class SelecionarDestinoActivity extends Activity {
 
         ctx = this;
         lvDestinos = (ListView)findViewById(R.id.lvDestinos);
-        listaDestinos = new ArrayList<>();
+        listaDestinos = new ArrayList<DestinoModel>();
 
         Intent intent = getIntent();
         predioSelecionado = intent.getStringExtra("predio_selecionado");
 
         //Montagem da Lista
-        listaDestinos.add(new Destino("Sala 1", "Sala de Aula",1));
-        listaDestinos.add(new Destino("Sala 2", "Sala de Aula",5));
-        listaDestinos.add(new Destino("Banheiro Masculino", "Banheiro",120));
-        listaDestinos.add(new Destino("Auditório", "Auditório",215));
-        listaDestinos.add(new Destino("Xerox", "Utilidade",25));
-        listaDestinos.add(new Destino("Sala 4", "Sala de Aula",42));
+        DestinoDataModel dataModel = new DestinoDataModel(this);
+        listaDestinos = dataModel.getAll_ApenasDestinos(1);
 
         //ToDo: Do banco de dados virão destinos da categoria obstáculo. Eles não devem ser exibidos,
-        // apenas notificados quando estão próximos
+        // apenas notificados quando estão próximos.
+        //ToDo: No momento da rota, ter uma lista dos destinos "exibíveis" e dos para controle interno
 
         lvDestinos.setAdapter(new DestinoAdapter(ctx, R.layout.list_item_destino, listaDestinos));
 
@@ -72,11 +73,11 @@ public class SelecionarDestinoActivity extends Activity {
                 int itemPosition = position;
 
                 // ListView Clicked item value
-                Destino itemValue = (Destino) lvDestinos.getItemAtPosition(position);
+                DestinoModel itemValue = (DestinoModel) lvDestinos.getItemAtPosition(position);
 
                 String textoTTS = "Você selecionou o destino: " + itemValue.getNome() + ". Este destino é da categoria: " +
-                        itemValue.getCategoria() +
-                        ". A distância até o destino é de: " + itemValue.getDistancia() + " metros";
+                        CategoriaEnum.getCategoriaById(itemValue.getIdCategoria()).toString() +
+                        ". A distância até o destino é de: " + itemValue.getDistanciaAproximada() + " metros";
 
                 tts1.speak(textoTTS, TextToSpeech.QUEUE_FLUSH, null);
             }
@@ -92,7 +93,7 @@ public class SelecionarDestinoActivity extends Activity {
                 int itemPosition = position;
 
                 // ListView Clicked item value
-                Destino itemValue = (Destino) lvDestinos.getItemAtPosition(position);
+                DestinoModel itemValue = (DestinoModel) lvDestinos.getItemAtPosition(position);
 
                 Gson myGson = new Gson();
 

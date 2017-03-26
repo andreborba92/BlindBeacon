@@ -11,18 +11,21 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import borba.com.br.blindbeacon.enums.CategoriaEnum;
+import borba.com.br.blindbeacon.models.DestinoModel;
+
 /**
  * Created by André Borba on 21/02/2017.
  */
-public class DestinoAdapter extends ArrayAdapter<Destino> {
+public class DestinoAdapter extends ArrayAdapter<DestinoModel> {
 
     private Context ctx;
     private int resourceID;
-    private List<Destino> meusDestinos;
+    private List<DestinoModel> meusDestinos;
     private ItemHolder itemHolder;
 
 
-    public DestinoAdapter(Context context, int resource, List<Destino> meusDestinos) {
+    public DestinoAdapter(Context context, int resource, List<DestinoModel> meusDestinos) {
         super(context, resource, meusDestinos);
         this.ctx = context;
         this.meusDestinos = meusDestinos;
@@ -48,10 +51,10 @@ public class DestinoAdapter extends ArrayAdapter<Destino> {
         } else {
             itemHolder = (ItemHolder) rowView.getTag();
         }
-
+//
         itemHolder.nome.setText(String.valueOf(meusDestinos.get(position).getNome()));
-        itemHolder.categoria.setText(String.valueOf(meusDestinos.get(position).getCategoria()));
-        itemHolder.distancia.setText(String.valueOf(meusDestinos.get(position).getDistancia()) + " m");
+        itemHolder.categoria.setText(String.valueOf(CategoriaEnum.getCategoriaById(meusDestinos.get(position).getIdCategoria()).toString()));
+        itemHolder.distancia.setText(String.valueOf(meusDestinos.get(position).getDistanciaAproximada()) + " m");
 
         return rowView;
     }

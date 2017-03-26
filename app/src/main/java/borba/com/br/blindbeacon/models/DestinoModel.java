@@ -7,6 +7,7 @@ package borba.com.br.blindbeacon.models;
 public class DestinoModel {
     private int IdDestino, IdPredio, IdTipoDestino, IdCategoria;
     private String Nome, Descricao;
+    private int DistanciaAproximada;
 
     public int getIdDestino() {
         return IdDestino;
@@ -54,6 +55,14 @@ public class DestinoModel {
 
     public void setDescricao(String descricao) {
         Descricao = descricao;
+    }
+
+    public int getDistanciaAproximada() {
+        return DistanciaAproximada;
+    }
+
+    public void setDistanciaAproximada(int distanciaAproximada) {
+        DistanciaAproximada = distanciaAproximada;
     }
 
     public DestinoModel(){

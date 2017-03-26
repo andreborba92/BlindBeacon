@@ -15,13 +15,16 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Locale;
 
+import borba.com.br.blindbeacon.datamodels.PredioDataModel;
+import borba.com.br.blindbeacon.models.PredioModel;
+
 /**
  * Created by André Borba on 20/09/2016.
  */
 public class SelecionarPredioActivity extends Activity {
 
     private ListView lvPredios;
-    ArrayList<String> listPredios;
+    ArrayList<PredioModel> listPredios;
     public TextToSpeech tts1;
     Context ctx;
 
@@ -35,10 +38,18 @@ public class SelecionarPredioActivity extends Activity {
         lvPredios = (ListView)findViewById(R.id.lvPredios);
         lvPredios.setLongClickable(true);
 
-        String[] values = {"Centro D06","Centro D07","Centro D08"};
+        PredioDataModel dataModel = new PredioDataModel(this);
+        listPredios = dataModel.getAll();
+
+        //ToDo: PredioAdapter
+        ArrayList<String> nomesPredio = new ArrayList<String>();
+
+        for (int i = 0; i < listPredios.size(); i++){
+            nomesPredio.add(listPredios.get(i).getNome());
+        }
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1, android.R.id.text1, values);
+                android.R.layout.simple_list_item_1, android.R.id.text1, nomesPredio);
 
 
         // Assign adapter to ListView
