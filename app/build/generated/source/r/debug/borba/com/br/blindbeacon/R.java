@@ -1677,10 +1677,10 @@ containing a value of this type.
         public static final int alertTitle=0x7f0c0032;
         public static final int always=0x7f0c001e;
         public static final int beginning=0x7f0c0019;
-        public static final int btnAjudaFuncionaldades=0x7f0c0057;
-        public static final int btnAjudaNavegacao=0x7f0c0058;
-        public static final int btnAjudaObstaculos=0x7f0c0059;
-        public static final int btnTTS=0x7f0c0056;
+        public static final int btnAjudaFuncionaldades=0x7f0c0056;
+        public static final int btnAjudaNavegacao=0x7f0c0057;
+        public static final int btnAjudaObstaculos=0x7f0c0058;
+        public static final int btnTTS=0x7f0c0059;
         public static final int buttonAjuda=0x7f0c0054;
         public static final int buttonBeaconFinder=0x7f0c0055;
         public static final int buttonNavegarDestino=0x7f0c0064;

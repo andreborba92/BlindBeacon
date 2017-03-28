@@ -489,10 +489,10 @@ int id adjust_width 0x7f0c001d
 int id alertTitle 0x7f0c0032
 int id always 0x7f0c001e
 int id beginning 0x7f0c0019
-int id btnAjudaFuncionaldades 0x7f0c0057
-int id btnAjudaNavegacao 0x7f0c0058
-int id btnAjudaObstaculos 0x7f0c0059
-int id btnTTS 0x7f0c0056
+int id btnAjudaFuncionaldades 0x7f0c0056
+int id btnAjudaNavegacao 0x7f0c0057
+int id btnAjudaObstaculos 0x7f0c0058
+int id btnTTS 0x7f0c0059
 int id buttonAjuda 0x7f0c0054
 int id buttonBeaconFinder 0x7f0c0055
 int id buttonNavegarDestino 0x7f0c0064

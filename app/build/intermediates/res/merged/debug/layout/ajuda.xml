@@ -8,14 +8,6 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_marginBottom="20dp"
-        android:text="Ouvir novamente"
-        android:onClick="onClickBtnTTS"
-        android:id="@+id/btnTTS"/>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginBottom="20dp"
         android:text="Sobre Funcionalidades"
         android:id="@+id/btnAjudaFuncionaldades"/>
 
@@ -32,5 +24,12 @@
         android:layout_marginBottom="20dp"
         android:text="Sobre Obstáculos"
         android:id="@+id/btnAjudaObstaculos"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginBottom="20dp"
+        android:text="Ouvir novamente"
+        android:id="@+id/btnTTS"/>
 
 </LinearLayout>

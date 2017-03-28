@@ -39,7 +39,7 @@ public class AjudaActivity extends Activity {
         this.textoParaTTS = "Olá, bem vindo ao aplicativo. "+
          "Ao clicar uma vez em algum botão, você irá ouvir a sua descrição. "+
          "Para executar o botão, você deve segurar o botão em um clique longo. "+
-         "Abaixo existem algumas opções de ajuda: sobre funcionalidades, sobre navegação e sobre obstáculos";
+         "Abaixo existem algumas opções de ajuda: sobre funcionalidades, sobre navegação, sobre obstáculos e ouvir novamente.";
 
 
         //Criação de um Handlar para enviar o TTS após X segundos da inicialização
@@ -56,6 +56,21 @@ public class AjudaActivity extends Activity {
     }
 
     public void SetClickListeners(){
+
+        btnTTS.setOnClickListener(new Button.OnClickListener() {
+            public void onClick(View v)
+            {
+                TTSManager.Speak("Este botão é para ouvir novamente. Pressione para ouvir");
+            }
+        });
+
+        btnTTS.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                TTSManager.Speak(textoParaTTS);
+                return true;
+            }
+        });
 
         btnAjudaFuncionaldades.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v)
@@ -108,11 +123,6 @@ public class AjudaActivity extends Activity {
         });
 
     };
-
-    public void onClickBtnTTS(View v){
-        String toSpeak = textoParaTTS;
-        TTSManager.Speak(toSpeak);
-    }
 
     public void onPause(){
         TTSManager.Pause();
