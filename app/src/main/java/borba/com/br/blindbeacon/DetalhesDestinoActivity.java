@@ -17,6 +17,7 @@ import java.util.Locale;
 
 import borba.com.br.blindbeacon.enums.CategoriaEnum;
 import borba.com.br.blindbeacon.models.DestinoModel;
+import borba.com.br.blindbeacon.models.PredioModel;
 
 /**
  * Created by André Borba on 22/02/2017.
@@ -24,10 +25,9 @@ import borba.com.br.blindbeacon.models.DestinoModel;
 public class DetalhesDestinoActivity extends Activity {
 
     private DestinoModel destino;
-    private String predioSelecionado;
+    private PredioModel predio;
     Context ctx;
     TextView tvnomeDestino, tvnomePredio, tvcategoriaDestino, tvdescricaoDestino, tvdistanciaDestino;
-    public TextToSpeech tts1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,11 +37,12 @@ public class DetalhesDestinoActivity extends Activity {
         ctx = this;
 
         Intent i = getIntent();
-        predioSelecionado = i.getStringExtra("PredioSelecionado");
         String serializedDestino = i.getStringExtra("DestinoSelecionado");
+        String serializedPredio = i.getStringExtra("PredioSelecionado");
 
         Gson myGson = new Gson();
         destino = myGson.fromJson(serializedDestino, DestinoModel.class);
+        predio = myGson.fromJson(serializedPredio, PredioModel.class);
 
         //Atribuição dos Text View
         tvnomeDestino = (TextView) this.findViewById(R.id.tvNomeDestino);
@@ -52,19 +53,10 @@ public class DetalhesDestinoActivity extends Activity {
 
         //Set Text
         tvnomeDestino.setText(destino.getNome());
-        tvnomePredio.setText(predioSelecionado);
+        tvnomePredio.setText(predio.getNome());
         tvcategoriaDestino.setText(CategoriaEnum.getCategoriaById(destino.getIdCategoria()).toString());
         //tvdescricaoDestino.setText(destino.getDescricao());
         tvdistanciaDestino.setText(String.valueOf(destino.getDistanciaAproximada()) + " m");
-
-        tts1=new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-            @Override
-            public void onInit(int status) {
-                if(status != TextToSpeech.ERROR) {
-                    tts1.setLanguage(Locale.getDefault());
-                }
-            }
-        });
     }
 
     @Override
@@ -76,7 +68,7 @@ public class DetalhesDestinoActivity extends Activity {
         //Intent in = new Intent(this, BeaconFinderActivity.class);
         //startActivity(in);
 
-        tts1.speak("Este é o botão: navegar. Pressione para começar a navegação.", TextToSpeech.QUEUE_FLUSH, null);
+        TTSManager.Speak("Este é o botão: navegar. Pressione para começar a navegação.");
     }
 
 }

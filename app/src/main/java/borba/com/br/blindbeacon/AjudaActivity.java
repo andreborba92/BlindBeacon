@@ -20,7 +20,7 @@ import java.util.Locale;
 public class AjudaActivity extends Activity {
 
     public Button btnTTS, btnAjudaFuncionaldades, btnAjudaNavegacao, btnAjudaObstaculos;
-    public TextToSpeech tts1;
+    //public TextToSpeech tts1;
     public String textoParaTTS;
     Context ctx;
 
@@ -41,23 +41,15 @@ public class AjudaActivity extends Activity {
          "Para executar o botão, você deve segurar o botão em um clique longo. "+
          "Abaixo existem algumas opções de ajuda: sobre funcionalidades, sobre navegação e sobre obstáculos";
 
-        tts1=new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-            @Override
-            public void onInit(int status) {
-                if(status != TextToSpeech.ERROR) {
-                    tts1.setLanguage(Locale.getDefault());
-                }
-            }
-        });
 
         //Criação de um Handlar para enviar o TTS após X segundos da inicialização
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             public void run() {
-                // Actions to do after 4 seconds
-                tts1.speak(textoParaTTS, TextToSpeech.QUEUE_FLUSH, null);
+                // Actions to do after 500 miliseconds
+                TTSManager.Speak(textoParaTTS);
             }
-        }, 4000);
+        }, 500);
 
 
         SetClickListeners();
@@ -68,7 +60,7 @@ public class AjudaActivity extends Activity {
         btnAjudaFuncionaldades.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v)
             {
-                tts1.speak("Este botão é sobre ajuda de funcionalidades. Pressione para ouvir", TextToSpeech.QUEUE_FLUSH, null);
+                TTSManager.Speak("Este botão é sobre ajuda de funcionalidades. Pressione para ouvir");
             }
         });
 
@@ -76,7 +68,7 @@ public class AjudaActivity extends Activity {
             @Override
             public boolean onLongClick(View v) {
                 String textoAjuda = "Este aplicativo possui as seguintes funcionalidades:";
-                tts1.speak(textoAjuda, TextToSpeech.QUEUE_FLUSH, null);
+                TTSManager.Speak(textoAjuda);
                 return true;
             }
         });
@@ -84,7 +76,7 @@ public class AjudaActivity extends Activity {
         btnAjudaNavegacao.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v)
             {
-                tts1.speak("Este botão é sobre ajuda de navegação. Pressione para ouvir", TextToSpeech.QUEUE_FLUSH, null);
+                TTSManager.Speak("Este botão é sobre ajuda de navegação. Pressione para ouvir");
             }
         });
 
@@ -92,7 +84,7 @@ public class AjudaActivity extends Activity {
             @Override
             public boolean onLongClick(View v) {
                 String textoAjuda = "A navegação funciona da seguinte forma:";
-                tts1.speak(textoAjuda, TextToSpeech.QUEUE_FLUSH, null);
+                TTSManager.Speak(textoAjuda);
                 return true;
             }
         });
@@ -100,7 +92,7 @@ public class AjudaActivity extends Activity {
         btnAjudaObstaculos.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v)
             {
-                tts1.speak("Este botão é sobre ajuda de obstáculos. Pressione para ouvir", TextToSpeech.QUEUE_FLUSH, null);
+                TTSManager.Speak("Este botão é sobre ajuda de obstáculos. Pressione para ouvir");
             }
         });
 
@@ -110,7 +102,7 @@ public class AjudaActivity extends Activity {
                 String textoAjuda = "Alguns obstáculos nos setores disponíveis são conhecidos, como portas e escadas. " +
                         "O aplicativo tentará te avisar da proximidade de um obstáculo sempre que possível, mas mesmo assim, "+
                         "você deve caminhar com cuidado.";
-                tts1.speak(textoAjuda, TextToSpeech.QUEUE_FLUSH, null);
+                TTSManager.Speak(textoAjuda);
                 return true;
             }
         });
@@ -119,14 +111,11 @@ public class AjudaActivity extends Activity {
 
     public void onClickBtnTTS(View v){
         String toSpeak = textoParaTTS;
-        tts1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
+        TTSManager.Speak(toSpeak);
     }
 
     public void onPause(){
-        if(tts1 !=null){
-            tts1.stop();
-            tts1.shutdown();
-        }
+        TTSManager.Pause();
         super.onPause();
     }
 }

@@ -18,6 +18,7 @@ import java.util.Locale;
 import borba.com.br.blindbeacon.datamodels.DestinoDataModel;
 import borba.com.br.blindbeacon.enums.CategoriaEnum;
 import borba.com.br.blindbeacon.models.DestinoModel;
+import borba.com.br.blindbeacon.models.PredioModel;
 
 /**
  * Created by André Borba on 21/02/2017.
@@ -25,9 +26,8 @@ import borba.com.br.blindbeacon.models.DestinoModel;
 public class SelecionarDestinoActivity extends Activity {
 
     private ListView lvDestinos;
-    private String predioSelecionado;
+    private PredioModel predioSelecionado;
     ArrayList<DestinoModel> listaDestinos;
-    public TextToSpeech tts1;
     Context ctx;
 
     @Override
@@ -40,27 +40,21 @@ public class SelecionarDestinoActivity extends Activity {
         listaDestinos = new ArrayList<DestinoModel>();
 
         Intent intent = getIntent();
-        predioSelecionado = intent.getStringExtra("predio_selecionado");
+        Gson myGson = new Gson();
+
+        String serializedPredio = intent.getStringExtra("PredioSelecionado");
+
+        predioSelecionado = myGson.fromJson(serializedPredio, PredioModel.class);
 
         //Montagem da Lista
         DestinoDataModel dataModel = new DestinoDataModel(this);
-        listaDestinos = dataModel.getAll_ApenasDestinos(1);
+        listaDestinos = dataModel.getAll_ApenasDestinos(predioSelecionado.getId());
 
         //ToDo: Do banco de dados virão destinos da categoria obstáculo. Eles não devem ser exibidos,
         // apenas notificados quando estão próximos.
         //ToDo: No momento da rota, ter uma lista dos destinos "exibíveis" e dos para controle interno
 
         lvDestinos.setAdapter(new DestinoAdapter(ctx, R.layout.list_item_destino, listaDestinos));
-
-        //Preparação do TTS
-        tts1=new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-            @Override
-            public void onInit(int status) {
-                if(status != TextToSpeech.ERROR) {
-                    tts1.setLanguage(Locale.getDefault());
-                }
-            }
-        });
 
         // ListView Item Click Listener
         lvDestinos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -79,7 +73,7 @@ public class SelecionarDestinoActivity extends Activity {
                         CategoriaEnum.getCategoriaById(itemValue.getIdCategoria()).toString() +
                         ". A distância até o destino é de: " + itemValue.getDistanciaAproximada() + " metros";
 
-                tts1.speak(textoTTS, TextToSpeech.QUEUE_FLUSH, null);
+                TTSManager.Speak(textoTTS);
             }
 
         });
@@ -98,7 +92,7 @@ public class SelecionarDestinoActivity extends Activity {
                 Gson myGson = new Gson();
 
                 Intent in = new Intent(ctx, DetalhesDestinoActivity.class);
-                in.putExtra("PredioSelecionado", predioSelecionado);
+                in.putExtra("PredioSelecionado", myGson.toJson(predioSelecionado));
                 in.putExtra("DestinoSelecionado", myGson.toJson(itemValue));
 
                 //Toast.makeText(ctx, myGson.toJson(itemValue), Toast.LENGTH_SHORT).show();

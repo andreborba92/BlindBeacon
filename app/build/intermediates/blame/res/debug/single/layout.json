@@ -112,6 +112,10 @@
         "source": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_screen_simple.xml"
     },
     {
+        "merged": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\list_item_predio.xml",
+        "source": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\src\\main\\res\\layout\\list_item_predio.xml"
+    },
+    {
         "merged": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
         "source": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\select_dialog_item_material.xml"
     },

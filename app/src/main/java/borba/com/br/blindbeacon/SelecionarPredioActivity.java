@@ -12,6 +12,8 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 
+import com.google.gson.Gson;
+
 import java.util.ArrayList;
 import java.util.Locale;
 
@@ -25,7 +27,6 @@ public class SelecionarPredioActivity extends Activity {
 
     private ListView lvPredios;
     ArrayList<PredioModel> listPredios;
-    public TextToSpeech tts1;
     Context ctx;
 
     @Override
@@ -41,29 +42,7 @@ public class SelecionarPredioActivity extends Activity {
         PredioDataModel dataModel = new PredioDataModel(this);
         listPredios = dataModel.getAll();
 
-        //ToDo: PredioAdapter
-        ArrayList<String> nomesPredio = new ArrayList<String>();
-
-        for (int i = 0; i < listPredios.size(); i++){
-            nomesPredio.add(listPredios.get(i).getNome());
-        }
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1, android.R.id.text1, nomesPredio);
-
-
-        // Assign adapter to ListView
-        lvPredios.setAdapter(adapter);
-
-        //Preparação do TTS
-        tts1=new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-            @Override
-            public void onInit(int status) {
-                if(status != TextToSpeech.ERROR) {
-                    tts1.setLanguage(Locale.getDefault());
-                }
-            }
-        });
+        lvPredios.setAdapter(new PredioAdapter(ctx, R.layout.list_item_predio, listPredios));
 
         // ListView Item Click Listener
         lvPredios.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -76,9 +55,9 @@ public class SelecionarPredioActivity extends Activity {
                 int itemPosition = position;
 
                 // ListView Clicked item value
-                String  itemValue = (String) lvPredios.getItemAtPosition(position);
+                PredioModel itemValue = (PredioModel) lvPredios.getItemAtPosition(position);
 
-                tts1.speak("Você clicou em: " + itemValue, TextToSpeech.QUEUE_FLUSH, null);
+                TTSManager.Speak("Você clicou em: " + itemValue.getNome());
             }
 
         });
@@ -92,10 +71,13 @@ public class SelecionarPredioActivity extends Activity {
                 int itemPosition = position;
 
                 // ListView Clicked item value
-                String  itemValue = (String) lvPredios.getItemAtPosition(position);
+                PredioModel itemValue = (PredioModel) lvPredios.getItemAtPosition(position);
+
+                Gson myGson = new Gson();
 
                 Intent in = new Intent(ctx, SelecionarDestinoActivity.class);
-                in.putExtra("predio_selecionado", itemValue);
+                in.putExtra("PredioSelecionado", myGson.toJson(itemValue));
+
                 startActivity(in);
 
                 return true;

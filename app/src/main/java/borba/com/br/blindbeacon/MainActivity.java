@@ -46,6 +46,7 @@ public class MainActivity extends Activity {
     @Override
     public void onStart() {
         super.onStart();
+        TTSManager.Initialize(ctx);
 
         //Verifica permissão de localização
         Log.w("TAG_BEACON_ADD", "Vai verificar permissão localização");
