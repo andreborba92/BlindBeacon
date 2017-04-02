@@ -1,18 +1,13 @@
 package borba.com.br.blindbeacon.database;
 
 import android.content.Context;
-import android.content.Intent;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.os.Handler;
 import android.util.Log;
-
-import org.altbeacon.beacon.BeaconData;
 
 import java.util.ArrayList;
 
-import borba.com.br.blindbeacon.datamodels.BeaconDataModel;
 import borba.com.br.blindbeacon.datamodels.CategoriaDataModel;
 import borba.com.br.blindbeacon.datamodels.DestinoDataModel;
 import borba.com.br.blindbeacon.datamodels.PredioDataModel;
@@ -46,7 +41,6 @@ public class DataBaseHandler extends SQLiteOpenHelper {
     private CategoriaDataModel _categoriaDataModel;
     private PredioDataModel _predioDataModel;
     private DestinoDataModel _destinoDataModel;
-    private BeaconDataModel _beaconDataModel;
     private RelacionaentoBeaconsDataModel _relacionaentoBeaconsDataModel;
 
     // Criando tabelas
@@ -69,9 +63,6 @@ public class DataBaseHandler extends SQLiteOpenHelper {
         String DestinoScript = _destinoDataModel.getCreateScript();
         db.execSQL(DestinoScript);
 
-        String BeaconScript = _beaconDataModel.getCreateScript();
-        db.execSQL(BeaconScript);
-
         String RelacionamentoBeaconScript = _relacionaentoBeaconsDataModel.getCreateScript();
         db.execSQL(RelacionamentoBeaconScript);
 
@@ -88,7 +79,6 @@ public class DataBaseHandler extends SQLiteOpenHelper {
         InitializeInstancesDataModels();
 
         db.execSQL("DROP TABLE IF EXISTS " + _relacionaentoBeaconsDataModel.TABLE_NAME);
-        db.execSQL("DROP TABLE IF EXISTS " + _beaconDataModel.TABLE_NAME);
         db.execSQL("DROP TABLE IF EXISTS " + _destinoDataModel.TABLE_NAME);
         db.execSQL("DROP TABLE IF EXISTS " + _tipoDestinoDataModel.TABLE_NAME);
         db.execSQL("DROP TABLE IF EXISTS " + _categoriaDataModel.TABLE_NAME);
@@ -109,7 +99,6 @@ public class DataBaseHandler extends SQLiteOpenHelper {
         this._categoriaDataModel.LoadWithFakeData();
         this._predioDataModel.LoadWithFakeData();
         this._destinoDataModel.LoadWithFakeData();
-        this._beaconDataModel.LoadWithFakeData();
         this._relacionaentoBeaconsDataModel.LoadWithFakeData();
 
         Log.v("Database", "onLoadWithFakeData Finish.");
@@ -169,7 +158,6 @@ public class DataBaseHandler extends SQLiteOpenHelper {
         this._categoriaDataModel = new CategoriaDataModel(this.context);
         this._predioDataModel = new PredioDataModel(this.context);
         this._destinoDataModel = new DestinoDataModel(this.context);
-        this._beaconDataModel = new BeaconDataModel(this.context);
         this._relacionaentoBeaconsDataModel = new RelacionaentoBeaconsDataModel(this.context);
 
         _dataModelsInitialized = true;

@@ -2,13 +2,11 @@ package borba.com.br.blindbeacon;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.RemoteException;
 import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import org.altbeacon.beacon.Beacon;
 import org.altbeacon.beacon.BeaconConsumer;
@@ -19,6 +17,10 @@ import org.altbeacon.beacon.Region;
 
 import java.util.ArrayList;
 import java.util.Collection;
+
+import borba.com.br.blindbeacon.datamodels.DestinoDataModel;
+import borba.com.br.blindbeacon.enums.CategoriaEnum;
+import borba.com.br.blindbeacon.models.DestinoModel;
 
 /**
  * Created by André Borba on 20/09/2016.
@@ -31,12 +33,15 @@ public class BeaconFinderActivity extends Activity implements BeaconConsumer {
     ArrayList<Beacon> MyBeacons;
     private Region beaconScanRegion;
     Context ctx;
-    public DestinosDB _destinosDB;
+    private DestinoDataModel destinoDataModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.beacon_finder);
+
+        destinoDataModel = new DestinoDataModel(this);
+
         beaconManager = BeaconManager.getInstanceForApplication(this);
         // To detect proprietary beacons, you must add a line like below corresponding to your beacon
         // type.  Do a web search for "setBeaconLayout" to get the proper expression.
@@ -55,7 +60,7 @@ public class BeaconFinderActivity extends Activity implements BeaconConsumer {
         MyBeacons = new ArrayList<>();
         beaconScanRegion = new Region("myRangingUniqueIdaa", null, null, null);
 
-        _destinosDB = new DestinosDB();
+        //_destinosDB = new _OLD_DestinosDB();
 
 //        lvMyBeacons.setAdapter( new BeaconsAdapter(this,R.layout.list_item_beacon, MyBeacons));
 
@@ -75,14 +80,16 @@ public class BeaconFinderActivity extends Activity implements BeaconConsumer {
                 if (beacons.size() > 0) {
                     Beacon teste = beacons.iterator().next();
 
-                    //Log.w("TAG_BEACON_ADD", "vou buscar o UID: " + String.valueOf(teste.getId1()));
+                    Log.w("TAG_BEACON_ADD", "Beacon pulse localizado: " + String.valueOf(teste.getId1()) +
+                            "Distancia: " + teste.getDistance());
 
-                    BeaconDestinoViewModel vm = _destinosDB.getPontoByUUID(String.valueOf(teste.getId1()));
+                    DestinoModel vm = destinoDataModel.getByBeacon(String.valueOf(teste.getId1()),
+                            String.valueOf(teste.getId1()), String.valueOf(teste.getId1()));
 
                     if(vm == null)
                         return;
 
-                    if(vm.getCategoria().equals("obstaculo")){
+                    if(CategoriaEnum.getCategoriaById(vm.getIdCategoria()).toString().equals("obstaculo")){
                         Log.w("TAG_BEACON_ADD", "Obstáculo localizado: " + String.valueOf(teste.getId1()) +
                         "Distancia: " + teste.getDistance());
                         return;

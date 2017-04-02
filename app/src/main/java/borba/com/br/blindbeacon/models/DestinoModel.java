@@ -1,5 +1,9 @@
 package borba.com.br.blindbeacon.models;
 
+import org.altbeacon.beacon.Beacon;
+
+import java.util.ArrayList;
+
 /**
  * Created by andre on 22/03/2017.
  */
@@ -8,6 +12,9 @@ public class DestinoModel {
     private int IdDestino, IdPredio, IdTipoDestino, IdCategoria;
     private String Nome, Descricao;
     private int DistanciaAproximada;
+
+    //Dados dos Beacons
+    private String UniqueId, MinorId, MajorId;
 
     public int getIdDestino() {
         return IdDestino;
@@ -65,16 +72,44 @@ public class DestinoModel {
         DistanciaAproximada = distanciaAproximada;
     }
 
+    public String getUniqueId() {
+        return UniqueId;
+    }
+
+    public void setUniqueId(String uniqueId) {
+        UniqueId = uniqueId;
+    }
+
+    public String getMinorId() {
+        return MinorId;
+    }
+
+    public void setMinorId(String minorId) {
+        MinorId = minorId;
+    }
+
+    public String getMajorId() {
+        return MajorId;
+    }
+
+    public void setMajorId(String majorId) {
+        MajorId = majorId;
+    }
+
     public DestinoModel(){
 
     }
 
-    public DestinoModel( int IdPredio, int IdTipoDestino, int IdCategoria, String Nome, String Descricao ){
+    public DestinoModel( int IdPredio, int IdTipoDestino, int IdCategoria, String Nome,
+                         String UniqueId, String MajorId, String MinorId, String Descricao){
         //this.IdDestino = IdDestino;
         this.IdPredio= IdPredio;
         this.IdTipoDestino= IdTipoDestino;
         this.IdCategoria= IdCategoria;
         this.Nome= Nome;
+        this.UniqueId= UniqueId;
+        this.MajorId= MajorId;
+        this.MinorId= MinorId;
         this.Descricao= Descricao;
     }
 }
