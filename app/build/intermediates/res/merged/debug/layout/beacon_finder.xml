@@ -3,13 +3,6 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ListView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/lvMyBeacons"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentStart="true" />
-
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -23,5 +16,12 @@
         android:id="@+id/buttonReiniciarScan"
         android:text="Reiniciar Scan"
         android:onClick="onClickReiniciarScan"/>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lvMyBeacons"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true" />
 
 </LinearLayout>

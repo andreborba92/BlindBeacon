@@ -1,4 +1,4 @@
-package borba.com.br.blindbeacon;
+package borba.com.br.blindbeacon.viewmodels;
 
 import org.altbeacon.beacon.Beacon;
 
@@ -6,7 +6,7 @@ import org.altbeacon.beacon.Beacon;
  * Created by andre on 13/03/2017.
  */
 
-public class BeaconDestinoViewModel {
+public class OLD_BeaconDestinoViewModel {
     private String UniqueID, MinorID, MajorID, Descricao, Tipo, Categoria, Nome;
 
     //Beacons: UniqueId, MinorId, MajorId, Descricao, IdLocal, “Lat, Long”
@@ -68,8 +68,8 @@ public class BeaconDestinoViewModel {
         Nome = nome;
     }
 
-    public BeaconDestinoViewModel(String uniqueId, String minorID, String majorID, String descricao,
-                                  String tipo, String categoria, String nome){
+    public OLD_BeaconDestinoViewModel(String uniqueId, String minorID, String majorID, String descricao,
+                                      String tipo, String categoria, String nome){
         this.UniqueID = uniqueId;
         this.MinorID = minorID;
         this.MajorID = majorID;

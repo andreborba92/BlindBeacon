@@ -52,7 +52,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="aeae4404d421159a5f0c75d61c49b057aee41ef7">
+        sha1="d20a366d90b2b0dc266f204e18b75a8a68dbeff9">
         <dex dex="C:\Users\andre\Documents\Projetos\Meu GitHub\App Blind Beacon\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_766cda84002ef008916571cba579efd79914534a\classes.dex" />
     </item>
     <item
@@ -88,7 +88,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="57945c0028d2ed9fd6593dfa48a9644777ca1dee">
+        sha1="9d1720c94c02c894540d08f504b87fcccb3131fa">
         <dex dex="C:\Users\andre\Documents\Projetos\Meu GitHub\App Blind Beacon\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_cc83f66b72719a1846046ae4c78edc75c6f6ef29\classes.dex" />
     </item>
     <item

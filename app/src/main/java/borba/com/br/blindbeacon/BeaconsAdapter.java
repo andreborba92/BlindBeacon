@@ -16,18 +16,20 @@ import java.text.DecimalFormat;
 import java.util.Collection;
 import java.util.List;
 
+import borba.com.br.blindbeacon.viewmodels.BeaconDestinoViewModel;
+
 /**
  * Created by tailan.trucolo on 15/09/2016.
  */
-public class BeaconsAdapter extends ArrayAdapter<Beacon> {
+public class BeaconsAdapter extends ArrayAdapter<BeaconDestinoViewModel> {
 
     private Context ctx;
     private int resourceID;
-    private List<Beacon> myBeacons;
+    private List<BeaconDestinoViewModel> myBeacons;
     private ItemHolder itemHolder;
 
 
-    public BeaconsAdapter(Context context, int resource, List<Beacon> myBeacons) {
+    public BeaconsAdapter(Context context, int resource, List<BeaconDestinoViewModel> myBeacons) {
         super(context, resource, myBeacons);
         this.ctx = context;
         this.myBeacons = myBeacons;
@@ -44,35 +46,35 @@ public class BeaconsAdapter extends ArrayAdapter<Beacon> {
 
             rowView = inflater.inflate(resourceID, parent, false);
 
+            itemHolder.nomeBeacon = (TextView) rowView.findViewById(R.id.tvNomeBeacon);
             itemHolder.uniqueID = (TextView) rowView.findViewById(R.id.tvUID);
-            itemHolder.majorID = (TextView) rowView.findViewById(R.id.tvMajorID);
-            itemHolder.minorID = (TextView) rowView.findViewById(R.id.tvMinorId);
-            itemHolder.rssi = (TextView) rowView.findViewById(R.id.tvRSSI);
-            itemHolder.distance = (TextView) rowView.findViewById(R.id.tvDistance);
+            itemHolder.majorMinorId = (TextView) rowView.findViewById(R.id.tvMajorMinor);
+            itemHolder.rssi_distance = (TextView) rowView.findViewById(R.id.tvRSSIDistance);
 
             rowView.setTag(itemHolder);
         } else {
             itemHolder = (ItemHolder) rowView.getTag();
         }
 
-        itemHolder.uniqueID.setText(String.valueOf(myBeacons.get(position).getId1()));
-        itemHolder.majorID.setText(String.valueOf(myBeacons.get(position).getId2()));
-        itemHolder.minorID.setText(String.valueOf(myBeacons.get(position).getId3()));
-        itemHolder.rssi.setText(String.valueOf(myBeacons.get(position).getRssi()));
+        itemHolder.nomeBeacon.setText(String.valueOf(myBeacons.get(position).getDestinoModel().getNome()));
+        itemHolder.uniqueID.setText(String.valueOf(myBeacons.get(position).getBeacon().getId1()));
+        itemHolder.majorMinorId.setText(String.valueOf(myBeacons.get(position).getBeacon().getId2()) + " / " +
+                String.valueOf(myBeacons.get(position).getBeacon().getId3()));
 
         //Formatação da distância de double para duas casas decimais
         DecimalFormat df = new DecimalFormat("#.##");
-        String distanciaFormatada = df.format(myBeacons.get(position).getDistance()) + " metros";
+        String distanciaFormatada = df.format(myBeacons.get(position).getBeacon().getDistance()) + " metros";
 
         //itemHolder.distance.setText(String.valueOf(myBeacons.get(position).getDistance()));
-        itemHolder.distance.setText(distanciaFormatada);
+        itemHolder.rssi_distance.setText(String.valueOf(myBeacons.get(position).getBeacon().getRssi())
+        + " / " + distanciaFormatada);
 
         return rowView;
     }
 
 
     private static class ItemHolder {
-        TextView uniqueID, majorID, minorID, rssi, distance;
+        TextView nomeBeacon, uniqueID, majorMinorId, rssi_distance;
     }
 }
 

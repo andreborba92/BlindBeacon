@@ -46,37 +46,43 @@ public class DestinoDataModel {
 
         //public DestinoModel( IdPredio, IdTipoDestino, IdCategoria, Nome, UniqueId, MajorId, MinorId,  Descricao ){
         this.addDestino(new DestinoModel(1, TipoDestinoEnum.DESTINO.getValue(), CategoriaEnum.SALA_DE_AULA.getValue(),
-                "Sala 110", "uuuu", "maaaa", "miii", "descrição"));
+                "Sala 110", "003e8c80-ea01-4ebb-b888-78da19df9e55", "893", "2", "Beacon Cinza 2"));
 
         this.addDestino(new DestinoModel(1, TipoDestinoEnum.DESTINO.getValue(), CategoriaEnum.SALA_DE_AULA.getValue(),
-                "Sala 120", "uuuu", "maaaa", "miii", "descrição"));
+                "Sala 150", "52414449-5553-4e45-5457-4f524b53434f", "6", "5", "Cel Nando"));
 
         this.addDestino(new DestinoModel(1, TipoDestinoEnum.DESTINO.getValue(), CategoriaEnum.SALA_DE_AULA.getValue(),
-                "Sala 150", "uuuu", "maaaa", "miii", "descrição"));
-
-        this.addDestino(new DestinoModel(1, TipoDestinoEnum.DESTINO.getValue(), CategoriaEnum.SALA_DE_AULA.getValue(),
-                "Sala 170", "uuuu", "maaaa", "miii", "descrição"));
-
-        this.addDestino(new DestinoModel(1, TipoDestinoEnum.DESTINO.getValue(), CategoriaEnum.SECRETARIA.getValue(),
-                "Secretaria Geral","uuuu", "maaaa", "miii",  "descrição"));
+                "Sala 170", "003e8c80-ea01-4ebb-b888-78da19df9e55", "893", "88", "Beacon Cinza 88"));
 
         this.addDestino(new DestinoModel(1, TipoDestinoEnum.DESTINO.getValue(), CategoriaEnum.BANHEIRO.getValue(),
-                "Banheiro Masculino", "uuuu", "maaaa", "miii", "descrição"));
+                "Banheiro Masculino", "003e8c80-ea01-4ebb-b888-78da19df9e55", "893", "148", "Beacon Cinza 148"));
 
         this.addDestino(new DestinoModel(1, TipoDestinoEnum.DESTINO.getValue(), CategoriaEnum.XEROX.getValue(),
-                "Xerox número 4", "uuuu", "maaaa", "miii", "descrição"));
+                "Xerox número 4", "2f234454-cf6d-4a0f-adf2-f4911ba9ffa6", "55", "44", "Cel Pai"));
 
         this.addDestino(new DestinoModel(1, TipoDestinoEnum.OBSTACULO.getValue(), CategoriaEnum.OUTRO.getValue(),
-                "Degrau", "uuuu", "maaaa", "miii", "descrição"));
+                "Degrau", "699ebc80-e1f3-11e3-9a0f-0cf3ee3bc012", "1", "20681", "beacon branco"));
+
+        //-----------------------------------------------------------------------------
+        //Sem Dispositivos até o momento
+
+        this.addDestino(new DestinoModel(1, TipoDestinoEnum.DESTINO.getValue(), CategoriaEnum.SALA_DE_AULA.getValue(),
+                "Sala 120", "11111", "11", "11", "descrição"));
+
+        this.addDestino(new DestinoModel(1, TipoDestinoEnum.DESTINO.getValue(), CategoriaEnum.SALA_DE_AULA.getValue(),
+                "Sala 150", "22222", "22", "22", "descrição"));
+
+        this.addDestino(new DestinoModel(1, TipoDestinoEnum.DESTINO.getValue(), CategoriaEnum.SECRETARIA.getValue(),
+                "Secretaria Geral","33333", "33", "33",  "descrição"));
 
         this.addDestino(new DestinoModel(1, TipoDestinoEnum.OBSTACULO.getValue(), CategoriaEnum.OUTRO.getValue(),
-                "Degrau", "uuuu", "maaaa", "miii", "descrição"));
+                "Degrau", "44444", "44", "44", "descrição"));
 
         this.addDestino(new DestinoModel(1, TipoDestinoEnum.CONEXAO.getValue(), CategoriaEnum.OUTRO.getValue(),
-                "Corredor", "uuuu", "maaaa", "miii", "descrição"));
+                "Corredor", "55555", "55", "55", "descrição"));
 
         this.addDestino(new DestinoModel(1, TipoDestinoEnum.CONEXAO.getValue(), CategoriaEnum.OUTRO.getValue(),
-                "Corredor", "uuuu", "maaaa", "miii", "descrição"));
+                "Corredor", "66666", "66", "66", "descrição"));
 
         /*
         //Disp branco
@@ -87,11 +93,11 @@ public class DestinoDataModel {
         this.addBeacon(new aBeaconModel("003e8c80-ea01-4ebb-b888-78da19df9e55","893","88",1,""));
         this.addBeacon(new aBeaconModel("003e8c80-ea01-4ebb-b888-78da19df9e55","893","148",1,""));
 
-        //Cel Pai
-        this.addBeacon(new aBeaconModel("52414449-5553-4e45-5457-4f524b53434f","??","??",1,""));
-
         //Cel Nando
-        this.addBeacon(new aBeaconModel("2f234454-cf6d-4a0f-adf2-f4911ba9ffa6","??","??",1,""));
+        this.addBeacon(new aBeaconModel("52414449-5553-4e45-5457-4f524b53434f","6","5",1,""));
+
+        //Cel Pai
+        this.addBeacon(new aBeaconModel("2f234454-cf6d-4a0f-adf2-f4911ba9ffa6","55","44",1,""));
         */
 
         Log.w("Database", "DestinoDataModel - End Fake Data");
@@ -115,7 +121,7 @@ public class DestinoDataModel {
     public void addDestino(DestinoModel model){
         final ContentValues values = new ContentValues();
 
-        values.put(DESTINO_ID, model.getIdDestino());
+        //values.put(DESTINO_ID, model.getIdDestino());
         values.put(DESTINO_NOME, model.getNome());
         values.put(DESTINO_DESCRICAO, model.getDescricao());
         values.put(DESTINO_IdPredio, model.getIdPredio());
@@ -146,19 +152,24 @@ public class DestinoDataModel {
         } catch (final Exception e) {
             e.printStackTrace();
         }
-        final ArrayList<DestinoModel> list = cursorToArrayList(cursor, false, idPredio);
+        final ArrayList<DestinoModel> list = cursorToArrayList(cursor, idPredio);
 
         closeDataBaseConnection();
         return list;
     }
 
-    public DestinoModel getByBeacon(String UniqueId, String MajorId, String MinorId){
+    public DestinoModel getByBeacon(ArrayList<DestinoModel> destinosList, String UniqueId, String MajorId, String MinorId){
+        for (DestinoModel vm:destinosList) {
+            if(vm.getUniqueId().equals(UniqueId) && vm.getMajorId().equals(MajorId) && vm.getMinorId().equals(MinorId))
+                return vm;
+        }
 
         return null;
     }
 
     public ArrayList<DestinoModel> getAll_ApenasDestinos(int idPredio){
-        final String query = "SELECT * FROM " + TABLE_NAME;
+        final String query = "SELECT * FROM " + TABLE_NAME + " WHERE " + DESTINO_IdTipoDestino + " = " +
+                TipoDestinoEnum.DESTINO.getValue();
         database = dbHandler.getReadableDatabase();
         Cursor cursor = null;
 
@@ -167,13 +178,13 @@ public class DestinoDataModel {
         } catch (final Exception e) {
             e.printStackTrace();
         }
-        final ArrayList<DestinoModel> list = cursorToArrayList(cursor, true, idPredio);
+        final ArrayList<DestinoModel> list = cursorToArrayList(cursor, idPredio);
 
         closeDataBaseConnection();
         return list;
     }
 
-    private ArrayList<DestinoModel> cursorToArrayList(final Cursor cursor, boolean apenasDestinos, int idPredio) {
+    private ArrayList<DestinoModel> cursorToArrayList(final Cursor cursor, int idPredio) {
         final ArrayList<DestinoModel> list = new ArrayList<DestinoModel>();
 
         if (cursor != null && cursor.getCount() != 0) {
@@ -184,12 +195,7 @@ public class DestinoDataModel {
                     if(dado.getIdPredio() != idPredio)
                         continue;
 
-                    if(apenasDestinos){
-                        if( dado.getIdTipoDestino() == TipoDestinoEnum.DESTINO.getValue())
-                            list.add(dado);
-                    }
-                    else
-                        list.add(dado);
+                    list.add(dado);
 
                 } while (cursor.moveToNext());
             }
