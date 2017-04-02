@@ -15,12 +15,15 @@ import org.altbeacon.beacon.BeaconParser;
 import org.altbeacon.beacon.RangeNotifier;
 import org.altbeacon.beacon.Region;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 
 import borba.com.br.blindbeacon.datamodels.DestinoDataModel;
 import borba.com.br.blindbeacon.enums.TipoDestinoEnum;
 import borba.com.br.blindbeacon.models.DestinoModel;
+import borba.com.br.blindbeacon.utils.BeaconDestinoComparator;
 import borba.com.br.blindbeacon.viewmodels.BeaconDestinoViewModel;
 
 /**
@@ -28,7 +31,6 @@ import borba.com.br.blindbeacon.viewmodels.BeaconDestinoViewModel;
  */
 public class BeaconFinderActivity extends Activity implements BeaconConsumer {
 
-    protected static final String TAG = "MonitoringActivity";
     private BeaconManager beaconManager;
     private ListView lvMyBeacons;
     ArrayList<BeaconDestinoViewModel> MyBeacons;
@@ -36,6 +38,7 @@ public class BeaconFinderActivity extends Activity implements BeaconConsumer {
     Context ctx;
     private DestinoDataModel destinoDataModel;
     private BeaconDestinoViewModel beaconDestinoViewModel;
+    private DecimalFormat df = new DecimalFormat("#.##");
 
     private ArrayList<DestinoModel> listDestinos;
 
@@ -53,8 +56,8 @@ public class BeaconFinderActivity extends Activity implements BeaconConsumer {
 
         //ToDo: Notificar via áudio a mudança de distância a cada X pulsos ou a cada X distancia alterada
         //Setting tempos de duração dos scans. 2 segundos entre scan
-        //beaconManager.setForegroundBetweenScanPeriod(30L);
-        beaconManager.setForegroundScanPeriod(1500L);
+        beaconManager.setForegroundBetweenScanPeriod(1000L);
+        beaconManager.setForegroundScanPeriod(4000L);
 
         beaconManager.getBeaconParsers().add(new BeaconParser().setBeaconLayout("m:2-3=0215,i:4-19,i:20-21,i:22-23,p:24-24,d:25-25"));
         beaconManager.bind(this);
@@ -64,9 +67,6 @@ public class BeaconFinderActivity extends Activity implements BeaconConsumer {
         lvMyBeacons = (ListView)findViewById(R.id.lvMyBeacons);
         MyBeacons = new ArrayList<>();
         beaconScanRegion = new Region("myRangingUniqueIdaa", null, null, null);
-
-//        lvMyBeacons.setAdapter( new BeaconsAdapter(this,R.layout.list_item_beacon, MyBeacons));
-
     }
 
     @Override
@@ -78,47 +78,64 @@ public class BeaconFinderActivity extends Activity implements BeaconConsumer {
     @Override
     public void onBeaconServiceConnect() {
         beaconManager.setRangeNotifier(new RangeNotifier() {
+
             @Override
             public void didRangeBeaconsInRegion(Collection<Beacon> beacons, Region region) {
+                MyBeacons = new ArrayList<BeaconDestinoViewModel>();
+
                 if (beacons.size() > 0) {
-                    Beacon beaconLocalizado = beacons.iterator().next();
 
-                    Log.w("TAG_BEACON_ADD", "Beacon pulse localizado: " + String.valueOf(beaconLocalizado.getId1()) +
-                            "; Minor: " + String.valueOf(beaconLocalizado.getId3()) +
-                            " Distancia: " + beaconLocalizado.getDistance());
+                    Log.w("TAG_BEACON_ADD", "Quantidade beacons localizados: " + beacons.size());
+                    //Beacon beaconLocalizado;
 
-                    DestinoModel vm = destinoDataModel.getByBeacon(listDestinos, String.valueOf(beaconLocalizado.getId1()),
-                            String.valueOf(beaconLocalizado.getId2()), String.valueOf(beaconLocalizado.getId3()));
+                    for(Beacon beaconLocalizado:beacons){
 
-                    if(vm == null)
-                        return;
+                        Log.w("TAG_BEACON_ADD", "Beacon pulse localizado: " + String.valueOf(beaconLocalizado.getId1()) +
+                                "; Minor: " + String.valueOf(beaconLocalizado.getId3()) +
+                                " Distancia: " + beaconLocalizado.getDistance());
 
-                    Log.w("TAG_BEACON_ADD", "Destino: " + vm.getNome());
+                        DestinoModel vm = destinoDataModel.getByBeacon(listDestinos, String.valueOf(beaconLocalizado.getId1()),
+                                String.valueOf(beaconLocalizado.getId2()), String.valueOf(beaconLocalizado.getId3()));
 
-                    if(vm.getIdTipoDestino() == TipoDestinoEnum.OBSTACULO.getValue()){
-                        Log.w("TAG_BEACON_ADD", "Obstáculo localizado: " + vm.getNome() +
-                        "Distancia: " + beaconLocalizado.getDistance());
-                        return;
+                        if(vm == null)
+                            continue;
+
+                        Log.w("TAG_BEACON_ADD", "Destino: " + vm.getNome());
+
+                        if(vm.getIdTipoDestino() == TipoDestinoEnum.OBSTACULO.getValue()){
+                            Log.w("TAG_BEACON_ADD", "Obstáculo localizado: " + vm.getNome() +
+                            "Distancia: " + beaconLocalizado.getDistance());
+
+                            String distanciaFormatada = df.format(beaconLocalizado.getDistance()) + " metros";
+
+                            //ToDo: Melhorar forma de reproduzir audio para nao ser uma metralhadora de notificações
+    //                        TTSManager.Speak("Obstáculo localizado, " + vm.getNome() + " a " + distanciaFormatada +
+    //                        " de distância.");
+                            continue;
+                        }
+
+                        //Inserção de info para identificação
+                        beaconDestinoViewModel = new BeaconDestinoViewModel(beaconLocalizado, vm);
+
+                        int indexOF = VerificaBeaconExistente(MyBeacons, beaconDestinoViewModel);
+
+                        if (indexOF == -1) {
+                            MyBeacons.add(beaconDestinoViewModel);
+                        } else {
+                            MyBeacons.remove(indexOF);
+                            MyBeacons.add(beaconDestinoViewModel);
+                        }
+
                     }
 
-                    //Inserção de info para identificação
-                    beaconDestinoViewModel = new BeaconDestinoViewModel(beaconLocalizado, vm);
+                    Collections.sort(MyBeacons, new BeaconDestinoComparator());
 
-                    int indexOF = VerificaBeaconExistente(MyBeacons, beaconDestinoViewModel);
-
-                    if (indexOF == -1) {
-                        MyBeacons.add(beaconDestinoViewModel);
-                    } else {
-                        MyBeacons.remove(indexOF);
-                        MyBeacons.add(beaconDestinoViewModel);
-                    }
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            lvMyBeacons.setAdapter(new BeaconsAdapter(ctx, R.layout.list_item_beacon, MyBeacons));
+                        lvMyBeacons.setAdapter(new BeaconsAdapter(ctx, R.layout.list_item_beacon, MyBeacons));
                         }
                     });
-
 
                 }
             }

@@ -8,7 +8,7 @@ import java.util.ArrayList;
  * Created by andre on 22/03/2017.
  */
 
-public class DestinoModel {
+public class DestinoModel{
     private int IdDestino, IdPredio, IdTipoDestino, IdCategoria;
     private String Nome, Descricao;
     private int DistanciaAproximada;
