@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,6 +30,7 @@ public class DetalhesDestinoActivity extends Activity {
     private PredioModel predio;
     Context ctx;
     TextView tvnomeDestino, tvnomePredio, tvcategoriaDestino, tvdescricaoDestino, tvdistanciaDestino;
+    Button btnNavegar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,12 +54,16 @@ public class DetalhesDestinoActivity extends Activity {
         //tvdescricaoDestino = (TextView) this.findViewById(R.id.tvDescricaoDestino);
         tvdistanciaDestino = (TextView) this.findViewById(R.id.tvDistanciaDestino);
 
+        btnNavegar = (Button) this.findViewById(R.id.buttonNavegarDestino);
+
         //Set Text
         tvnomeDestino.setText(destino.getNome());
         tvnomePredio.setText(predio.getNome());
         tvcategoriaDestino.setText(CategoriaEnum.getCategoriaById(destino.getIdCategoria()).toString());
         //tvdescricaoDestino.setText(destino.getDescricao());
         tvdistanciaDestino.setText(String.valueOf(destino.getDistanciaAproximada()) + " m");
+
+        CarregarEventoClick();
     }
 
     @Override
@@ -64,11 +71,27 @@ public class DetalhesDestinoActivity extends Activity {
         super.onDestroy();
     }
 
-    public void onClickNavegarDestino(View v){
-        //Intent in = new Intent(this, BeaconFinderActivity.class);
-        //startActivity(in);
+    private void CarregarEventoClick(){
 
-        TTSManager.Speak("Este é o botão: navegar. Pressione para começar a navegação.");
+        btnNavegar.setOnClickListener(new Button.OnClickListener() {
+            public void onClick(View v)
+            {
+                TTSManager.Speak("Este é o botão: navegar. Pressione para começar a navegação.");
+            }
+        });
+
+        btnNavegar.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Gson myGson = new Gson();
+
+                Intent in = new Intent(ctx, RotaActivity.class);
+                in.putExtra("DestinoSelecionado", myGson.toJson(destino));
+
+                startActivity(in);
+                return true;
+            }
+        });
+
     }
-
 }

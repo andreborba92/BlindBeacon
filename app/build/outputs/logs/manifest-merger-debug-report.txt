@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\andre\Documents\Projetos\Meu GitHub\App Blind Beacon\app\src\main\AndroidManifest.xml:2:1-40:12
+ADDED from C:\Users\andre\Documents\Projetos\Meu GitHub\App Blind Beacon\app\src\main\AndroidManifest.xml:2:1-41:12
 	package
 		ADDED from C:\Users\andre\Documents\Projetos\Meu GitHub\App Blind Beacon\app\src\main\AndroidManifest.xml:3:5-39
 		INJECTED from C:\Users\andre\Documents\Projetos\Meu GitHub\App Blind Beacon\app\src\main\AndroidManifest.xml
@@ -44,7 +44,7 @@ ADDED from C:\Users\andre\Documents\Projetos\Meu GitHub\App Blind Beacon\app\src
 	android:name
 		ADDED from C:\Users\andre\Documents\Projetos\Meu GitHub\App Blind Beacon\app\src\main\AndroidManifest.xml:10:22-76
 application
-ADDED from C:\Users\andre\Documents\Projetos\Meu GitHub\App Blind Beacon\app\src\main\AndroidManifest.xml:13:5-38:19
+ADDED from C:\Users\andre\Documents\Projetos\Meu GitHub\App Blind Beacon\app\src\main\AndroidManifest.xml:13:5-39:19
 MERGED from [com.android.support:appcompat-v7:23.3.0] C:\Users\andre\Documents\Projetos\Meu GitHub\App Blind Beacon\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:animated-vector-drawable:23.3.0] C:\Users\andre\Documents\Projetos\Meu GitHub\App Blind Beacon\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
 MERGED from [com.android.support:support-vector-drawable:23.3.0] C:\Users\andre\Documents\Projetos\Meu GitHub\App Blind Beacon\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
@@ -96,13 +96,17 @@ activity#borba.com.br.blindbeacon.DetalhesDestinoActivity
 ADDED from C:\Users\andre\Documents\Projetos\Meu GitHub\App Blind Beacon\app\src\main\AndroidManifest.xml:31:9-61
 	android:name
 		ADDED from C:\Users\andre\Documents\Projetos\Meu GitHub\App Blind Beacon\app\src\main\AndroidManifest.xml:31:19-58
+activity#borba.com.br.blindbeacon.RotaActivity
+ADDED from C:\Users\andre\Documents\Projetos\Meu GitHub\App Blind Beacon\app\src\main\AndroidManifest.xml:32:9-50
+	android:name
+		ADDED from C:\Users\andre\Documents\Projetos\Meu GitHub\App Blind Beacon\app\src\main\AndroidManifest.xml:32:19-47
 meta-data#com.google.android.gms.version
-ADDED from C:\Users\andre\Documents\Projetos\Meu GitHub\App Blind Beacon\app\src\main\AndroidManifest.xml:35:9-37:69
+ADDED from C:\Users\andre\Documents\Projetos\Meu GitHub\App Blind Beacon\app\src\main\AndroidManifest.xml:36:9-38:69
 MERGED from [com.google.android.gms:play-services-basement:8.1.0] C:\Users\andre\Documents\Projetos\Meu GitHub\App Blind Beacon\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\AndroidManifest.xml:21:9-23:69
 	android:value
-		ADDED from C:\Users\andre\Documents\Projetos\Meu GitHub\App Blind Beacon\app\src\main\AndroidManifest.xml:37:13-66
+		ADDED from C:\Users\andre\Documents\Projetos\Meu GitHub\App Blind Beacon\app\src\main\AndroidManifest.xml:38:13-66
 	android:name
-		ADDED from C:\Users\andre\Documents\Projetos\Meu GitHub\App Blind Beacon\app\src\main\AndroidManifest.xml:36:13-58
+		ADDED from C:\Users\andre\Documents\Projetos\Meu GitHub\App Blind Beacon\app\src\main\AndroidManifest.xml:37:13-58
 uses-sdk
 INJECTED from C:\Users\andre\Documents\Projetos\Meu GitHub\App Blind Beacon\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.3.0] C:\Users\andre\Documents\Projetos\Meu GitHub\App Blind Beacon\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:21:5-23:78

@@ -161,6 +161,22 @@ public class DestinoDataModel {
         return list;
     }
 
+    public DestinoModel getByIdDestino(int idDestino){
+        final String query = "SELECT * FROM " + TABLE_NAME + " WHERE " + DESTINO_ID + " = " + idDestino;
+        database = dbHandler.getReadableDatabase();
+        Cursor cursor = null;
+
+        try {
+            cursor = database.rawQuery(query, null);
+        } catch (final Exception e) {
+            e.printStackTrace();
+        }
+        final DestinoModel model = cursorToSingle(cursor);
+
+        closeDataBaseConnection();
+        return model;
+    }
+
     public DestinoModel getByBeacon(ArrayList<DestinoModel> destinosList, String UniqueId, String MajorId, String MinorId){
         for (DestinoModel vm:destinosList) {
             if(vm.getUniqueId().equals(UniqueId) && vm.getMajorId().equals(MajorId) && vm.getMinorId().equals(MinorId))
@@ -209,6 +225,25 @@ public class DestinoDataModel {
         }
 
         return list;
+    }
+
+    private DestinoModel cursorToSingle(final Cursor cursor) {
+        DestinoModel model = new DestinoModel();
+
+        if (cursor != null && cursor.getCount() != 0) {
+            if (cursor.moveToFirst()) {
+                do {
+                    model = cursorToData(cursor);
+
+                } while (cursor.moveToNext());
+            }
+        }
+
+        if (cursor != null) {
+            cursor.close();
+        }
+
+        return model;
     }
 
     private DestinoModel cursorToData(Cursor cursor) {

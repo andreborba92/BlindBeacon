@@ -42,13 +42,13 @@ public class RotaDataModel{
         Log.w("Database", "RotaDataModel - Start Fake Data");
 
         //public RotaModel(int IdPredio, int IdDestino, int Ordem, String OrientacaoF, String OrientacaoT, double Metragem){
-        this.addRota(new RotaModel(1, 1, 1, "Siga em frente que você passará pelo ponto {NOME}", "Você chegou ao início do prédio", 20));
-        this.addRota(new RotaModel(1, 2, 2, "Siga em frente que você passará pelo ponto {NOME}", "Siga em frente que você passará pelo ponto {NOME}", 40));
-        this.addRota(new RotaModel(1, 3, 3, "Cuidado com o degrau a frente", "Siga em frente que você passará pelo ponto {NOME}", 60));
-        this.addRota(new RotaModel(1, 7, 4, "", "", 75)); //Obstáculo
-        this.addRota(new RotaModel(1, 4, 5, "Siga em frente que você passará pelo ponto {NOME}", "Cuidado com o degrau a frente", 90));
-        this.addRota(new RotaModel(1, 5, 6, "Siga em frente que você passará pelo ponto {NOME}", "Siga em frente que você passará pelo ponto {NOME}", 110));
-        this.addRota(new RotaModel(1, 6, 7, "Você chegou ao final do prédio", "Siga em frente que você passará pelo ponto {NOME}", 130));
+        this.addRota(new RotaModel(1, 1, 1, "Siga em frente que você passará pelo ponto {NOME}", "Você chegou ao início do prédio", 0));
+        this.addRota(new RotaModel(1, 2, 2, "Siga em frente que você passará pelo ponto {NOME}", "Siga em frente que você passará pelo ponto {NOME}", 6.15));
+        this.addRota(new RotaModel(1, 3, 3, "Cuidado com o degrau a frente", "Siga em frente que você passará pelo ponto {NOME}", 11.7));
+        this.addRota(new RotaModel(1, 7, 4, "", "", 17.1)); //Obstáculo
+        this.addRota(new RotaModel(1, 4, 5, "Siga em frente que você passará pelo ponto {NOME}", "Cuidado com o degrau a frente", 22.65));
+        this.addRota(new RotaModel(1, 5, 6, "Siga em frente que você passará pelo ponto {NOME}", "Siga em frente que você passará pelo ponto {NOME}", 28.05));
+        this.addRota(new RotaModel(1, 6, 7, "Você chegou ao final do prédio", "Siga em frente que você passará pelo ponto {NOME}", 33.45));
 
         Log.w("Database", "RotaDataModel - End Fake Data");
     }

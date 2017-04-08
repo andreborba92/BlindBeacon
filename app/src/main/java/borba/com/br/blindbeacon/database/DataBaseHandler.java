@@ -34,7 +34,7 @@ public class DataBaseHandler extends SQLiteOpenHelper {
 
     // Declaracao do banco de dados
     private static final String BLINDBEACON_DATABASE_NAME = "BLINDBEACON_DATABASE";
-    private static final int BLINDBEACON_DATABASE_VERSION = 8;
+    private static final int BLINDBEACON_DATABASE_VERSION = 9;
 
     //DataModels
     private TipoDestinoDataModel _tipoDestinoDataModel;

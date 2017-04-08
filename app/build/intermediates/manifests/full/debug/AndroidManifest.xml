@@ -40,6 +40,7 @@
         <activity android:name="borba.com.br.blindbeacon.AjudaActivity" />
         <activity android:name="borba.com.br.blindbeacon.SelecionarDestinoActivity" />
         <activity android:name="borba.com.br.blindbeacon.DetalhesDestinoActivity" />
+        <activity android:name="borba.com.br.blindbeacon.RotaActivity" />
 
         <!--
      ATTENTION: This was auto-generated to add Google Play services to your project for

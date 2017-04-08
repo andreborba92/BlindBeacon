@@ -27,11 +27,23 @@ public class BeaconDestinoViewModel implements Comparable<BeaconDestinoViewModel
         this._destinoModel = destino;
     }
 
+    //Order By por IdDestino
+//    @Override
+//    public int compareTo(BeaconDestinoViewModel another) {
+//        if(this.getDestinoModel().getIdDestino() < another.getDestinoModel().getIdDestino())
+//            return -1;
+//        else if(this.getDestinoModel().getIdDestino() > another.getDestinoModel().getIdDestino())
+//            return 1;
+//        else
+//            return 0;
+//    }
+
+    //Order by por distancia
     @Override
     public int compareTo(BeaconDestinoViewModel another) {
-        if(this.getDestinoModel().getIdDestino() < another.getDestinoModel().getIdDestino())
+        if(this.getBeacon().getDistance() < another.getBeacon().getDistance())
             return -1;
-        else if(this.getDestinoModel().getIdDestino() > another.getDestinoModel().getIdDestino())
+        else if(this.getBeacon().getDistance() > another.getBeacon().getDistance())
             return 1;
         else
             return 0;
