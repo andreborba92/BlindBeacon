@@ -100,9 +100,9 @@ public class DestinoModel{
 
     }
 
-    public DestinoModel( int IdPredio, int IdTipoDestino, int IdCategoria, String Nome,
+    public DestinoModel(int IdDestino, int IdPredio, int IdTipoDestino, int IdCategoria, String Nome,
                          String UniqueId, String MajorId, String MinorId, String Descricao){
-        //this.IdDestino = IdDestino;
+        this.IdDestino = IdDestino;
         this.IdPredio= IdPredio;
         this.IdTipoDestino= IdTipoDestino;
         this.IdCategoria= IdCategoria;

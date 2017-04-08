@@ -45,44 +45,47 @@ public class DestinoDataModel {
         Log.w("Database", "DestinoDataModel - Start Fake Data");
 
         //public DestinoModel( IdPredio, IdTipoDestino, IdCategoria, Nome, UniqueId, MajorId, MinorId,  Descricao ){
-        this.addDestino(new DestinoModel(1, TipoDestinoEnum.DESTINO.getValue(), CategoriaEnum.SALA_DE_AULA.getValue(),
-                "Sala 110", "003e8c80-ea01-4ebb-b888-78da19df9e55", "893", "2", "Beacon Cinza 2"));
+        this.addDestino(new DestinoModel(1, 1, TipoDestinoEnum.DESTINO.getValue(), CategoriaEnum.SALA_DE_AULA.getValue(),
+                "Ponto 1", "003e8c80-ea01-4ebb-b888-78da19df9e55", "893", "2", "Beacon Cinza 2"));
 
-        this.addDestino(new DestinoModel(1, TipoDestinoEnum.DESTINO.getValue(), CategoriaEnum.SALA_DE_AULA.getValue(),
-                "Sala 150", "52414449-5553-4e45-5457-4f524b53434f", "6", "5", "Cel Nando"));
+        this.addDestino(new DestinoModel(2, 1, TipoDestinoEnum.DESTINO.getValue(), CategoriaEnum.SALA_DE_AULA.getValue(),
+                "Ponto 2", "003e8c80-ea01-4ebb-b888-78da19df9e55", "893", "88", "Beacon Cinza 88"));
 
-        this.addDestino(new DestinoModel(1, TipoDestinoEnum.DESTINO.getValue(), CategoriaEnum.SALA_DE_AULA.getValue(),
-                "Sala 170", "003e8c80-ea01-4ebb-b888-78da19df9e55", "893", "88", "Beacon Cinza 88"));
+        this.addDestino(new DestinoModel(3, 1, TipoDestinoEnum.DESTINO.getValue(), CategoriaEnum.SALA_DE_AULA.getValue(),
+                "Ponto 3", "5AFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF", "704", "705", "Cel Nando Antigo"));
 
-        this.addDestino(new DestinoModel(1, TipoDestinoEnum.DESTINO.getValue(), CategoriaEnum.BANHEIRO.getValue(),
-                "Banheiro Masculino", "003e8c80-ea01-4ebb-b888-78da19df9e55", "893", "148", "Beacon Cinza 148"));
+        this.addDestino(new DestinoModel(4, 1, TipoDestinoEnum.DESTINO.getValue(), CategoriaEnum.BANHEIRO.getValue(),
+                "Ponto 4", "003e8c80-ea01-4ebb-b888-78da19df9e55", "893", "148", "Beacon Cinza 148"));
 
-        this.addDestino(new DestinoModel(1, TipoDestinoEnum.DESTINO.getValue(), CategoriaEnum.XEROX.getValue(),
-                "Xerox número 4", "2f234454-cf6d-4a0f-adf2-f4911ba9ffa6", "55", "44", "Cel Pai"));
+        this.addDestino(new DestinoModel(5, 1, TipoDestinoEnum.DESTINO.getValue(), CategoriaEnum.SALA_DE_AULA.getValue(),
+                "Ponto 5", "52414449-5553-4e45-5457-4f524b53434f", "6", "5", "Cel Nando"));
 
-        this.addDestino(new DestinoModel(1, TipoDestinoEnum.OBSTACULO.getValue(), CategoriaEnum.OUTRO.getValue(),
+        this.addDestino(new DestinoModel(6, 1, TipoDestinoEnum.DESTINO.getValue(), CategoriaEnum.XEROX.getValue(),
+                "Ponto 6", "2f234454-cf6d-4a0f-adf2-f4911ba9ffa6", "55", "44", "Cel Pai"));
+
+        this.addDestino(new DestinoModel(7, 1, TipoDestinoEnum.OBSTACULO.getValue(), CategoriaEnum.OUTRO.getValue(),
                 "Degrau", "699ebc80-e1f3-11e3-9a0f-0cf3ee3bc012", "1", "20681", "beacon branco"));
 
         //-----------------------------------------------------------------------------
         //Sem Dispositivos até o momento
 
-        this.addDestino(new DestinoModel(1, TipoDestinoEnum.DESTINO.getValue(), CategoriaEnum.SALA_DE_AULA.getValue(),
-                "Sala 120", "11111", "11", "11", "descrição"));
-
-        this.addDestino(new DestinoModel(1, TipoDestinoEnum.DESTINO.getValue(), CategoriaEnum.SALA_DE_AULA.getValue(),
-                "Sala 150", "22222", "22", "22", "descrição"));
-
-        this.addDestino(new DestinoModel(1, TipoDestinoEnum.DESTINO.getValue(), CategoriaEnum.SECRETARIA.getValue(),
-                "Secretaria Geral","33333", "33", "33",  "descrição"));
-
-        this.addDestino(new DestinoModel(1, TipoDestinoEnum.OBSTACULO.getValue(), CategoriaEnum.OUTRO.getValue(),
-                "Degrau", "44444", "44", "44", "descrição"));
-
-        this.addDestino(new DestinoModel(1, TipoDestinoEnum.CONEXAO.getValue(), CategoriaEnum.OUTRO.getValue(),
-                "Corredor", "55555", "55", "55", "descrição"));
-
-        this.addDestino(new DestinoModel(1, TipoDestinoEnum.CONEXAO.getValue(), CategoriaEnum.OUTRO.getValue(),
-                "Corredor", "66666", "66", "66", "descrição"));
+//        this.addDestino(new DestinoModel(8, 1, TipoDestinoEnum.DESTINO.getValue(), CategoriaEnum.SALA_DE_AULA.getValue(),
+//                "Sala 120", "11111", "11", "11", "descrição"));
+//
+//        this.addDestino(new DestinoModel(9, 1, TipoDestinoEnum.DESTINO.getValue(), CategoriaEnum.SALA_DE_AULA.getValue(),
+//                "Sala 199", "22222", "22", "22", "descrição"));
+//
+//        this.addDestino(new DestinoModel(10, 1, TipoDestinoEnum.DESTINO.getValue(), CategoriaEnum.SECRETARIA.getValue(),
+//                "Secretaria Geral","33333", "33", "33",  "descrição"));
+//
+//        this.addDestino(new DestinoModel(11, 1, TipoDestinoEnum.OBSTACULO.getValue(), CategoriaEnum.OUTRO.getValue(),
+//                "Degrau", "44444", "44", "44", "descrição"));
+//
+//        this.addDestino(new DestinoModel(12, 1, TipoDestinoEnum.CONEXAO.getValue(), CategoriaEnum.OUTRO.getValue(),
+//                "Corredor", "55555", "55", "55", "descrição"));
+//
+//        this.addDestino(new DestinoModel(13, 1, TipoDestinoEnum.CONEXAO.getValue(), CategoriaEnum.OUTRO.getValue(),
+//                "Corredor", "66666", "66", "66", "descrição"));
 
         /*
         //Disp branco
@@ -110,7 +113,7 @@ public class DestinoDataModel {
     }
 
     public String getCreateScript(){
-        String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME + "(" + DESTINO_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+        String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME + "(" + DESTINO_ID + " INTEGER PRIMARY KEY, " +
                 DESTINO_NOME + " TEXT, " + DESTINO_DESCRICAO + " TEXT, " + DESTINO_IdPredio + " INT, " +
                 DESTINO_UniqueId + " TEXT, " + DESTINO_MajorId + " TEXT, " + DESTINO_MinorId + " TEXT, " +
                 DESTINO_IdTipoDestino + " INT, " + DESTINO_IdCategoria + " INT)";
@@ -121,7 +124,7 @@ public class DestinoDataModel {
     public void addDestino(DestinoModel model){
         final ContentValues values = new ContentValues();
 
-        //values.put(DESTINO_ID, model.getIdDestino());
+        values.put(DESTINO_ID, model.getIdDestino());
         values.put(DESTINO_NOME, model.getNome());
         values.put(DESTINO_DESCRICAO, model.getDescricao());
         values.put(DESTINO_IdPredio, model.getIdPredio());

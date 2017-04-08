@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import borba.com.br.blindbeacon.datamodels.CategoriaDataModel;
 import borba.com.br.blindbeacon.datamodels.DestinoDataModel;
 import borba.com.br.blindbeacon.datamodels.PredioDataModel;
-import borba.com.br.blindbeacon.datamodels.RelacionaentoBeaconsDataModel;
+import borba.com.br.blindbeacon.datamodels.RotaDataModel;
 import borba.com.br.blindbeacon.datamodels.TipoDestinoDataModel;
 import borba.com.br.blindbeacon.models.CategoriaModel;
 import borba.com.br.blindbeacon.models.DestinoModel;
@@ -34,14 +34,14 @@ public class DataBaseHandler extends SQLiteOpenHelper {
 
     // Declaracao do banco de dados
     private static final String BLINDBEACON_DATABASE_NAME = "BLINDBEACON_DATABASE";
-    private static final int BLINDBEACON_DATABASE_VERSION = 7;
+    private static final int BLINDBEACON_DATABASE_VERSION = 8;
 
     //DataModels
     private TipoDestinoDataModel _tipoDestinoDataModel;
     private CategoriaDataModel _categoriaDataModel;
     private PredioDataModel _predioDataModel;
     private DestinoDataModel _destinoDataModel;
-    private RelacionaentoBeaconsDataModel _relacionaentoBeaconsDataModel;
+    private RotaDataModel _rotaDataModel;
 
     // Criando tabelas
     @Override
@@ -63,8 +63,8 @@ public class DataBaseHandler extends SQLiteOpenHelper {
         String DestinoScript = _destinoDataModel.getCreateScript();
         db.execSQL(DestinoScript);
 
-        String RelacionamentoBeaconScript = _relacionaentoBeaconsDataModel.getCreateScript();
-        db.execSQL(RelacionamentoBeaconScript);
+        String RotaScript = _rotaDataModel.getCreateScript();
+        db.execSQL(RotaScript);
 
         Log.v("Database", "onCreate Finish.");
         Log.v("Database", "Base criada com sucesso!");
@@ -78,7 +78,7 @@ public class DataBaseHandler extends SQLiteOpenHelper {
 
         InitializeInstancesDataModels();
 
-        db.execSQL("DROP TABLE IF EXISTS " + _relacionaentoBeaconsDataModel.TABLE_NAME);
+        db.execSQL("DROP TABLE IF EXISTS " + _rotaDataModel.TABLE_NAME);
         db.execSQL("DROP TABLE IF EXISTS " + _destinoDataModel.TABLE_NAME);
         db.execSQL("DROP TABLE IF EXISTS " + _tipoDestinoDataModel.TABLE_NAME);
         db.execSQL("DROP TABLE IF EXISTS " + _categoriaDataModel.TABLE_NAME);
@@ -99,7 +99,7 @@ public class DataBaseHandler extends SQLiteOpenHelper {
         this._categoriaDataModel.LoadWithFakeData();
         this._predioDataModel.LoadWithFakeData();
         this._destinoDataModel.LoadWithFakeData();
-        this._relacionaentoBeaconsDataModel.LoadWithFakeData();
+        this._rotaDataModel.LoadWithFakeData();
 
         Log.v("Database", "onLoadWithFakeData Finish.");
     }
@@ -158,7 +158,7 @@ public class DataBaseHandler extends SQLiteOpenHelper {
         this._categoriaDataModel = new CategoriaDataModel(this.context);
         this._predioDataModel = new PredioDataModel(this.context);
         this._destinoDataModel = new DestinoDataModel(this.context);
-        this._relacionaentoBeaconsDataModel = new RelacionaentoBeaconsDataModel(this.context);
+        this._rotaDataModel = new RotaDataModel(this.context);
 
         _dataModelsInitialized = true;
     }
