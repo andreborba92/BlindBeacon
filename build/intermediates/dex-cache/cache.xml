@@ -21,21 +21,21 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\andre\Documents\Projetos\Meu GitHub\App Blind Beacon\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="51f63f22b2aaa265e7bf2fb5d463e2ca8b1230bc">
+        <dex dex="C:\Users\andre\Documents\Projetos\Meu GitHub\App Blind Beacon\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_cc83f66b72719a1846046ae4c78edc75c6f6ef29\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\andre\Documents\Projetos\Meu GitHub\App Blind Beacon\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
         sha1="23be6993826b8fd88bbc8d14928bb3b8960d3d4e">
         <dex dex="C:\Users\andre\Documents\Projetos\Meu GitHub\App Blind Beacon\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-23.3.0_33e02b08a2f6f6ea5834c4e3f3e3df535a15048b\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\andre\Documents\Projetos\Meu GitHub\App Blind Beacon\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="490437b3aa0d00e0e3fdea2f3a2cb01ff460c9d3">
-        <dex dex="C:\Users\andre\Documents\Projetos\Meu GitHub\App Blind Beacon\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_cc83f66b72719a1846046ae4c78edc75c6f6ef29\classes.dex" />
     </item>
     <item
         is-multidex="true"

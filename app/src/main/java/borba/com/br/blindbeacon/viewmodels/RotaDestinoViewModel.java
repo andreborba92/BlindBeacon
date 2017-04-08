@@ -5,6 +5,8 @@ import org.altbeacon.beacon.Beacon;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
+import borba.com.br.blindbeacon.enums.CategoriaEnum;
+import borba.com.br.blindbeacon.enums.TipoDestinoEnum;
 import borba.com.br.blindbeacon.models.DestinoModel;
 import borba.com.br.blindbeacon.models.RotaModel;
 
@@ -61,23 +63,57 @@ public class RotaDestinoViewModel implements Comparable<RotaDestinoViewModel> {
                 if(vm.getRotaModel().getOrdem() <= posicaoOrigem && vm.getRotaModel().getOrdem() >= posicaoDestino)
                     _rotasRetorno.add(vm);
             }
+
+            if(posicaoOrigem == posicaoDestino) {
+                if(vm.getRotaModel().getOrdem() == posicaoDestino)
+                    _rotasRetorno.add(vm);
+            }
         }
 
         Boolean primeiroRegistro = true;
         Double distanciaAcumulada = distanciaPontoOrigem;
+        Double metragemInicial = 0.0;
 
         for(RotaDestinoViewModel vm:_rotasRetorno) {
 
-            if(primeiroRegistro)
+            if(primeiroRegistro) {
+                primeiroRegistro = false;
+
+                metragemInicial = vm.getRotaModel().getMetragem();
                 vm.setDistanciaDoPontoOrigem(distanciaPontoOrigem);
+
+                //No primeiro registro este valor será negativo, pois ele está tirando toda a metragem inicial até o ponto de origem
+                distanciaAcumulada += distanciaPontoOrigem - metragemInicial;
+                continue;
+            }
 
             distanciaAcumulada += vm.getRotaModel().getMetragem();
             vm.setDistanciaDoPontoOrigem(distanciaAcumulada);
 
-            primeiroRegistro = false;
+
+//            if(vm.getDestinoModel().getIdTipoDestino() == TipoDestinoEnum.OBSTACULO.getValue())
+//                vm.setDistanciaDoPontoOrigem(distanciaAcumulada);
+//            else
+
         }
 
         return _rotasRetorno;
+    }
+
+    public static Double getDistanciaTotalEntreOrigemDestino(ArrayList<RotaDestinoViewModel> lista, int origem, int destino,
+                                                             Double distanciaProximoPonto) {
+        RotaDestinoViewModel rotaOrigem = null;
+        RotaDestinoViewModel rotaDestino = null;
+
+        for(RotaDestinoViewModel vm: lista){
+            if(vm.getRotaModel().getOrdem() == origem)
+                rotaOrigem = vm;
+
+            if(vm.getRotaModel().getOrdem() == destino)
+                rotaDestino = vm;
+        }
+
+        return rotaDestino.getRotaModel().getMetragem() - rotaOrigem.getRotaModel().getMetragem() + distanciaProximoPonto;
     }
 
     @Override

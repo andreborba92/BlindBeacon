@@ -35,7 +35,6 @@ import borba.com.br.blindbeacon.viewmodels.RotaDestinoViewModel;
 /**
  * Created by andre on 08/04/2017.
  */
-//ToDo: Rever toda a lógica desta tela....
 //ToDo: Lista interna com os beacons encontrados. Lista "visível" com a ordem dos pontos da rota.
 public class RotaActivity extends Activity implements BeaconConsumer {
 
@@ -43,7 +42,6 @@ public class RotaActivity extends Activity implements BeaconConsumer {
     private Region beaconScanRegion;
     Context ctx;
 
-    //private ListView lvBeaconsLocalizados;
     private ListView lvRotas;
     ArrayList<BeaconDestinoViewModel> MyBeacons;
     ArrayList<RotaDestinoViewModel> MyRotas;
@@ -54,11 +52,11 @@ public class RotaActivity extends Activity implements BeaconConsumer {
     private RotaDataModel rotaDataModel;
 
     private BeaconDestinoViewModel beaconDestinoViewModel;
-    //private RotaDestinoViewModel rotaDestinoViewModel;
     private DecimalFormat df = new DecimalFormat("#.##");
 
     private ArrayList<DestinoModel> listDestinosExistentesNaRota = new ArrayList<>();
 
+    Boolean primeiraTransmissao = true;
     DestinoModel destinoFinal;
 
     @Override
@@ -75,8 +73,8 @@ public class RotaActivity extends Activity implements BeaconConsumer {
         //Apenas do mais próximo através da prop Orientação (F/T)
 
         //Setting tempos de duração dos scans. 8 segundos entre scan
-        beaconManager.setForegroundBetweenScanPeriod(5000L);
-        beaconManager.setForegroundScanPeriod(8000L);
+        beaconManager.setForegroundBetweenScanPeriod(12000L);
+        beaconManager.setForegroundScanPeriod(4000L);
 
         beaconManager.getBeaconParsers().add(new BeaconParser().setBeaconLayout("m:2-3=0215,i:4-19,i:20-21,i:22-23,p:24-24,d:25-25"));
         beaconManager.bind(this);
@@ -96,16 +94,16 @@ public class RotaActivity extends Activity implements BeaconConsumer {
         String serializedDestino = in.getStringExtra("DestinoSelecionado");
 
         Gson myGson = new Gson();
-        DestinoModel destino = myGson.fromJson(serializedDestino, DestinoModel.class);
+        destinoFinal = myGson.fromJson(serializedDestino, DestinoModel.class);
 
-        ArrayList<RotaModel> _rotas = rotaDataModel.getAllByPredioId(destino.getIdPredio());
+        ArrayList<RotaModel> _rotas = rotaDataModel.getAllByPredioId(destinoFinal.getIdPredio());
         Log.w("TAG_FLUXO", "Quantidade de rotas localizados: " + _rotas.size());
 
         for(int i = 0; i < _rotas.size(); i++){
-            destinoFinal = destinoDataModel.getByIdDestino(_rotas.get(i).getIdDestino());
+            DestinoModel _destinoCorrente = destinoDataModel.getByIdDestino(_rotas.get(i).getIdDestino());
 
-            listDestinosExistentesNaRota.add(destinoFinal);
-            MyRotas.add(new RotaDestinoViewModel(_rotas.get(i), destinoFinal));
+            listDestinosExistentesNaRota.add(_destinoCorrente);
+            MyRotas.add(new RotaDestinoViewModel(_rotas.get(i), _destinoCorrente));
         }
 
         Log.w("TAG_FLUXO", "Quantidade de itens na listaDestinos: " + listDestinosExistentesNaRota.size());
@@ -124,7 +122,9 @@ public class RotaActivity extends Activity implements BeaconConsumer {
             @Override
             public void didRangeBeaconsInRegion(Collection<Beacon> beacons, Region region) {
                 MyBeacons = new ArrayList<BeaconDestinoViewModel>();
+                RotasExibicao = new ArrayList<RotaDestinoViewModel>();
 
+                //ToDo: Na primeira leitura, mandar um áudio mais informativo dizendo da distancia do destino final
                 if (beacons.size() > 0) {
 
                     Log.w("TAG_FLUXO", "Quantidade beacons localizados: " + beacons.size());
@@ -139,14 +139,15 @@ public class RotaActivity extends Activity implements BeaconConsumer {
                         beaconDestinoViewModel = new BeaconDestinoViewModel(beaconLocalizado, vm);
 
                         //O código abaixo evita que adicione duas vezes o mesmo beacon na coleção
-                        int indexOF = VerificaBeaconExistente(MyBeacons, beaconDestinoViewModel);
-
-                        if (indexOF == -1) {
-                            MyBeacons.add(beaconDestinoViewModel);
-                        } else {
-                            MyBeacons.remove(indexOF);
-                            MyBeacons.add(beaconDestinoViewModel);
-                        }
+//                        int indexOF = VerificaBeaconExistente(MyBeacons, beaconDestinoViewModel);
+//
+//                        if (indexOF == -1) {
+//                            MyBeacons.add(beaconDestinoViewModel);
+//                        } else {
+//                            MyBeacons.remove(indexOF);
+//                            MyBeacons.add(beaconDestinoViewModel);
+//                        }
+                        MyBeacons.add(beaconDestinoViewModel);
                     }
 
                     Collections.sort(MyBeacons, new BeaconDestinoComparator());
@@ -180,88 +181,13 @@ public class RotaActivity extends Activity implements BeaconConsumer {
                         }
                     });
 
-                    RotaDestinoViewModel proximoPonto = RotasExibicao.size() > 1 ? RotasExibicao.get(1) : null;
-                    String nomeProxDestino = proximoPonto == null ? "" : proximoPonto.getDestinoModel().getNome();
-                    String distanciaProxDestino = proximoPonto == null ? "" : " em " + proximoPonto.getDistanciaFormatada();
-
-                    //Orientação frente
-                    if(posicaoPontoAtual < posicaoDestinoFinal){
-                        String textoLocal = "Você está perto do ponto: " + beaconMaisProximo.getDestinoModel().getNome() + ". ";
-
-                        String orientacao = RotasExibicao.get(0).getRotaModel().getOrientacaoFrente().replace("{NOME}",
-                                nomeProxDestino + distanciaProxDestino);
-
-                        Log.w("TAG_FLUXO", textoLocal + orientacao);
-                        TTSManager.Speak(textoLocal + orientacao);
-                    }
-                    else{
-                        String textoLocal = "Você está perto do ponto: " + beaconMaisProximo.getDestinoModel().getNome() + ". ";
-
-                        String orientacao = RotasExibicao.get(0).getRotaModel().getOrientacaoTras().replace("{NOME}",
-                                nomeProxDestino + distanciaProxDestino);
-
-                        Log.w("TAG_FLUXO", textoLocal + orientacao);
-                        TTSManager.Speak(textoLocal + orientacao);
-                    }
-
-                    //ToDo: Reproduzir TTS com o destino mais próximo e orientações (F/T)
-                    // Enviar para o adapter a distancia do ponto inicial pra somar com a do final
-
-                    /*
-                    for(Beacon beaconLocalizado:beacons){
-
-                        Log.w("TAG_BEACON_ADD", "Beacon pulse localizado: " + String.valueOf(beaconLocalizado.getId1()) +
-                                "; Minor: " + String.valueOf(beaconLocalizado.getId3()) +
-                                " Distancia: " + beaconLocalizado.getDistance());
-
-                 !!       DestinoModel vm = destinoDataModel.getByBeacon(listDestinosExistentesNaRota, String.valueOf(beaconLocalizado.getId1()),
-                                String.valueOf(beaconLocalizado.getId2()), String.valueOf(beaconLocalizado.getId3()));
-
-                        if(vm == null)
-                            continue;
-
-                        Log.w("TAG_BEACON_ADD", "Destino: " + vm.getNome());
-
-                 !!       if(vm.getIdTipoDestino() == TipoDestinoEnum.OBSTACULO.getValue()){
-                            Log.w("TAG_BEACON_ADD", "Obstáculo localizado: " + vm.getNome() +
-                                    "Distancia: " + beaconLocalizado.getDistance());
-
-                            String distanciaFormatada = df.format(beaconLocalizado.getDistance()) + " metros";
-
-                            //ToDo: Melhorar forma de reproduzir audio para nao ser uma metralhadora de notificações
-                            //                        TTSManager.Speak("Obstáculo localizado, " + vm.getNome() + " a " + distanciaFormatada +
-                            //                        " de distância.");
-                            continue;
-                        }
-
-                        //Inserção de info para identificação
-                 !!       beaconDestinoViewModel = new BeaconDestinoViewModel(beaconLocalizado, vm);
-
-                        int indexOF = VerificaBeaconExistente(MyBeacons, beaconDestinoViewModel);
-
-                        if (indexOF == -1) {
-                            MyBeacons.add(beaconDestinoViewModel);
-                        } else {
-                            MyBeacons.remove(indexOF);
-                            MyBeacons.add(beaconDestinoViewModel);
-                        }
-
-                    }
-
-                    Collections.sort(MyBeacons, new BeaconDestinoComparator());
-
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            lvRotas.setAdapter(new RotaAdapter(ctx, R.layout.list_item_rota, RotasExibicao));
-                        }
-                    });
-                    */
+                    //Executa a transmissão do áudio
+                    TransmissaoAudio(posicaoPontoAtual, posicaoDestinoFinal);
 
                 }
                 else{
                     //ToDo: Avisar que não localizou pontos... andar um pouco
-                    TTSManager.Speak("Não foi possível determinar sua localização, favor caminhe mais um pouco");
+                    TTSManager.Speak("Não foi possível determinar sua localização, favor caminhar mais um pouco");
                 }
 
             }
@@ -284,6 +210,76 @@ public class RotaActivity extends Activity implements BeaconConsumer {
     @Override
     public void onStop() {
         super.onStop();
+
+    }
+
+    private void TransmissaoAudio(int posicaoPontoAtual, int posicaoDestinoFinal){
+
+        RotaDestinoViewModel proximoPonto = RotasExibicao.size() > 1 ? RotasExibicao.get(1) : null;
+        String nomeProxDestino = proximoPonto == null ? "" : proximoPonto.getDestinoModel().getNome();
+        String distanciaProxDestino = proximoPonto == null ? "" : " em " + proximoPonto.getDistanciaFormatada();
+
+        if(primeiraTransmissao){
+            primeiraTransmissao = false;
+            Double distanciaEntreOrigemDestino = RotaDestinoViewModel.getDistanciaTotalEntreOrigemDestino(RotasExibicao,
+                    posicaoPontoAtual, posicaoDestinoFinal, beaconMaisProximo.getBeacon().getDistance());
+            String texto = "O destino selecionado foi: " + destinoFinal.getNome() + ". Você está a aproximadamente " +
+                    df.format(distanciaEntreOrigemDestino) + " metros de distância. Continue andando que irei te guiar até chegar lá";
+
+            TTSManager.Speak(texto);
+            return;
+        }
+
+
+        if(beaconMaisProximo.getDestinoModel().getIdTipoDestino() == TipoDestinoEnum.OBSTACULO.getValue()){
+            //Avisa usuário de obstáculo próximo
+
+            String texto = "Cuidado, tem um obstáculo próximo de você. " + beaconMaisProximo.getDestinoModel().getNome() +
+                    " em " + df.format(beaconMaisProximo.getBeacon().getDistance()) + " metros. ";
+            texto += "Após o obstáculo, você passará pelo local: " + nomeProxDestino + distanciaProxDestino;
+
+            TTSManager.Speak(texto);
+            return;
+        }
+
+        if(beaconMaisProximo.getDestinoModel().getIdDestino() == destinoFinal.getIdDestino()){
+            String textoChegouDestino;
+
+            if(beaconMaisProximo.getBeacon().getDistance() <= 2.0) {
+                textoChegouDestino = "Você chegou ao seu destino. " + destinoFinal.getNome();
+                //beaconManager.stopRangingBeaconsInRegion(beaconScanRegion);
+            }
+            else{
+                textoChegouDestino = "Você está próximo do seu destino. " + destinoFinal.getNome() + " em " +
+                        df.format(beaconMaisProximo.getBeacon().getDistance()) + " metros";
+            }
+
+            TTSManager.Speak(textoChegouDestino);
+            return;
+        }
+
+        if(RotasExibicao.get(0) == null)
+            return;
+
+        //Orientação frente
+        if(posicaoPontoAtual < posicaoDestinoFinal){
+            String textoLocal = "Você está perto do local: " + beaconMaisProximo.getDestinoModel().getNome() + ". ";
+
+            String orientacao = RotasExibicao.get(0).getRotaModel().getOrientacaoFrente().replace("{NOME}",
+                    nomeProxDestino + distanciaProxDestino);
+
+            Log.w("TAG_FLUXO", textoLocal + orientacao);
+            TTSManager.Speak(textoLocal + orientacao);
+        }
+        else{
+            String textoLocal = "Você está perto do local: " + beaconMaisProximo.getDestinoModel().getNome() + ". ";
+
+            String orientacao = RotasExibicao.get(0).getRotaModel().getOrientacaoTras().replace("{NOME}",
+                    nomeProxDestino + distanciaProxDestino);
+
+            Log.w("TAG_FLUXO", textoLocal + orientacao);
+            TTSManager.Speak(textoLocal + orientacao);
+        }
 
     }
 

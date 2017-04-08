@@ -26,21 +26,36 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="borba.com.br.blindbeacon.MainActivity" >
+        <activity
+            android:name="borba.com.br.blindbeacon.MainActivity"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="borba.com.br.blindbeacon.BeaconFinderActivity" />
-        <activity android:name="borba.com.br.blindbeacon.SelecionarPredioActivity" />
-        <activity android:name="borba.com.br.blindbeacon.AjudaActivity" />
-        <activity android:name="borba.com.br.blindbeacon.SelecionarDestinoActivity" />
-        <activity android:name="borba.com.br.blindbeacon.DetalhesDestinoActivity" />
-        <activity android:name="borba.com.br.blindbeacon.RotaActivity" />
+        <activity
+            android:name="borba.com.br.blindbeacon.BeaconFinderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="borba.com.br.blindbeacon.SelecionarPredioActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="borba.com.br.blindbeacon.AjudaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="borba.com.br.blindbeacon.SelecionarDestinoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="borba.com.br.blindbeacon.DetalhesDestinoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="borba.com.br.blindbeacon.RotaActivity"
+            android:screenOrientation="portrait" />
 
         <!--
      ATTENTION: This was auto-generated to add Google Play services to your project for
