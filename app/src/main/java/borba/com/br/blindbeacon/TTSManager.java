@@ -46,7 +46,7 @@ public class TTSManager {
     public static void Pause(){
         if(_tts !=null){
             _tts.stop();
-            _tts.shutdown();
+            //_tts.shutdown();
         }
     }
 }

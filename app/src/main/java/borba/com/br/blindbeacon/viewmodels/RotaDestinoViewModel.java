@@ -18,8 +18,7 @@ public class RotaDestinoViewModel implements Comparable<RotaDestinoViewModel> {
     private RotaModel _rotaModel;
     private DestinoModel _destinoModel;
     private Double _distanciaDoPontoOrigem;
-    //ToDo: Ver se terá uma prop para a metragem "origem" para este ponto da rota
-
+    
     public RotaDestinoViewModel(RotaModel rota, DestinoModel destino){
         this._rotaModel = rota;
         this._destinoModel = destino;

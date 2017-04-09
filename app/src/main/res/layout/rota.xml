@@ -3,15 +3,11 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:text="CARREGANDO"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:fontFamily="sans-serif"
-        android:paddingBottom="3dp"
-        android:textAllCaps="true"
-        android:textSize="15sp"/>
+    <WebView
+        android:layout_width="135dp"
+        android:layout_height="140dp"
+        android:id="@+id/webViewGif"
+        android:layout_gravity="center_horizontal" />
 
     <ListView
         android:layout_width="wrap_content"

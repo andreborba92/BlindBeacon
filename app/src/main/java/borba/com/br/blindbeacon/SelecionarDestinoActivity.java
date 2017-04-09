@@ -50,9 +50,7 @@ public class SelecionarDestinoActivity extends Activity {
         DestinoDataModel dataModel = new DestinoDataModel(this);
         listaDestinos = dataModel.getAll_ApenasDestinos(predioSelecionado.getId());
 
-        //ToDo: Do banco de dados virão destinos da categoria obstáculo. Eles não devem ser exibidos,
-        // apenas notificados quando estão próximos.
-        //ToDo: No momento da rota, ter uma lista dos destinos "exibíveis" e dos para controle interno
+        NotificacaoTTsDestino(listaDestinos);
 
         lvDestinos.setAdapter(new DestinoAdapter(ctx, R.layout.list_item_destino, listaDestinos));
 
@@ -71,7 +69,7 @@ public class SelecionarDestinoActivity extends Activity {
 
                 String textoTTS = "Você selecionou o destino: " + itemValue.getNome() + ". Este destino é da categoria: " +
                         CategoriaEnum.getCategoriaById(itemValue.getIdCategoria()).toString() +
-                        ". A distância até o destino é de: " + itemValue.getDistanciaAproximada() + " metros";
+                        ". Pressione para selecionar este destino.";
 
                 TTSManager.Speak(textoTTS);
             }
@@ -82,6 +80,8 @@ public class SelecionarDestinoActivity extends Activity {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view,
                                            int position, long id) {
+
+                TTSManager.Pause();
 
                 // ListView Clicked item index
                 int itemPosition = position;
@@ -102,6 +102,17 @@ public class SelecionarDestinoActivity extends Activity {
                 return true;
             }
         });
+    }
+
+    private void NotificacaoTTsDestino(ArrayList<DestinoModel> listaDestinos){
+        String textoTTS = "Foram localizados os seguintes destinos: ";
+
+        for(DestinoModel vm: listaDestinos){
+            textoTTS += "Destino: " + vm.getNome() + ", Categoria: " +
+                    CategoriaEnum.getCategoriaById(vm.getIdCategoria()).toString() + ". ";
+        }
+
+        TTSManager.Speak(textoTTS);
     }
 
     @Override

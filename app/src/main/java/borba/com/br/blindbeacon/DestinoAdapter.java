@@ -45,23 +45,21 @@ public class DestinoAdapter extends ArrayAdapter<DestinoModel> {
 
             itemHolder.nome = (TextView) rowView.findViewById(R.id.tvNomeDestino);
             itemHolder.categoria = (TextView) rowView.findViewById(R.id.tvCategoriaDestino);
-            itemHolder.distancia = (TextView) rowView.findViewById(R.id.tvDistanciaDestino);
 
             rowView.setTag(itemHolder);
         } else {
             itemHolder = (ItemHolder) rowView.getTag();
         }
-//
+
         itemHolder.nome.setText(String.valueOf(meusDestinos.get(position).getNome()));
         itemHolder.categoria.setText(String.valueOf(CategoriaEnum.getCategoriaById(meusDestinos.get(position).getIdCategoria()).toString()));
-        itemHolder.distancia.setText(String.valueOf(meusDestinos.get(position).getDistanciaAproximada()) + " m");
 
         return rowView;
     }
 
 
     private static class ItemHolder {
-        TextView nome, categoria, distancia;
+        TextView nome, categoria;
     }
 }
 

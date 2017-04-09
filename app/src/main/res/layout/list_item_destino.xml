@@ -50,18 +50,5 @@
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/tvDistanciaDestino"
-        android:text="tvDistanciaDestino"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center_vertical"
-        android:fontFamily="sans-serif"
-        android:paddingBottom="3dp"
-        android:textAllCaps="true"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        android:layout_weight="3"/>
-
 
 </LinearLayout>

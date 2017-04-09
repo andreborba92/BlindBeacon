@@ -4,9 +4,12 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.RemoteException;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.ListView;
 
 import com.google.gson.Gson;
@@ -35,7 +38,7 @@ import borba.com.br.blindbeacon.viewmodels.RotaDestinoViewModel;
 /**
  * Created by andre on 08/04/2017.
  */
-//ToDo: Lista interna com os beacons encontrados. Lista "visível" com a ordem dos pontos da rota.
+
 public class RotaActivity extends Activity implements BeaconConsumer {
 
     private BeaconManager beaconManager;
@@ -43,6 +46,8 @@ public class RotaActivity extends Activity implements BeaconConsumer {
     Context ctx;
 
     private ListView lvRotas;
+    private WebView wView;
+
     ArrayList<BeaconDestinoViewModel> MyBeacons;
     ArrayList<RotaDestinoViewModel> MyRotas;
     ArrayList<RotaDestinoViewModel> RotasExibicao;
@@ -69,9 +74,6 @@ public class RotaActivity extends Activity implements BeaconConsumer {
 
         beaconManager = BeaconManager.getInstanceForApplication(this);
 
-        //ToDo: Notificar via áudio a mudança de distância a cada X pulsos ou a cada X distancia alterada.
-        //Apenas do mais próximo através da prop Orientação (F/T)
-
         //Setting tempos de duração dos scans. 8 segundos entre scan
         beaconManager.setForegroundBetweenScanPeriod(12000L);
         beaconManager.setForegroundScanPeriod(4000L);
@@ -81,8 +83,12 @@ public class RotaActivity extends Activity implements BeaconConsumer {
         ctx = this;
 
         lvRotas = (ListView)findViewById(R.id.lvPontosRota);
+        wView = (WebView) this.findViewById(R.id.webViewGif);
+        wView.loadUrl("file:///android_asset/bluetooth.gif");
+
         MyBeacons = new ArrayList<>();
         MyRotas = new ArrayList<>();
+
         beaconScanRegion = new Region("myRangingUniqueIdaa", null, null, null);
 
         CarregarListaRotas();
@@ -97,7 +103,7 @@ public class RotaActivity extends Activity implements BeaconConsumer {
         destinoFinal = myGson.fromJson(serializedDestino, DestinoModel.class);
 
         ArrayList<RotaModel> _rotas = rotaDataModel.getAllByPredioId(destinoFinal.getIdPredio());
-        Log.w("TAG_FLUXO", "Quantidade de rotas localizados: " + _rotas.size());
+        //Log.w("TAG_FLUXO", "Quantidade de rotas localizados: " + _rotas.size());
 
         for(int i = 0; i < _rotas.size(); i++){
             DestinoModel _destinoCorrente = destinoDataModel.getByIdDestino(_rotas.get(i).getIdDestino());
@@ -106,7 +112,7 @@ public class RotaActivity extends Activity implements BeaconConsumer {
             MyRotas.add(new RotaDestinoViewModel(_rotas.get(i), _destinoCorrente));
         }
 
-        Log.w("TAG_FLUXO", "Quantidade de itens na listaDestinos: " + listDestinosExistentesNaRota.size());
+        //Log.w("TAG_FLUXO", "Quantidade de itens na listaDestinos: " + listDestinosExistentesNaRota.size());
     }
 
     @Override
@@ -117,6 +123,7 @@ public class RotaActivity extends Activity implements BeaconConsumer {
 
     @Override
     public void onBeaconServiceConnect() {
+
         beaconManager.setRangeNotifier(new RangeNotifier() {
 
             @Override
@@ -124,10 +131,12 @@ public class RotaActivity extends Activity implements BeaconConsumer {
                 MyBeacons = new ArrayList<BeaconDestinoViewModel>();
                 RotasExibicao = new ArrayList<RotaDestinoViewModel>();
 
-                //ToDo: Na primeira leitura, mandar um áudio mais informativo dizendo da distancia do destino final
+                Log.w("TAG_FLUXO", "onBeaconServiceConnect. QTD Localizados: " + beacons.size());
+
                 if (beacons.size() > 0) {
 
-                    Log.w("TAG_FLUXO", "Quantidade beacons localizados: " + beacons.size());
+                    ManipularVisibilidadeGIF(false);
+                    //Log.w("TAG_FLUXO", "Quantidade beacons localizados: " + beacons.size());
 
                     for(Beacon beaconLocalizado:beacons) {
                         DestinoModel vm = destinoDataModel.getByBeacon(listDestinosExistentesNaRota, String.valueOf(beaconLocalizado.getId1()),
@@ -176,8 +185,7 @@ public class RotaActivity extends Activity implements BeaconConsumer {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                        Log.w("TAG_FLUXO","Status do lvRotas: " + lvRotas);
-                        lvRotas.setAdapter(new RotaAdapter(ctx, R.layout.list_item_rota, RotasExibicao));
+                            lvRotas.setAdapter(new RotaAdapter(ctx, R.layout.list_item_rota, RotasExibicao));
                         }
                     });
 
@@ -186,31 +194,40 @@ public class RotaActivity extends Activity implements BeaconConsumer {
 
                 }
                 else{
-                    //ToDo: Avisar que não localizou pontos... andar um pouco
+                    Log.w("TAG_FLUXO", "Nao localizou nada. Audio");
+
+                    ManipularVisibilidadeGIF(true);
                     TTSManager.Speak("Não foi possível determinar sua localização, favor caminhar mais um pouco");
                 }
-
             }
-
         });
 
-        try {
-            beaconManager.startRangingBeaconsInRegion(beaconScanRegion);
-
-
-        } catch (RemoteException e) {    }
+        //Inicia requisições
+        StartScan();
     }
 
     @Override
     public void onStart() {
         super.onStart();
-
     }
 
     @Override
     public void onStop() {
         super.onStop();
+    }
 
+    public void StartScan(){
+        try {
+            Log.w("TAG_FLUXO", "Start Scan");
+            beaconManager.startRangingBeaconsInRegion(beaconScanRegion);
+        } catch (RemoteException e) {  Log.w("TAG_FLUXO", "EXCEPTION Start Scan");  }
+    }
+
+    public void StopScan(){
+        try {
+            Log.w("TAG_FLUXO", "Stop Scan");
+            beaconManager.stopRangingBeaconsInRegion(beaconScanRegion);
+        } catch (RemoteException e) {  Log.w("TAG_FLUXO", "EXCEPTION Stop Scan");   }
     }
 
     private void TransmissaoAudio(int posicaoPontoAtual, int posicaoDestinoFinal){
@@ -283,12 +300,6 @@ public class RotaActivity extends Activity implements BeaconConsumer {
 
     }
 
-//    public void onClickPararScan(View v) throws RemoteException {
-//        beaconManager.stopRangingBeaconsInRegion(beaconScanRegion);
-//
-//    }
-
-
     //Verificação dentro da listagem de beacons, se um único item existe
     private int VerificaBeaconExistente(ArrayList<BeaconDestinoViewModel> list, BeaconDestinoViewModel object) {
         int s = list.size() -1;
@@ -304,5 +315,27 @@ public class RotaActivity extends Activity implements BeaconConsumer {
         }
 
         return -1;
+    }
+
+    private void ManipularVisibilidadeGIF(Boolean exibir){
+
+        final Boolean _exibir = exibir;
+
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                if(_exibir){
+                    wView.setVisibility(View.VISIBLE);
+                    lvRotas.setVisibility(View.INVISIBLE);
+                }
+                else{
+                    wView.setVisibility(View.INVISIBLE);
+                    lvRotas.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+
+
     }
 }

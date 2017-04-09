@@ -28,7 +28,6 @@ public class MainActivity extends Activity {
 
     Context ctx;
     public DataBaseHandler dbHandler;
-    WebView wView;
     Boolean exibir = true;
 
     @Override
@@ -102,8 +101,6 @@ public class MainActivity extends Activity {
                     }
                 }, 2000);
             }
-
-        TesteGIF();
      }
 
     @Override
@@ -112,17 +109,8 @@ public class MainActivity extends Activity {
     }
 
     public void onClickBeaconFinder(View v){
-//        Intent in = new Intent(this, BeaconFinderActivity.class);
-//        startActivity(in);
-        //ToDo: Remover. Teste de hide
-        if(exibir){
-            exibir = false;
-            wView.setVisibility(View.INVISIBLE);
-        }
-        else{
-            exibir = true;
-            wView.setVisibility(View.VISIBLE);
-        }
+        Intent in = new Intent(this, BeaconFinderActivity.class);
+        startActivity(in);
     }
 
     public void onClickSelecionarPredio(View v){
@@ -135,10 +123,10 @@ public class MainActivity extends Activity {
         startActivity(in);
     }
 
-    private void TesteGIF(){
-
-        wView = (WebView) this.findViewById(R.id.webView);
-        wView.loadUrl("file:///android_asset/bluetooth.gif");
-        //setContentView(wView);
-    }
+//    private void TesteGIF(){
+//
+//        wView = (WebView) this.findViewById(R.id.webView);
+//        wView.loadUrl("file:///android_asset/bluetooth.gif");
+//        //setContentView(wView);
+//    }
 }

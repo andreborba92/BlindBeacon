@@ -42,6 +42,8 @@ public class SelecionarPredioActivity extends Activity {
         PredioDataModel dataModel = new PredioDataModel(this);
         listPredios = dataModel.getAll();
 
+        NotificacaoTTsPredio(listPredios);
+
         lvPredios.setAdapter(new PredioAdapter(ctx, R.layout.list_item_predio, listPredios));
 
         // ListView Item Click Listener
@@ -57,7 +59,8 @@ public class SelecionarPredioActivity extends Activity {
                 // ListView Clicked item value
                 PredioModel itemValue = (PredioModel) lvPredios.getItemAtPosition(position);
 
-                TTSManager.Speak("Você clicou em: " + itemValue.getNome());
+                TTSManager.Speak("Você clicou em: " + itemValue.getNome() +
+                        ". Pressione para selecionar este prédio.");
             }
 
         });
@@ -66,6 +69,8 @@ public class SelecionarPredioActivity extends Activity {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view,
                                            int position, long id) {
+
+                TTSManager.Pause();
 
                 // ListView Clicked item index
                 int itemPosition = position;
@@ -83,6 +88,15 @@ public class SelecionarPredioActivity extends Activity {
                 return true;
             }
         });
+    }
 
+    private void NotificacaoTTsPredio(ArrayList<PredioModel> listaPredios){
+        String textoTTS = "Foram localizados os seguintes prédios: ";
+
+        for(PredioModel vm: listaPredios){
+            textoTTS += "Prédio: " + vm.getNome() + ". ";
+        }
+
+        TTSManager.Speak(textoTTS);
     }
 }

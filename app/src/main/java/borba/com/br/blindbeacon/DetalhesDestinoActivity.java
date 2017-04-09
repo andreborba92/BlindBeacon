@@ -29,7 +29,7 @@ public class DetalhesDestinoActivity extends Activity {
     private DestinoModel destino;
     private PredioModel predio;
     Context ctx;
-    TextView tvnomeDestino, tvnomePredio, tvcategoriaDestino, tvdescricaoDestino, tvdistanciaDestino;
+    TextView tvnomeDestino, tvnomePredio, tvcategoriaDestino, tvdescricaoDestino;
     Button btnNavegar;
 
     @Override
@@ -52,7 +52,7 @@ public class DetalhesDestinoActivity extends Activity {
         tvnomePredio = (TextView) this.findViewById(R.id.tvNomePredio);
         tvcategoriaDestino = (TextView) this.findViewById(R.id.tvCategoriaDestino);
         //tvdescricaoDestino = (TextView) this.findViewById(R.id.tvDescricaoDestino);
-        tvdistanciaDestino = (TextView) this.findViewById(R.id.tvDistanciaDestino);
+        //tvdistanciaDestino = (TextView) this.findViewById(R.id.tvDistanciaDestino);
 
         btnNavegar = (Button) this.findViewById(R.id.buttonNavegarDestino);
 
@@ -61,9 +61,10 @@ public class DetalhesDestinoActivity extends Activity {
         tvnomePredio.setText(predio.getNome());
         tvcategoriaDestino.setText(CategoriaEnum.getCategoriaById(destino.getIdCategoria()).toString());
         //tvdescricaoDestino.setText(destino.getDescricao());
-        tvdistanciaDestino.setText(String.valueOf(destino.getDistanciaAproximada()) + " m");
+        //tvdistanciaDestino.setText(String.valueOf(destino.getDistanciaAproximada()) + " m");
 
         CarregarEventoClick();
+        NotificacaoTTsDestino(destino);
     }
 
     @Override
@@ -83,6 +84,8 @@ public class DetalhesDestinoActivity extends Activity {
         btnNavegar.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
+                TTSManager.Pause();
+
                 Gson myGson = new Gson();
 
                 Intent in = new Intent(ctx, RotaActivity.class);
@@ -92,6 +95,12 @@ public class DetalhesDestinoActivity extends Activity {
                 return true;
             }
         });
+    }
 
+    private void NotificacaoTTsDestino(DestinoModel destinoSelecionado){
+        String textoTTS = "O destino selecionado foi: " + destinoSelecionado.getNome() +
+                ". Pressione o botão navegar para iniciar a navegação.";
+
+        TTSManager.Speak(textoTTS);
     }
 }

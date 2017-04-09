@@ -54,7 +54,7 @@ public class BeaconFinderActivity extends Activity implements BeaconConsumer {
         // To detect proprietary beacons, you must add a line like below corresponding to your beacon
         // type.  Do a web search for "setBeaconLayout" to get the proper expression.
 
-        //ToDo: Notificar via áudio a mudança de distância a cada X pulsos ou a cada X distancia alterada
+        //TosDos: Notificar via áudio a mudança de distância a cada X pulsos ou a cada X distancia alterada
         //Setting tempos de duração dos scans. 2 segundos entre scan
         beaconManager.setForegroundBetweenScanPeriod(1000L);
         beaconManager.setForegroundScanPeriod(4000L);
@@ -108,7 +108,7 @@ public class BeaconFinderActivity extends Activity implements BeaconConsumer {
 
                             String distanciaFormatada = df.format(beaconLocalizado.getDistance()) + " metros";
 
-                            //ToDo: Melhorar forma de reproduzir audio para nao ser uma metralhadora de notificações
+                            //TosDos: Melhorar forma de reproduzir audio para nao ser uma metralhadora de notificações
     //                        TTSManager.Speak("Obstáculo localizado, " + vm.getNome() + " a " + distanciaFormatada +
     //                        " de distância.");
                             continue;

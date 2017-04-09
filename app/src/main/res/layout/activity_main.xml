@@ -35,11 +35,4 @@
         android:text="Tela Beacon Finder"
         android:onClick="onClickBeaconFinder"/>
 
-
-    <WebView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:id="@+id/webView"
-        android:layout_gravity="center_horizontal" />
-
 </LinearLayout>
