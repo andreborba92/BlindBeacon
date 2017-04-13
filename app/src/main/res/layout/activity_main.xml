@@ -17,7 +17,7 @@
         android:layout_height="100dp"
         android:layout_marginBottom="20dp"
         android:id="@+id/buttonSelecionarPredio"
-        android:text="Selecione o Prédio"
+        android:text="Selecione o Setor"
         android:onClick="onClickSelecionarPredio"/>
 
     <Button
@@ -25,14 +25,12 @@
         android:layout_height="100dp"
         android:layout_marginBottom="20dp"
         android:id="@+id/buttonAjuda"
-        android:text="Ajuda"
-        android:onClick="onClickBtnAjuda"/>
+        android:text="Ajuda"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:id="@+id/buttonBeaconFinder"
-        android:text="Tela Beacon Finder"
-        android:onClick="onClickBeaconFinder"/>
+        android:id="@+id/buttonOuvirNovamente"
+        android:text="Ouvir Novamente"/>
 
 </LinearLayout>

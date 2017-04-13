@@ -60,7 +60,7 @@ public class SelecionarPredioActivity extends Activity {
                 PredioModel itemValue = (PredioModel) lvPredios.getItemAtPosition(position);
 
                 TTSManager.Speak("Você clicou em: " + itemValue.getNome() +
-                        ". Pressione para selecionar este prédio.");
+                        ". Pressione para selecionar este setor.");
             }
 
         });
@@ -91,10 +91,10 @@ public class SelecionarPredioActivity extends Activity {
     }
 
     private void NotificacaoTTsPredio(ArrayList<PredioModel> listaPredios){
-        String textoTTS = "Foram localizados os seguintes prédios: ";
+        String textoTTS = "Foram localizados os seguintes setores: ";
 
         for(PredioModel vm: listaPredios){
-            textoTTS += "Prédio: " + vm.getNome() + ". ";
+            textoTTS += "Setor: " + vm.getNome() + ". ";
         }
 
         TTSManager.Speak(textoTTS);

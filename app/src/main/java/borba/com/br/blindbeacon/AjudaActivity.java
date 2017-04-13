@@ -36,10 +36,9 @@ public class AjudaActivity extends Activity {
         this.btnAjudaNavegacao = (Button) findViewById(R.id.btnAjudaNavegacao);
         this.btnAjudaObstaculos = (Button) findViewById(R.id.btnAjudaObstaculos);
 
-        this.textoParaTTS = "Olá, bem vindo ao aplicativo. "+
-         "Ao clicar uma vez em algum botão, você irá ouvir a sua descrição. "+
-         "Para executar o botão, você deve segurar o botão em um clique longo. "+
-         "Abaixo existem algumas opções de ajuda: sobre funcionalidades, sobre navegação, sobre obstáculos e ouvir novamente.";
+        this.textoParaTTS = "Olá, esta é a tela de ajuda. "+
+                "Abaixo existem algumas opções de ajuda: sobre funcionalidades, sobre navegação, sobre obstáculos e ouvir novamente." +
+                " Clique nos botões abaixo para ouvir a ajuda de cada tópico.";
 
 
         //Criação de um Handlar para enviar o TTS após X segundos da inicialização
@@ -50,7 +49,6 @@ public class AjudaActivity extends Activity {
                 TTSManager.Speak(textoParaTTS);
             }
         }, 500);
-
 
         SetClickListeners();
     }
@@ -82,7 +80,10 @@ public class AjudaActivity extends Activity {
         btnAjudaFuncionaldades.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                String textoAjuda = "Este aplicativo possui as seguintes funcionalidades:";
+                String textoAjuda = "Após a tela inicial, você irá entrar na tela de seleção de Setores." +
+                        " Nesta tela serão listados todos os setores disponíveis, que foram mapeados pelo aplicativo." +
+                        " Ao selecionar um setor, você verá a listagem dos destinos mapeados, que são salas, banheiros, secretarias e outros." +
+                        " Ao selecionar um destino, você irá para uma tela que irá descrever os seus detalhes, e um botão com a opção de navegar.";
                 TTSManager.Speak(textoAjuda);
                 return true;
             }
@@ -98,7 +99,10 @@ public class AjudaActivity extends Activity {
         btnAjudaNavegacao.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                String textoAjuda = "A navegação funciona da seguinte forma:";
+                String textoAjuda = "Ao clicar no botão navegação, o aplicativo irá verificar onde você se encontra, e te guiar para o seu destino." +
+                        " Será traçada uma rota, e conforme você vai se deslocando, o aplicativo irá avisar qual o próximo ponto conhecido da rota, " +
+                        " bem como a distância aproximada até lá. Caso o aplicativo avise que não conseguiu localizar nenhum ponto conhecido, " +
+                        " caminhe um pouco mais, pois terá algum ponto conhecido em algum lugar próximo.";
                 TTSManager.Speak(textoAjuda);
                 return true;
             }
@@ -114,9 +118,9 @@ public class AjudaActivity extends Activity {
         btnAjudaObstaculos.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                String textoAjuda = "Alguns obstáculos nos setores disponíveis são conhecidos, como portas e escadas. " +
+                String textoAjuda = "Alguns obstáculos nos setores disponíveis são conhecidos, como portas, escadas e degraus. " +
                         "O aplicativo tentará te avisar da proximidade de um obstáculo sempre que possível, mas mesmo assim, "+
-                        "você deve caminhar com cuidado.";
+                        "você deve caminhar devagar, e com cuidado.";
                 TTSManager.Speak(textoAjuda);
                 return true;
             }

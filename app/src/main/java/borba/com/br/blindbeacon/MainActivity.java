@@ -16,6 +16,7 @@ import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.View;
 import android.webkit.WebView;
+import android.widget.Button;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -29,6 +30,13 @@ public class MainActivity extends Activity {
     Context ctx;
     public DataBaseHandler dbHandler;
     Boolean exibir = true;
+    private Button btnSetores, btnAjuda, btnOuvirNovamente;
+    private String textoParaTTS = "Olá, bem vindo ao aplicativo. "+
+            "Ao clicar uma vez em algum botão, você irá ouvir a sua descrição. "+
+            "Para executar o botão, você deve segurar o botão em um clique longo. "+
+            "Abaixo existem os seguintes botões: seleção de setores, ajuda, e ouvir novamente." +
+            " Se for sua primeira vez no aplicativo, acesse a tela de ajuda para entender melhor como é, o funcionamento. Para isso," +
+            " basta clicar no botão abaixo." ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +44,10 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         this.ctx = this;
+
+        this.btnSetores = (Button)this.findViewById(R.id.buttonSelecionarPredio);
+        this.btnAjuda = (Button)this.findViewById(R.id.buttonAjuda);
+        this.btnOuvirNovamente = (Button)this.findViewById(R.id.buttonOuvirNovamente);
     }
 
     @Override
@@ -43,12 +55,19 @@ public class MainActivity extends Activity {
         super.onDestroy();
     }
 
-
-
     @Override
     public void onStart() {
         super.onStart();
         TTSManager.Initialize(ctx);
+
+        //Criação de um Handlar para enviar o TTS após X segundos da inicialização
+        Handler handlerTTS = new Handler();
+        handlerTTS.postDelayed(new Runnable() {
+            public void run() {
+                // Actions to do after 500 miliseconds
+                TTSManager.Speak(textoParaTTS);
+            }
+        }, 500);
 
         //Verifica permissão de localização
         Log.w("TAG_BEACON_ADD", "Vai verificar permissão localização");
@@ -101,6 +120,8 @@ public class MainActivity extends Activity {
                     }
                 }, 2000);
             }
+
+        SetListeners();
      }
 
     @Override
@@ -108,25 +129,56 @@ public class MainActivity extends Activity {
         super.onStop();
     }
 
-    public void onClickBeaconFinder(View v){
-        Intent in = new Intent(this, BeaconFinderActivity.class);
-        startActivity(in);
+    private void SetListeners(){
+
+        btnSetores.setOnClickListener(new Button.OnClickListener() {
+            public void onClick(View v)
+            {
+                TTSManager.Speak("Este é o botão de seleção de setores. Pressione para acessar esta funcionalidade.");
+            }
+        });
+
+        btnSetores.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Intent in = new Intent(ctx, SelecionarPredioActivity.class);
+                startActivity(in);
+
+                return true;
+            }
+        });
+
+        btnAjuda.setOnClickListener(new Button.OnClickListener() {
+            public void onClick(View v)
+            {
+                TTSManager.Speak("Este é o botão de ajuda. Pressione para acessar esta tela.");
+            }
+        });
+
+        btnAjuda.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Intent in = new Intent(ctx, AjudaActivity.class);
+                startActivity(in);
+                return true;
+            }
+        });
+
+        btnOuvirNovamente.setOnClickListener(new Button.OnClickListener() {
+            public void onClick(View v)
+            {
+                TTSManager.Speak("Este é o botão ouvir novamente. Pressione para ouvir.");
+            }
+        });
+
+        btnOuvirNovamente.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                TTSManager.Speak(textoParaTTS);
+                return true;
+            }
+        });
+
     }
 
-    public void onClickSelecionarPredio(View v){
-        Intent in = new Intent(this, SelecionarPredioActivity.class);
-        startActivity(in);
-    }
-
-    public void onClickBtnAjuda(View v){
-        Intent in = new Intent(this, AjudaActivity.class);
-        startActivity(in);
-    }
-
-//    private void TesteGIF(){
-//
-//        wView = (WebView) this.findViewById(R.id.webView);
-//        wView.loadUrl("file:///android_asset/bluetooth.gif");
-//        //setContentView(wView);
-//    }
 }

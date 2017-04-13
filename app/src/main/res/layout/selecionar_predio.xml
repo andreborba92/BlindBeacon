@@ -6,7 +6,7 @@
 
     <TextView
         android:id="@+id/tvID1"
-        android:text="Selecione o prédio"
+        android:text="Selecione o setor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"

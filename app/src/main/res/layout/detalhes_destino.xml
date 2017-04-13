@@ -6,7 +6,7 @@
 
     <TextView
         android:id="@+id/tvNomePredio"
-        android:text="Nome Predio"
+        android:text="Nome Setor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
