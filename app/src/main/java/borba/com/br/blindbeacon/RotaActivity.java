@@ -139,6 +139,9 @@ public class RotaActivity extends Activity implements BeaconConsumer {
                     //Log.w("TAG_FLUXO", "Quantidade beacons localizados: " + beacons.size());
 
                     for(Beacon beaconLocalizado:beacons) {
+//                        Log.w("TAG_FLUXO", "beacon localizado: " + beaconLocalizado.getId1() + "; " +
+//                        beaconLocalizado.getId2() + "; " + beaconLocalizado.getId3());
+
                         DestinoModel vm = destinoDataModel.getByBeacon(listDestinosExistentesNaRota, String.valueOf(beaconLocalizado.getId1()),
                                 String.valueOf(beaconLocalizado.getId2()), String.valueOf(beaconLocalizado.getId3()));
 
@@ -157,6 +160,12 @@ public class RotaActivity extends Activity implements BeaconConsumer {
 //                            MyBeacons.add(beaconDestinoViewModel);
 //                        }
                         MyBeacons.add(beaconDestinoViewModel);
+                    }
+
+                    if(MyBeacons.size() == 0){
+                        ManipularVisibilidadeGIF(true);
+                        TTSManager.Speak("Não foi possível determinar sua localização, favor caminhar mais um pouco");
+                        return;
                     }
 
                     Collections.sort(MyBeacons, new BeaconDestinoComparator());
@@ -250,10 +259,11 @@ public class RotaActivity extends Activity implements BeaconConsumer {
 
         if(beaconMaisProximo.getDestinoModel().getIdTipoDestino() == TipoDestinoEnum.OBSTACULO.getValue()){
             //Avisa usuário de obstáculo próximo
+            //ToDo: Revisar para nao dizer que o próximo ponto é obstáculo, fica redundante.
 
             String texto = "Cuidado, tem um obstáculo próximo de você. " + beaconMaisProximo.getDestinoModel().getNome() +
                     " em " + df.format(beaconMaisProximo.getBeacon().getDistance()) + " metros. ";
-            texto += "Após o obstáculo, você passará pelo local: " + nomeProxDestino + distanciaProxDestino;
+            texto += "Depois você passará pelo local: " + nomeProxDestino + distanciaProxDestino;
 
             TTSManager.Speak(texto);
             return;

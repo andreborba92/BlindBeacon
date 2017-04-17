@@ -34,7 +34,7 @@ public class DataBaseHandler extends SQLiteOpenHelper {
 
     // Declaracao do banco de dados
     private static final String BLINDBEACON_DATABASE_NAME = "BLINDBEACON_DATABASE";
-    private static final int BLINDBEACON_DATABASE_VERSION = 9;
+    private static final int BLINDBEACON_DATABASE_VERSION = 12;
 
     //DataModels
     private TipoDestinoDataModel _tipoDestinoDataModel;
@@ -83,6 +83,10 @@ public class DataBaseHandler extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + _tipoDestinoDataModel.TABLE_NAME);
         db.execSQL("DROP TABLE IF EXISTS " + _categoriaDataModel.TABLE_NAME);
         db.execSQL("DROP TABLE IF EXISTS " + _predioDataModel.TABLE_NAME);
+
+        Log.w("Database", "Database - Start Fake Data");
+        this.LoadWithFakeData();
+        Log.w("Database", "Database - End Fake Data");
 
         Log.v("Database", "onUpgrade Finish.");
 

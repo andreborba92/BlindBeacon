@@ -52,7 +52,7 @@ public class DestinoDataModel {
                 "Ponto 2", "003e8c80-ea01-4ebb-b888-78da19df9e55", "893", "88", "Beacon Cinza 88"));
 
         this.addDestino(new DestinoModel(3, 1, TipoDestinoEnum.DESTINO.getValue(), CategoriaEnum.SALA_DE_AULA.getValue(),
-                "Ponto 3", "5AFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF", "704", "705", "Cel Nando Antigo"));
+                "Ponto 3", "5affffff-ffff-ffff-ffff-ffffffffffff", "704", "705", "Cel Nando Antigo"));
 
         this.addDestino(new DestinoModel(4, 1, TipoDestinoEnum.DESTINO.getValue(), CategoriaEnum.BANHEIRO.getValue(),
                 "Ponto 4", "003e8c80-ea01-4ebb-b888-78da19df9e55", "893", "148", "Beacon Cinza 148"));

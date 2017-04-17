@@ -81,9 +81,6 @@ public class MainActivity extends Activity {
         //Carrega dependências
           Log.w("Database", "Vai iniciar Database");
           this.dbHandler = new DataBaseHandler(this);
-//          Log.w("Database", "Database - Start Fake Data");
-//          this.dbHandler.LoadWithFakeData();
-//          Log.w("Database", "Database - End Fake Data");
 
 //          Log.w("Database", "Database - Start Data Test");
 //          this.dbHandler.TestFakeData();

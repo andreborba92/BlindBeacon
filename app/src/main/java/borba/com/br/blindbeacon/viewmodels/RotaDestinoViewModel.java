@@ -72,6 +72,7 @@ public class RotaDestinoViewModel implements Comparable<RotaDestinoViewModel> {
         Boolean primeiroRegistro = true;
         Double distanciaAcumulada = distanciaPontoOrigem;
         Double metragemInicial = 0.0;
+        RotaDestinoViewModel pontoOrigem = _rotasRetorno.get(0);
 
         for(RotaDestinoViewModel vm:_rotasRetorno) {
 
@@ -86,7 +87,7 @@ public class RotaDestinoViewModel implements Comparable<RotaDestinoViewModel> {
                 continue;
             }
 
-            distanciaAcumulada += vm.getRotaModel().getMetragem();
+            distanciaAcumulada = vm.getRotaModel().getMetragem() - pontoOrigem.getRotaModel().getMetragem();
             vm.setDistanciaDoPontoOrigem(distanciaAcumulada);
 
 
@@ -112,7 +113,14 @@ public class RotaDestinoViewModel implements Comparable<RotaDestinoViewModel> {
                 rotaDestino = vm;
         }
 
-        return rotaDestino.getRotaModel().getMetragem() - rotaOrigem.getRotaModel().getMetragem() + distanciaProximoPonto;
+        //ToDo: Comando comentado onde contabiliza a distancia do primeiro ponto
+        //Double distancia = rotaDestino.getRotaModel().getMetragem() - rotaOrigem.getRotaModel().getMetragem() + distanciaProximoPonto;
+        Double distancia = rotaDestino.getRotaModel().getMetragem() - rotaOrigem.getRotaModel().getMetragem();
+
+        if(distancia < 0)
+            distancia = distancia * -1;
+
+        return distancia;
     }
 
     @Override

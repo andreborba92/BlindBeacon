@@ -61,7 +61,7 @@ MERGED from [com.android.support:support-v4:23.3.0] C:\Users\andre\Documents\Pro
 	android:allowBackup
 		ADDED from C:\Users\andre\Documents\Projetos\Meu GitHub\App Blind Beacon\app\src\main\AndroidManifest.xml:14:9-35
 	android:icon
-		ADDED from C:\Users\andre\Documents\Projetos\Meu GitHub\App Blind Beacon\app\src\main\AndroidManifest.xml:15:9-43
+		ADDED from C:\Users\andre\Documents\Projetos\Meu GitHub\App Blind Beacon\app\src\main\AndroidManifest.xml:15:9-50
 	android:theme
 		ADDED from C:\Users\andre\Documents\Projetos\Meu GitHub\App Blind Beacon\app\src\main\AndroidManifest.xml:19:9-40
 activity#borba.com.br.blindbeacon.MainActivity
