@@ -12,6 +12,10 @@
         "source": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_action_mode_close_item_material.xml"
     },
     {
+        "merged": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\window_title.xml",
+        "source": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\src\\main\\res\\layout\\window_title.xml"
+    },
+    {
         "merged": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines.xml",
         "source": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_template_lines.xml"
     },

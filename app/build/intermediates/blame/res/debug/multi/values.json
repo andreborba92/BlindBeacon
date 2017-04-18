@@ -275,14 +275,7 @@
                     "endOffset": 1636
                 },
                 "from": {
-                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 119,
-                        "endColumn": 45,
-                        "endOffset": 160
-                    }
+                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -4523,9 +4516,43 @@
                     "startLine": 1230,
                     "startColumn": 4,
                     "startOffset": 94936,
-                    "endLine": 1267,
+                    "endLine": 1235,
                     "endColumn": 12,
-                    "endOffset": 97731
+                    "endOffset": 95285
+                },
+                "from": {
+                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\src\\main\\res\\values\\custom_style.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 139,
+                        "endLine": 10,
+                        "endColumn": 12,
+                        "endOffset": 493
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 1236,
+                    "startColumn": 4,
+                    "startOffset": 95290,
+                    "endLine": 1238,
+                    "endColumn": 12,
+                    "endOffset": 95402
+                },
+                "from": {
+                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\src\\main\\res\\values\\custom_style.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 1239,
+                    "startColumn": 4,
+                    "startOffset": 95407,
+                    "endLine": 1276,
+                    "endColumn": 12,
+                    "endOffset": 98202
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -4533,12 +4560,12 @@
             },
             {
                 "to": {
-                    "startLine": 1268,
+                    "startLine": 1277,
                     "startColumn": 4,
-                    "startOffset": 97736,
-                    "endLine": 1306,
+                    "startOffset": 98207,
+                    "endLine": 1315,
                     "endColumn": 12,
-                    "endOffset": 100671
+                    "endOffset": 101142
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -4546,11 +4573,11 @@
             },
             {
                 "to": {
-                    "startLine": 1307,
+                    "startLine": 1316,
                     "startColumn": 4,
-                    "startOffset": 100676,
+                    "startOffset": 101147,
                     "endColumn": 61,
-                    "endOffset": 100733
+                    "endOffset": 101204
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -4558,25 +4585,12 @@
             },
             {
                 "to": {
-                    "startLine": 1308,
+                    "startLine": 1317,
                     "startColumn": 4,
-                    "startOffset": 100738,
-                    "endLine": 1317,
-                    "endColumn": 12,
-                    "endOffset": 101311
-                },
-                "from": {
-                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 1318,
-                    "startColumn": 4,
-                    "startOffset": 101316,
+                    "startOffset": 101209,
                     "endLine": 1326,
                     "endColumn": 12,
-                    "endOffset": 101895
+                    "endOffset": 101782
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -4586,48 +4600,22 @@
                 "to": {
                     "startLine": 1327,
                     "startColumn": 4,
-                    "startOffset": 101900,
+                    "startOffset": 101787,
+                    "endLine": 1335,
+                    "endColumn": 12,
+                    "endOffset": 102366
+                },
+                "from": {
+                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 1336,
+                    "startColumn": 4,
+                    "startOffset": 102371,
                     "endColumn": 85,
-                    "endOffset": 101981
-                },
-                "from": {
-                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 1328,
-                    "startColumn": 4,
-                    "startOffset": 101986,
-                    "endLine": 1329,
-                    "endColumn": 12,
-                    "endOffset": 102094
-                },
-                "from": {
-                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 1330,
-                    "startColumn": 4,
-                    "startOffset": 102099,
-                    "endLine": 1333,
-                    "endColumn": 12,
-                    "endOffset": 102323
-                },
-                "from": {
-                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 1334,
-                    "startColumn": 4,
-                    "startOffset": 102328,
-                    "endLine": 1336,
-                    "endColumn": 12,
-                    "endOffset": 102483
+                    "endOffset": 102452
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -4637,10 +4625,10 @@
                 "to": {
                     "startLine": 1337,
                     "startColumn": 4,
-                    "startOffset": 102488,
-                    "endLine": 1339,
+                    "startOffset": 102457,
+                    "endLine": 1338,
                     "endColumn": 12,
-                    "endOffset": 102635
+                    "endOffset": 102565
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -4648,12 +4636,12 @@
             },
             {
                 "to": {
-                    "startLine": 1340,
+                    "startLine": 1339,
                     "startColumn": 4,
-                    "startOffset": 102640,
+                    "startOffset": 102570,
                     "endLine": 1342,
                     "endColumn": 12,
-                    "endOffset": 102806
+                    "endOffset": 102794
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -4663,10 +4651,10 @@
                 "to": {
                     "startLine": 1343,
                     "startColumn": 4,
-                    "startOffset": 102811,
+                    "startOffset": 102799,
                     "endLine": 1345,
                     "endColumn": 12,
-                    "endOffset": 102973
+                    "endOffset": 102954
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -4676,10 +4664,10 @@
                 "to": {
                     "startLine": 1346,
                     "startColumn": 4,
-                    "startOffset": 102978,
-                    "endLine": 1349,
+                    "startOffset": 102959,
+                    "endLine": 1348,
                     "endColumn": 12,
-                    "endOffset": 103216
+                    "endOffset": 103106
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -4687,12 +4675,12 @@
             },
             {
                 "to": {
-                    "startLine": 1350,
+                    "startLine": 1349,
                     "startColumn": 4,
-                    "startOffset": 103221,
-                    "endLine": 1352,
+                    "startOffset": 103111,
+                    "endLine": 1351,
                     "endColumn": 12,
-                    "endOffset": 103386
+                    "endOffset": 103277
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -4700,12 +4688,12 @@
             },
             {
                 "to": {
-                    "startLine": 1353,
+                    "startLine": 1352,
                     "startColumn": 4,
-                    "startOffset": 103391,
-                    "endLine": 1355,
+                    "startOffset": 103282,
+                    "endLine": 1354,
                     "endColumn": 12,
-                    "endOffset": 103559
+                    "endOffset": 103444
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -4713,12 +4701,12 @@
             },
             {
                 "to": {
-                    "startLine": 1356,
+                    "startLine": 1355,
                     "startColumn": 4,
-                    "startOffset": 103564,
+                    "startOffset": 103449,
                     "endLine": 1358,
                     "endColumn": 12,
-                    "endOffset": 103730
+                    "endOffset": 103687
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -4728,10 +4716,10 @@
                 "to": {
                     "startLine": 1359,
                     "startColumn": 4,
-                    "startOffset": 103735,
-                    "endLine": 1362,
+                    "startOffset": 103692,
+                    "endLine": 1361,
                     "endColumn": 12,
-                    "endOffset": 104004
+                    "endOffset": 103857
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -4739,12 +4727,12 @@
             },
             {
                 "to": {
-                    "startLine": 1363,
+                    "startLine": 1362,
                     "startColumn": 4,
-                    "startOffset": 104009,
-                    "endLine": 1365,
+                    "startOffset": 103862,
+                    "endLine": 1364,
                     "endColumn": 12,
-                    "endOffset": 104203
+                    "endOffset": 104030
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -4752,12 +4740,12 @@
             },
             {
                 "to": {
-                    "startLine": 1366,
+                    "startLine": 1365,
                     "startColumn": 4,
-                    "startOffset": 104208,
-                    "endLine": 1369,
+                    "startOffset": 104035,
+                    "endLine": 1367,
                     "endColumn": 12,
-                    "endOffset": 104408
+                    "endOffset": 104201
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -4765,12 +4753,12 @@
             },
             {
                 "to": {
-                    "startLine": 1370,
+                    "startLine": 1368,
                     "startColumn": 4,
-                    "startOffset": 104413,
-                    "endLine": 1373,
+                    "startOffset": 104206,
+                    "endLine": 1371,
                     "endColumn": 12,
-                    "endOffset": 104738
+                    "endOffset": 104475
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -4778,11 +4766,12 @@
             },
             {
                 "to": {
-                    "startLine": 1374,
+                    "startLine": 1372,
                     "startColumn": 4,
-                    "startOffset": 104743,
-                    "endColumn": 83,
-                    "endOffset": 104822
+                    "startOffset": 104480,
+                    "endLine": 1374,
+                    "endColumn": 12,
+                    "endOffset": 104674
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -4792,45 +4781,10 @@
                 "to": {
                     "startLine": 1375,
                     "startColumn": 4,
-                    "startOffset": 104827,
-                    "endColumn": 95,
-                    "endOffset": 104918
-                },
-                "from": {
-                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 1376,
-                    "startColumn": 4,
-                    "startOffset": 104923,
-                    "endColumn": 95,
-                    "endOffset": 105014
-                },
-                "from": {
-                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 1377,
-                    "startColumn": 4,
-                    "startOffset": 105019,
-                    "endColumn": 97,
-                    "endOffset": 105112
-                },
-                "from": {
-                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 1378,
-                    "startColumn": 4,
-                    "startOffset": 105117,
-                    "endColumn": 99,
-                    "endOffset": 105212
+                    "startOffset": 104679,
+                    "endLine": 1378,
+                    "endColumn": 12,
+                    "endOffset": 104879
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -4840,45 +4794,10 @@
                 "to": {
                     "startLine": 1379,
                     "startColumn": 4,
-                    "startOffset": 105217,
-                    "endColumn": 101,
-                    "endOffset": 105314
-                },
-                "from": {
-                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 1380,
-                    "startColumn": 4,
-                    "startOffset": 105319,
-                    "endColumn": 101,
-                    "endOffset": 105416
-                },
-                "from": {
-                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 1381,
-                    "startColumn": 4,
-                    "startOffset": 105421,
-                    "endColumn": 101,
-                    "endOffset": 105518
-                },
-                "from": {
-                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 1382,
-                    "startColumn": 4,
-                    "startOffset": 105523,
-                    "endColumn": 101,
-                    "endOffset": 105620
+                    "startOffset": 104884,
+                    "endLine": 1382,
+                    "endColumn": 12,
+                    "endOffset": 105209
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -4888,9 +4807,9 @@
                 "to": {
                     "startLine": 1383,
                     "startColumn": 4,
-                    "startOffset": 105625,
-                    "endColumn": 101,
-                    "endOffset": 105722
+                    "startOffset": 105214,
+                    "endColumn": 83,
+                    "endOffset": 105293
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -4900,9 +4819,9 @@
                 "to": {
                     "startLine": 1384,
                     "startColumn": 4,
-                    "startOffset": 105727,
-                    "endColumn": 99,
-                    "endOffset": 105822
+                    "startOffset": 105298,
+                    "endColumn": 95,
+                    "endOffset": 105389
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -4912,9 +4831,9 @@
                 "to": {
                     "startLine": 1385,
                     "startColumn": 4,
-                    "startOffset": 105827,
+                    "startOffset": 105394,
                     "endColumn": 95,
-                    "endOffset": 105918
+                    "endOffset": 105485
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -4924,9 +4843,9 @@
                 "to": {
                     "startLine": 1386,
                     "startColumn": 4,
-                    "startOffset": 105923,
-                    "endColumn": 111,
-                    "endOffset": 106030
+                    "startOffset": 105490,
+                    "endColumn": 97,
+                    "endOffset": 105583
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -4936,9 +4855,9 @@
                 "to": {
                     "startLine": 1387,
                     "startColumn": 4,
-                    "startOffset": 106035,
-                    "endColumn": 128,
-                    "endOffset": 106159
+                    "startOffset": 105588,
+                    "endColumn": 99,
+                    "endOffset": 105683
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -4948,9 +4867,9 @@
                 "to": {
                     "startLine": 1388,
                     "startColumn": 4,
-                    "startOffset": 106164,
-                    "endColumn": 122,
-                    "endOffset": 106282
+                    "startOffset": 105688,
+                    "endColumn": 101,
+                    "endOffset": 105785
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -4960,10 +4879,21 @@
                 "to": {
                     "startLine": 1389,
                     "startColumn": 4,
-                    "startOffset": 106287,
-                    "endLine": 1390,
-                    "endColumn": 12,
-                    "endOffset": 106436
+                    "startOffset": 105790,
+                    "endColumn": 101,
+                    "endOffset": 105887
+                },
+                "from": {
+                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 1390,
+                    "startColumn": 4,
+                    "startOffset": 105892,
+                    "endColumn": 101,
+                    "endOffset": 105989
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -4973,10 +4903,21 @@
                 "to": {
                     "startLine": 1391,
                     "startColumn": 4,
-                    "startOffset": 106441,
-                    "endLine": 1392,
-                    "endColumn": 12,
-                    "endOffset": 106590
+                    "startOffset": 105994,
+                    "endColumn": 101,
+                    "endOffset": 106091
+                },
+                "from": {
+                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 1392,
+                    "startColumn": 4,
+                    "startOffset": 106096,
+                    "endColumn": 101,
+                    "endOffset": 106193
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -4986,9 +4927,9 @@
                 "to": {
                     "startLine": 1393,
                     "startColumn": 4,
-                    "startOffset": 106595,
-                    "endColumn": 97,
-                    "endOffset": 106688
+                    "startOffset": 106198,
+                    "endColumn": 99,
+                    "endOffset": 106293
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -4998,9 +4939,9 @@
                 "to": {
                     "startLine": 1394,
                     "startColumn": 4,
-                    "startOffset": 106693,
-                    "endColumn": 113,
-                    "endOffset": 106802
+                    "startOffset": 106298,
+                    "endColumn": 95,
+                    "endOffset": 106389
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5010,9 +4951,9 @@
                 "to": {
                     "startLine": 1395,
                     "startColumn": 4,
-                    "startOffset": 106807,
-                    "endColumn": 93,
-                    "endOffset": 106896
+                    "startOffset": 106394,
+                    "endColumn": 111,
+                    "endOffset": 106501
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5022,10 +4963,21 @@
                 "to": {
                     "startLine": 1396,
                     "startColumn": 4,
-                    "startOffset": 106901,
-                    "endLine": 1397,
-                    "endColumn": 12,
-                    "endOffset": 107036
+                    "startOffset": 106506,
+                    "endColumn": 128,
+                    "endOffset": 106630
+                },
+                "from": {
+                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 1397,
+                    "startColumn": 4,
+                    "startOffset": 106635,
+                    "endColumn": 122,
+                    "endOffset": 106753
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5035,10 +4987,10 @@
                 "to": {
                     "startLine": 1398,
                     "startColumn": 4,
-                    "startOffset": 107041,
+                    "startOffset": 106758,
                     "endLine": 1399,
                     "endColumn": 12,
-                    "endOffset": 107170
+                    "endOffset": 106907
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5048,21 +5000,10 @@
                 "to": {
                     "startLine": 1400,
                     "startColumn": 4,
-                    "startOffset": 107175,
-                    "endColumn": 95,
-                    "endOffset": 107266
-                },
-                "from": {
-                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 1401,
-                    "startColumn": 4,
-                    "startOffset": 107271,
-                    "endColumn": 111,
-                    "endOffset": 107378
+                    "startOffset": 106912,
+                    "endLine": 1401,
+                    "endColumn": 12,
+                    "endOffset": 107061
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5072,9 +5013,9 @@
                 "to": {
                     "startLine": 1402,
                     "startColumn": 4,
-                    "startOffset": 107383,
-                    "endColumn": 99,
-                    "endOffset": 107478
+                    "startOffset": 107066,
+                    "endColumn": 97,
+                    "endOffset": 107159
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5084,9 +5025,9 @@
                 "to": {
                     "startLine": 1403,
                     "startColumn": 4,
-                    "startOffset": 107483,
-                    "endColumn": 115,
-                    "endOffset": 107594
+                    "startOffset": 107164,
+                    "endColumn": 113,
+                    "endOffset": 107273
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5096,9 +5037,9 @@
                 "to": {
                     "startLine": 1404,
                     "startColumn": 4,
-                    "startOffset": 107599,
-                    "endColumn": 95,
-                    "endOffset": 107690
+                    "startOffset": 107278,
+                    "endColumn": 93,
+                    "endOffset": 107367
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5108,22 +5049,10 @@
                 "to": {
                     "startLine": 1405,
                     "startColumn": 4,
-                    "startOffset": 107695,
-                    "endColumn": 111,
-                    "endOffset": 107802
-                },
-                "from": {
-                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 1406,
-                    "startColumn": 4,
-                    "startOffset": 107807,
-                    "endLine": 1407,
+                    "startOffset": 107372,
+                    "endLine": 1406,
                     "endColumn": 12,
-                    "endOffset": 107942
+                    "endOffset": 107507
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5131,11 +5060,12 @@
             },
             {
                 "to": {
-                    "startLine": 1408,
+                    "startLine": 1407,
                     "startColumn": 4,
-                    "startOffset": 107947,
-                    "endColumn": 135,
-                    "endOffset": 108078
+                    "startOffset": 107512,
+                    "endLine": 1408,
+                    "endColumn": 12,
+                    "endOffset": 107641
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5145,10 +5075,21 @@
                 "to": {
                     "startLine": 1409,
                     "startColumn": 4,
-                    "startOffset": 108083,
-                    "endLine": 1410,
-                    "endColumn": 12,
-                    "endOffset": 108242
+                    "startOffset": 107646,
+                    "endColumn": 95,
+                    "endOffset": 107737
+                },
+                "from": {
+                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 1410,
+                    "startColumn": 4,
+                    "startOffset": 107742,
+                    "endColumn": 111,
+                    "endOffset": 107849
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5158,9 +5099,9 @@
                 "to": {
                     "startLine": 1411,
                     "startColumn": 4,
-                    "startOffset": 108247,
-                    "endColumn": 129,
-                    "endOffset": 108372
+                    "startOffset": 107854,
+                    "endColumn": 99,
+                    "endOffset": 107949
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5170,10 +5111,21 @@
                 "to": {
                     "startLine": 1412,
                     "startColumn": 4,
-                    "startOffset": 108377,
-                    "endLine": 1413,
-                    "endColumn": 12,
-                    "endOffset": 108530
+                    "startOffset": 107954,
+                    "endColumn": 115,
+                    "endOffset": 108065
+                },
+                "from": {
+                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 1413,
+                    "startColumn": 4,
+                    "startOffset": 108070,
+                    "endColumn": 95,
+                    "endOffset": 108161
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5183,10 +5135,9 @@
                 "to": {
                     "startLine": 1414,
                     "startColumn": 4,
-                    "startOffset": 108535,
-                    "endLine": 1415,
-                    "endColumn": 12,
-                    "endOffset": 108680
+                    "startOffset": 108166,
+                    "endColumn": 111,
+                    "endOffset": 108273
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5194,11 +5145,12 @@
             },
             {
                 "to": {
-                    "startLine": 1416,
+                    "startLine": 1415,
                     "startColumn": 4,
-                    "startOffset": 108685,
-                    "endColumn": 140,
-                    "endOffset": 108821
+                    "startOffset": 108278,
+                    "endLine": 1416,
+                    "endColumn": 12,
+                    "endOffset": 108413
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5208,10 +5160,9 @@
                 "to": {
                     "startLine": 1417,
                     "startColumn": 4,
-                    "startOffset": 108826,
-                    "endLine": 1418,
-                    "endColumn": 12,
-                    "endOffset": 108965
+                    "startOffset": 108418,
+                    "endColumn": 135,
+                    "endOffset": 108549
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5219,11 +5170,12 @@
             },
             {
                 "to": {
-                    "startLine": 1419,
+                    "startLine": 1418,
                     "startColumn": 4,
-                    "startOffset": 108970,
-                    "endColumn": 134,
-                    "endOffset": 109100
+                    "startOffset": 108554,
+                    "endLine": 1419,
+                    "endColumn": 12,
+                    "endOffset": 108713
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5233,9 +5185,9 @@
                 "to": {
                     "startLine": 1420,
                     "startColumn": 4,
-                    "startOffset": 109105,
-                    "endColumn": 111,
-                    "endOffset": 109212
+                    "startOffset": 108718,
+                    "endColumn": 129,
+                    "endOffset": 108843
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5245,9 +5197,10 @@
                 "to": {
                     "startLine": 1421,
                     "startColumn": 4,
-                    "startOffset": 109217,
-                    "endColumn": 127,
-                    "endOffset": 109340
+                    "startOffset": 108848,
+                    "endLine": 1422,
+                    "endColumn": 12,
+                    "endOffset": 109001
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5255,12 +5208,12 @@
             },
             {
                 "to": {
-                    "startLine": 1422,
+                    "startLine": 1423,
                     "startColumn": 4,
-                    "startOffset": 109345,
-                    "endLine": 1423,
+                    "startOffset": 109006,
+                    "endLine": 1424,
                     "endColumn": 12,
-                    "endOffset": 109476
+                    "endOffset": 109151
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5268,12 +5221,11 @@
             },
             {
                 "to": {
-                    "startLine": 1424,
+                    "startLine": 1425,
                     "startColumn": 4,
-                    "startOffset": 109481,
-                    "endLine": 1425,
-                    "endColumn": 12,
-                    "endOffset": 109618
+                    "startOffset": 109156,
+                    "endColumn": 140,
+                    "endOffset": 109292
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5283,10 +5235,10 @@
                 "to": {
                     "startLine": 1426,
                     "startColumn": 4,
-                    "startOffset": 109623,
+                    "startOffset": 109297,
                     "endLine": 1427,
                     "endColumn": 12,
-                    "endOffset": 109760
+                    "endOffset": 109436
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5296,9 +5248,9 @@
                 "to": {
                     "startLine": 1428,
                     "startColumn": 4,
-                    "startOffset": 109765,
-                    "endColumn": 111,
-                    "endOffset": 109872
+                    "startOffset": 109441,
+                    "endColumn": 134,
+                    "endOffset": 109571
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5308,9 +5260,9 @@
                 "to": {
                     "startLine": 1429,
                     "startColumn": 4,
-                    "startOffset": 109877,
-                    "endColumn": 139,
-                    "endOffset": 110012
+                    "startOffset": 109576,
+                    "endColumn": 111,
+                    "endOffset": 109683
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5320,9 +5272,9 @@
                 "to": {
                     "startLine": 1430,
                     "startColumn": 4,
-                    "startOffset": 110017,
-                    "endColumn": 67,
-                    "endOffset": 110080
+                    "startOffset": 109688,
+                    "endColumn": 127,
+                    "endOffset": 109811
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5332,21 +5284,10 @@
                 "to": {
                     "startLine": 1431,
                     "startColumn": 4,
-                    "startOffset": 110085,
-                    "endColumn": 72,
-                    "endOffset": 110153
-                },
-                "from": {
-                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 1432,
-                    "startColumn": 4,
-                    "startOffset": 110158,
-                    "endColumn": 73,
-                    "endOffset": 110227
+                    "startOffset": 109816,
+                    "endLine": 1432,
+                    "endColumn": 12,
+                    "endOffset": 109947
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5356,21 +5297,10 @@
                 "to": {
                     "startLine": 1433,
                     "startColumn": 4,
-                    "startOffset": 110232,
-                    "endColumn": 72,
-                    "endOffset": 110300
-                },
-                "from": {
-                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 1434,
-                    "startColumn": 4,
-                    "startOffset": 110305,
-                    "endColumn": 73,
-                    "endOffset": 110374
+                    "startOffset": 109952,
+                    "endLine": 1434,
+                    "endColumn": 12,
+                    "endOffset": 110089
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5380,10 +5310,10 @@
                 "to": {
                     "startLine": 1435,
                     "startColumn": 4,
-                    "startOffset": 110379,
+                    "startOffset": 110094,
                     "endLine": 1436,
                     "endColumn": 12,
-                    "endOffset": 110520
+                    "endOffset": 110231
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5393,10 +5323,21 @@
                 "to": {
                     "startLine": 1437,
                     "startColumn": 4,
-                    "startOffset": 110525,
-                    "endLine": 1438,
-                    "endColumn": 12,
-                    "endOffset": 110664
+                    "startOffset": 110236,
+                    "endColumn": 111,
+                    "endOffset": 110343
+                },
+                "from": {
+                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 1438,
+                    "startColumn": 4,
+                    "startOffset": 110348,
+                    "endColumn": 139,
+                    "endOffset": 110483
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5406,10 +5347,21 @@
                 "to": {
                     "startLine": 1439,
                     "startColumn": 4,
-                    "startOffset": 110669,
-                    "endLine": 1440,
-                    "endColumn": 12,
-                    "endOffset": 110802
+                    "startOffset": 110488,
+                    "endColumn": 67,
+                    "endOffset": 110551
+                },
+                "from": {
+                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 1440,
+                    "startColumn": 4,
+                    "startOffset": 110556,
+                    "endColumn": 72,
+                    "endOffset": 110624
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5419,9 +5371,9 @@
                 "to": {
                     "startLine": 1441,
                     "startColumn": 4,
-                    "startOffset": 110807,
-                    "endColumn": 65,
-                    "endOffset": 110868
+                    "startOffset": 110629,
+                    "endColumn": 73,
+                    "endOffset": 110698
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5431,9 +5383,9 @@
                 "to": {
                     "startLine": 1442,
                     "startColumn": 4,
-                    "startOffset": 110873,
-                    "endColumn": 89,
-                    "endOffset": 110958
+                    "startOffset": 110703,
+                    "endColumn": 72,
+                    "endOffset": 110771
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5443,9 +5395,9 @@
                 "to": {
                     "startLine": 1443,
                     "startColumn": 4,
-                    "startOffset": 110963,
-                    "endColumn": 75,
-                    "endOffset": 111034
+                    "startOffset": 110776,
+                    "endColumn": 73,
+                    "endOffset": 110845
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5455,21 +5407,10 @@
                 "to": {
                     "startLine": 1444,
                     "startColumn": 4,
-                    "startOffset": 111039,
-                    "endColumn": 103,
-                    "endOffset": 111138
-                },
-                "from": {
-                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 1445,
-                    "startColumn": 4,
-                    "startOffset": 111143,
-                    "endColumn": 89,
-                    "endOffset": 111228
+                    "startOffset": 110850,
+                    "endLine": 1445,
+                    "endColumn": 12,
+                    "endOffset": 110991
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5479,21 +5420,10 @@
                 "to": {
                     "startLine": 1446,
                     "startColumn": 4,
-                    "startOffset": 111233,
-                    "endColumn": 101,
-                    "endOffset": 111330
-                },
-                "from": {
-                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 1447,
-                    "startColumn": 4,
-                    "startOffset": 111335,
-                    "endColumn": 107,
-                    "endOffset": 111438
+                    "startOffset": 110996,
+                    "endLine": 1447,
+                    "endColumn": 12,
+                    "endOffset": 111135
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5503,21 +5433,10 @@
                 "to": {
                     "startLine": 1448,
                     "startColumn": 4,
-                    "startOffset": 111443,
-                    "endColumn": 107,
-                    "endOffset": 111546
-                },
-                "from": {
-                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 1449,
-                    "startColumn": 4,
-                    "startOffset": 111551,
-                    "endColumn": 99,
-                    "endOffset": 111646
+                    "startOffset": 111140,
+                    "endLine": 1449,
+                    "endColumn": 12,
+                    "endOffset": 111273
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5527,9 +5446,9 @@
                 "to": {
                     "startLine": 1450,
                     "startColumn": 4,
-                    "startOffset": 111651,
-                    "endColumn": 79,
-                    "endOffset": 111726
+                    "startOffset": 111278,
+                    "endColumn": 65,
+                    "endOffset": 111339
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5539,9 +5458,9 @@
                 "to": {
                     "startLine": 1451,
                     "startColumn": 4,
-                    "startOffset": 111731,
-                    "endColumn": 91,
-                    "endOffset": 111818
+                    "startOffset": 111344,
+                    "endColumn": 89,
+                    "endOffset": 111429
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5551,9 +5470,9 @@
                 "to": {
                     "startLine": 1452,
                     "startColumn": 4,
-                    "startOffset": 111823,
-                    "endColumn": 97,
-                    "endOffset": 111916
+                    "startOffset": 111434,
+                    "endColumn": 75,
+                    "endOffset": 111505
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5563,10 +5482,21 @@
                 "to": {
                     "startLine": 1453,
                     "startColumn": 4,
-                    "startOffset": 111921,
-                    "endLine": 1454,
-                    "endColumn": 12,
-                    "endOffset": 112026
+                    "startOffset": 111510,
+                    "endColumn": 103,
+                    "endOffset": 111609
+                },
+                "from": {
+                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 1454,
+                    "startColumn": 4,
+                    "startOffset": 111614,
+                    "endColumn": 89,
+                    "endOffset": 111699
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5576,9 +5506,9 @@
                 "to": {
                     "startLine": 1455,
                     "startColumn": 4,
-                    "startOffset": 112031,
-                    "endColumn": 77,
-                    "endOffset": 112104
+                    "startOffset": 111704,
+                    "endColumn": 101,
+                    "endOffset": 111801
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5588,9 +5518,9 @@
                 "to": {
                     "startLine": 1456,
                     "startColumn": 4,
-                    "startOffset": 112109,
-                    "endColumn": 105,
-                    "endOffset": 112210
+                    "startOffset": 111806,
+                    "endColumn": 107,
+                    "endOffset": 111909
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5600,9 +5530,9 @@
                 "to": {
                     "startLine": 1457,
                     "startColumn": 4,
-                    "startOffset": 112215,
-                    "endColumn": 91,
-                    "endOffset": 112302
+                    "startOffset": 111914,
+                    "endColumn": 107,
+                    "endOffset": 112017
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5612,9 +5542,9 @@
                 "to": {
                     "startLine": 1458,
                     "startColumn": 4,
-                    "startOffset": 112307,
-                    "endColumn": 103,
-                    "endOffset": 112406
+                    "startOffset": 112022,
+                    "endColumn": 99,
+                    "endOffset": 112117
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5624,9 +5554,9 @@
                 "to": {
                     "startLine": 1459,
                     "startColumn": 4,
-                    "startOffset": 112411,
-                    "endColumn": 109,
-                    "endOffset": 112516
+                    "startOffset": 112122,
+                    "endColumn": 79,
+                    "endOffset": 112197
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5636,10 +5566,21 @@
                 "to": {
                     "startLine": 1460,
                     "startColumn": 4,
-                    "startOffset": 112521,
-                    "endLine": 1461,
-                    "endColumn": 12,
-                    "endOffset": 112638
+                    "startOffset": 112202,
+                    "endColumn": 91,
+                    "endOffset": 112289
+                },
+                "from": {
+                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 1461,
+                    "startColumn": 4,
+                    "startOffset": 112294,
+                    "endColumn": 97,
+                    "endOffset": 112387
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5649,10 +5590,34 @@
                 "to": {
                     "startLine": 1462,
                     "startColumn": 4,
-                    "startOffset": 112643,
-                    "endLine": 1465,
+                    "startOffset": 112392,
+                    "endLine": 1463,
                     "endColumn": 12,
-                    "endOffset": 112801
+                    "endOffset": 112497
+                },
+                "from": {
+                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 1464,
+                    "startColumn": 4,
+                    "startOffset": 112502,
+                    "endColumn": 77,
+                    "endOffset": 112575
+                },
+                "from": {
+                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 1465,
+                    "startColumn": 4,
+                    "startOffset": 112580,
+                    "endColumn": 105,
+                    "endOffset": 112681
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5662,10 +5627,9 @@
                 "to": {
                     "startLine": 1466,
                     "startColumn": 4,
-                    "startOffset": 112806,
-                    "endLine": 1469,
-                    "endColumn": 12,
-                    "endOffset": 112958
+                    "startOffset": 112686,
+                    "endColumn": 91,
+                    "endOffset": 112773
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5673,11 +5637,36 @@
             },
             {
                 "to": {
-                    "startLine": 1470,
+                    "startLine": 1467,
                     "startColumn": 4,
-                    "startOffset": 112963,
-                    "endColumn": 79,
-                    "endOffset": 113038
+                    "startOffset": 112778,
+                    "endColumn": 103,
+                    "endOffset": 112877
+                },
+                "from": {
+                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 1468,
+                    "startColumn": 4,
+                    "startOffset": 112882,
+                    "endColumn": 109,
+                    "endOffset": 112987
+                },
+                "from": {
+                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 1469,
+                    "startColumn": 4,
+                    "startOffset": 112992,
+                    "endLine": 1470,
+                    "endColumn": 12,
+                    "endOffset": 113109
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5687,45 +5676,10 @@
                 "to": {
                     "startLine": 1471,
                     "startColumn": 4,
-                    "startOffset": 113043,
-                    "endColumn": 99,
-                    "endOffset": 113138
-                },
-                "from": {
-                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 1472,
-                    "startColumn": 4,
-                    "startOffset": 113143,
-                    "endColumn": 89,
-                    "endOffset": 113228
-                },
-                "from": {
-                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 1473,
-                    "startColumn": 4,
-                    "startOffset": 113233,
-                    "endColumn": 109,
-                    "endOffset": 113338
-                },
-                "from": {
-                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 1474,
-                    "startColumn": 4,
-                    "startOffset": 113343,
-                    "endColumn": 91,
-                    "endOffset": 113430
+                    "startOffset": 113114,
+                    "endLine": 1474,
+                    "endColumn": 12,
+                    "endOffset": 113272
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5735,23 +5689,10 @@
                 "to": {
                     "startLine": 1475,
                     "startColumn": 4,
-                    "startOffset": 113435,
-                    "endLine": 1476,
-                    "endColumn": 12,
-                    "endOffset": 113530
-                },
-                "from": {
-                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 1477,
-                    "startColumn": 4,
-                    "startOffset": 113535,
+                    "startOffset": 113277,
                     "endLine": 1478,
                     "endColumn": 12,
-                    "endOffset": 113642
+                    "endOffset": 113429
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5761,10 +5702,21 @@
                 "to": {
                     "startLine": 1479,
                     "startColumn": 4,
-                    "startOffset": 113647,
-                    "endLine": 1480,
-                    "endColumn": 12,
-                    "endOffset": 113756
+                    "startOffset": 113434,
+                    "endColumn": 79,
+                    "endOffset": 113509
+                },
+                "from": {
+                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 1480,
+                    "startColumn": 4,
+                    "startOffset": 113514,
+                    "endColumn": 99,
+                    "endOffset": 113609
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5774,10 +5726,21 @@
                 "to": {
                     "startLine": 1481,
                     "startColumn": 4,
-                    "startOffset": 113761,
-                    "endLine": 1482,
-                    "endColumn": 12,
-                    "endOffset": 113872
+                    "startOffset": 113614,
+                    "endColumn": 89,
+                    "endOffset": 113699
+                },
+                "from": {
+                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 1482,
+                    "startColumn": 4,
+                    "startOffset": 113704,
+                    "endColumn": 109,
+                    "endOffset": 113809
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5787,10 +5750,9 @@
                 "to": {
                     "startLine": 1483,
                     "startColumn": 4,
-                    "startOffset": 113877,
-                    "endLine": 1484,
-                    "endColumn": 12,
-                    "endOffset": 113988
+                    "startOffset": 113814,
+                    "endColumn": 91,
+                    "endOffset": 113901
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5798,11 +5760,12 @@
             },
             {
                 "to": {
-                    "startLine": 1485,
+                    "startLine": 1484,
                     "startColumn": 4,
-                    "startOffset": 113993,
-                    "endColumn": 93,
-                    "endOffset": 114082
+                    "startOffset": 113906,
+                    "endLine": 1485,
+                    "endColumn": 12,
+                    "endOffset": 114001
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5812,21 +5775,10 @@
                 "to": {
                     "startLine": 1486,
                     "startColumn": 4,
-                    "startOffset": 114087,
-                    "endColumn": 113,
-                    "endOffset": 114196
-                },
-                "from": {
-                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 1487,
-                    "startColumn": 4,
-                    "startOffset": 114201,
-                    "endColumn": 111,
-                    "endOffset": 114308
+                    "startOffset": 114006,
+                    "endLine": 1487,
+                    "endColumn": 12,
+                    "endOffset": 114113
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5836,10 +5788,10 @@
                 "to": {
                     "startLine": 1488,
                     "startColumn": 4,
-                    "startOffset": 114313,
+                    "startOffset": 114118,
                     "endLine": 1489,
                     "endColumn": 12,
-                    "endOffset": 114410
+                    "endOffset": 114227
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5849,10 +5801,10 @@
                 "to": {
                     "startLine": 1490,
                     "startColumn": 4,
-                    "startOffset": 114415,
+                    "startOffset": 114232,
                     "endLine": 1491,
                     "endColumn": 12,
-                    "endOffset": 114530
+                    "endOffset": 114343
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5862,10 +5814,10 @@
                 "to": {
                     "startLine": 1492,
                     "startColumn": 4,
-                    "startOffset": 114535,
+                    "startOffset": 114348,
                     "endLine": 1493,
                     "endColumn": 12,
-                    "endOffset": 114652
+                    "endOffset": 114459
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5875,9 +5827,9 @@
                 "to": {
                     "startLine": 1494,
                     "startColumn": 4,
-                    "startOffset": 114657,
-                    "endColumn": 81,
-                    "endOffset": 114734
+                    "startOffset": 114464,
+                    "endColumn": 93,
+                    "endOffset": 114553
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5887,9 +5839,9 @@
                 "to": {
                     "startLine": 1495,
                     "startColumn": 4,
-                    "startOffset": 114739,
-                    "endColumn": 103,
-                    "endOffset": 114838
+                    "startOffset": 114558,
+                    "endColumn": 113,
+                    "endOffset": 114667
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5899,9 +5851,9 @@
                 "to": {
                     "startLine": 1496,
                     "startColumn": 4,
-                    "startOffset": 114843,
-                    "endColumn": 119,
-                    "endOffset": 114958
+                    "startOffset": 114672,
+                    "endColumn": 111,
+                    "endOffset": 114779
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5911,21 +5863,10 @@
                 "to": {
                     "startLine": 1497,
                     "startColumn": 4,
-                    "startOffset": 114963,
-                    "endColumn": 125,
-                    "endOffset": 115084
-                },
-                "from": {
-                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 1498,
-                    "startColumn": 4,
-                    "startOffset": 115089,
-                    "endColumn": 97,
-                    "endOffset": 115182
+                    "startOffset": 114784,
+                    "endLine": 1498,
+                    "endColumn": 12,
+                    "endOffset": 114881
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5935,21 +5876,10 @@
                 "to": {
                     "startLine": 1499,
                     "startColumn": 4,
-                    "startOffset": 115187,
-                    "endColumn": 93,
-                    "endOffset": 115276
-                },
-                "from": {
-                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 1500,
-                    "startColumn": 4,
-                    "startOffset": 115281,
-                    "endColumn": 87,
-                    "endOffset": 115364
+                    "startOffset": 114886,
+                    "endLine": 1500,
+                    "endColumn": 12,
+                    "endOffset": 115001
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5959,21 +5889,10 @@
                 "to": {
                     "startLine": 1501,
                     "startColumn": 4,
-                    "startOffset": 115369,
-                    "endColumn": 111,
-                    "endOffset": 115476
-                },
-                "from": {
-                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 1502,
-                    "startColumn": 4,
-                    "startOffset": 115481,
-                    "endColumn": 115,
-                    "endOffset": 115592
+                    "startOffset": 115006,
+                    "endLine": 1502,
+                    "endColumn": 12,
+                    "endOffset": 115123
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5983,9 +5902,9 @@
                 "to": {
                     "startLine": 1503,
                     "startColumn": 4,
-                    "startOffset": 115597,
-                    "endColumn": 121,
-                    "endOffset": 115714
+                    "startOffset": 115128,
+                    "endColumn": 81,
+                    "endOffset": 115205
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -5995,9 +5914,9 @@
                 "to": {
                     "startLine": 1504,
                     "startColumn": 4,
-                    "startOffset": 115719,
-                    "endColumn": 111,
-                    "endOffset": 115826
+                    "startOffset": 115210,
+                    "endColumn": 103,
+                    "endOffset": 115309
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -6007,10 +5926,33 @@
                 "to": {
                     "startLine": 1505,
                     "startColumn": 4,
-                    "startOffset": 115831,
-                    "endLine": 1507,
-                    "endColumn": 12,
-                    "endOffset": 116001
+                    "startOffset": 115314,
+                    "endColumn": 119,
+                    "endOffset": 115429
+                },
+                "from": {
+                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 1506,
+                    "startColumn": 4,
+                    "startOffset": 115434,
+                    "endColumn": 125,
+                    "endOffset": 115555
+                },
+                "from": {
+                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 1507,
+                    "startColumn": 4,
+                    "startOffset": 115560,
+                    "endColumn": 97,
+                    "endOffset": 115653
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -6020,9 +5962,9 @@
                 "to": {
                     "startLine": 1508,
                     "startColumn": 4,
-                    "startOffset": 116006,
-                    "endColumn": 115,
-                    "endOffset": 116117
+                    "startOffset": 115658,
+                    "endColumn": 93,
+                    "endOffset": 115747
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -6032,9 +5974,9 @@
                 "to": {
                     "startLine": 1509,
                     "startColumn": 4,
-                    "startOffset": 116122,
-                    "endColumn": 85,
-                    "endOffset": 116203
+                    "startOffset": 115752,
+                    "endColumn": 87,
+                    "endOffset": 115835
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -6044,9 +5986,9 @@
                 "to": {
                     "startLine": 1510,
                     "startColumn": 4,
-                    "startOffset": 116208,
-                    "endColumn": 91,
-                    "endOffset": 116295
+                    "startOffset": 115840,
+                    "endColumn": 111,
+                    "endOffset": 115947
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -6056,10 +5998,21 @@
                 "to": {
                     "startLine": 1511,
                     "startColumn": 4,
-                    "startOffset": 116300,
-                    "endLine": 1512,
-                    "endColumn": 12,
-                    "endOffset": 116407
+                    "startOffset": 115952,
+                    "endColumn": 115,
+                    "endOffset": 116063
+                },
+                "from": {
+                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 1512,
+                    "startColumn": 4,
+                    "startOffset": 116068,
+                    "endColumn": 121,
+                    "endOffset": 116185
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -6069,10 +6022,9 @@
                 "to": {
                     "startLine": 1513,
                     "startColumn": 4,
-                    "startOffset": 116412,
-                    "endLine": 1514,
-                    "endColumn": 12,
-                    "endOffset": 116531
+                    "startOffset": 116190,
+                    "endColumn": 111,
+                    "endOffset": 116297
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -6080,11 +6032,12 @@
             },
             {
                 "to": {
-                    "startLine": 1515,
+                    "startLine": 1514,
                     "startColumn": 4,
-                    "startOffset": 116536,
-                    "endColumn": 66,
-                    "endOffset": 116598
+                    "startOffset": 116302,
+                    "endLine": 1516,
+                    "endColumn": 12,
+                    "endOffset": 116472
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -6092,12 +6045,11 @@
             },
             {
                 "to": {
-                    "startLine": 1516,
+                    "startLine": 1517,
                     "startColumn": 4,
-                    "startOffset": 116603,
-                    "endLine": 1517,
-                    "endColumn": 12,
-                    "endOffset": 116724
+                    "startOffset": 116477,
+                    "endColumn": 115,
+                    "endOffset": 116588
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -6107,9 +6059,9 @@
                 "to": {
                     "startLine": 1518,
                     "startColumn": 4,
-                    "startOffset": 116729,
-                    "endColumn": 67,
-                    "endOffset": 116792
+                    "startOffset": 116593,
+                    "endColumn": 85,
+                    "endOffset": 116674
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -6119,10 +6071,9 @@
                 "to": {
                     "startLine": 1519,
                     "startColumn": 4,
-                    "startOffset": 116797,
-                    "endLine": 1520,
-                    "endColumn": 12,
-                    "endOffset": 116920
+                    "startOffset": 116679,
+                    "endColumn": 91,
+                    "endOffset": 116766
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -6130,12 +6081,12 @@
             },
             {
                 "to": {
-                    "startLine": 1521,
+                    "startLine": 1520,
                     "startColumn": 4,
-                    "startOffset": 116925,
-                    "endLine": 1522,
+                    "startOffset": 116771,
+                    "endLine": 1521,
                     "endColumn": 12,
-                    "endOffset": 117064
+                    "endOffset": 116878
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -6143,12 +6094,24 @@
             },
             {
                 "to": {
-                    "startLine": 1523,
+                    "startLine": 1522,
                     "startColumn": 4,
-                    "startOffset": 117069,
-                    "endLine": 1524,
+                    "startOffset": 116883,
+                    "endLine": 1523,
                     "endColumn": 12,
-                    "endOffset": 117192
+                    "endOffset": 117002
+                },
+                "from": {
+                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 1524,
+                    "startColumn": 4,
+                    "startOffset": 117007,
+                    "endColumn": 66,
+                    "endOffset": 117069
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -6158,21 +6121,10 @@
                 "to": {
                     "startLine": 1525,
                     "startColumn": 4,
-                    "startOffset": 117197,
-                    "endColumn": 68,
-                    "endOffset": 117261
-                },
-                "from": {
-                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 1526,
-                    "startColumn": 4,
-                    "startOffset": 117266,
-                    "endColumn": 94,
-                    "endOffset": 117356
+                    "startOffset": 117074,
+                    "endLine": 1526,
+                    "endColumn": 12,
+                    "endOffset": 117195
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -6182,9 +6134,9 @@
                 "to": {
                     "startLine": 1527,
                     "startColumn": 4,
-                    "startOffset": 117361,
-                    "endColumn": 114,
-                    "endOffset": 117471
+                    "startOffset": 117200,
+                    "endColumn": 67,
+                    "endOffset": 117263
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -6194,21 +6146,10 @@
                 "to": {
                     "startLine": 1528,
                     "startColumn": 4,
-                    "startOffset": 117476,
-                    "endColumn": 112,
-                    "endOffset": 117584
-                },
-                "from": {
-                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 1529,
-                    "startColumn": 4,
-                    "startOffset": 117589,
-                    "endColumn": 98,
-                    "endOffset": 117683
+                    "startOffset": 117268,
+                    "endLine": 1529,
+                    "endColumn": 12,
+                    "endOffset": 117391
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -6218,21 +6159,10 @@
                 "to": {
                     "startLine": 1530,
                     "startColumn": 4,
-                    "startOffset": 117688,
-                    "endColumn": 108,
-                    "endOffset": 117792
-                },
-                "from": {
-                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 1531,
-                    "startColumn": 4,
-                    "startOffset": 117797,
-                    "endColumn": 110,
-                    "endOffset": 117903
+                    "startOffset": 117396,
+                    "endLine": 1531,
+                    "endColumn": 12,
+                    "endOffset": 117535
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -6242,21 +6172,10 @@
                 "to": {
                     "startLine": 1532,
                     "startColumn": 4,
-                    "startOffset": 117908,
-                    "endColumn": 110,
-                    "endOffset": 118014
-                },
-                "from": {
-                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 1533,
-                    "startColumn": 4,
-                    "startOffset": 118019,
-                    "endColumn": 100,
-                    "endOffset": 118115
+                    "startOffset": 117540,
+                    "endLine": 1533,
+                    "endColumn": 12,
+                    "endOffset": 117663
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -6266,9 +6185,9 @@
                 "to": {
                     "startLine": 1534,
                     "startColumn": 4,
-                    "startOffset": 118120,
-                    "endColumn": 104,
-                    "endOffset": 118220
+                    "startOffset": 117668,
+                    "endColumn": 68,
+                    "endOffset": 117732
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -6278,10 +6197,21 @@
                 "to": {
                     "startLine": 1535,
                     "startColumn": 4,
-                    "startOffset": 118225,
-                    "endLine": 1536,
-                    "endColumn": 12,
-                    "endOffset": 118332
+                    "startOffset": 117737,
+                    "endColumn": 94,
+                    "endOffset": 117827
+                },
+                "from": {
+                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 1536,
+                    "startColumn": 4,
+                    "startOffset": 117832,
+                    "endColumn": 114,
+                    "endOffset": 117942
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -6291,10 +6221,21 @@
                 "to": {
                     "startLine": 1537,
                     "startColumn": 4,
-                    "startOffset": 118337,
-                    "endLine": 1538,
-                    "endColumn": 12,
-                    "endOffset": 118462
+                    "startOffset": 117947,
+                    "endColumn": 112,
+                    "endOffset": 118055
+                },
+                "from": {
+                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 1538,
+                    "startColumn": 4,
+                    "startOffset": 118060,
+                    "endColumn": 98,
+                    "endOffset": 118154
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -6304,9 +6245,9 @@
                 "to": {
                     "startLine": 1539,
                     "startColumn": 4,
-                    "startOffset": 118467,
-                    "endColumn": 90,
-                    "endOffset": 118553
+                    "startOffset": 118159,
+                    "endColumn": 108,
+                    "endOffset": 118263
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -6316,9 +6257,9 @@
                 "to": {
                     "startLine": 1540,
                     "startColumn": 4,
-                    "startOffset": 118558,
-                    "endColumn": 122,
-                    "endOffset": 118676
+                    "startOffset": 118268,
+                    "endColumn": 110,
+                    "endOffset": 118374
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -6328,10 +6269,21 @@
                 "to": {
                     "startLine": 1541,
                     "startColumn": 4,
-                    "startOffset": 118681,
-                    "endLine": 1542,
-                    "endColumn": 12,
-                    "endOffset": 118788
+                    "startOffset": 118379,
+                    "endColumn": 110,
+                    "endOffset": 118485
+                },
+                "from": {
+                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 1542,
+                    "startColumn": 4,
+                    "startOffset": 118490,
+                    "endColumn": 100,
+                    "endOffset": 118586
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -6341,9 +6293,9 @@
                 "to": {
                     "startLine": 1543,
                     "startColumn": 4,
-                    "startOffset": 118793,
-                    "endColumn": 85,
-                    "endOffset": 118874
+                    "startOffset": 118591,
+                    "endColumn": 104,
+                    "endOffset": 118691
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -6353,9 +6305,10 @@
                 "to": {
                     "startLine": 1544,
                     "startColumn": 4,
-                    "startOffset": 118879,
-                    "endColumn": 103,
-                    "endOffset": 118978
+                    "startOffset": 118696,
+                    "endLine": 1545,
+                    "endColumn": 12,
+                    "endOffset": 118803
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -6363,12 +6316,12 @@
             },
             {
                 "to": {
-                    "startLine": 1545,
+                    "startLine": 1546,
                     "startColumn": 4,
-                    "startOffset": 118983,
-                    "endLine": 1546,
+                    "startOffset": 118808,
+                    "endLine": 1547,
                     "endColumn": 12,
-                    "endOffset": 119086
+                    "endOffset": 118933
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -6376,12 +6329,11 @@
             },
             {
                 "to": {
-                    "startLine": 1547,
+                    "startLine": 1548,
                     "startColumn": 4,
-                    "startOffset": 119091,
-                    "endLine": 1548,
-                    "endColumn": 12,
-                    "endOffset": 119186
+                    "startOffset": 118938,
+                    "endColumn": 90,
+                    "endOffset": 119024
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -6391,10 +6343,9 @@
                 "to": {
                     "startLine": 1549,
                     "startColumn": 4,
-                    "startOffset": 119191,
-                    "endLine": 1550,
-                    "endColumn": 12,
-                    "endOffset": 119304
+                    "startOffset": 119029,
+                    "endColumn": 122,
+                    "endOffset": 119147
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -6402,12 +6353,24 @@
             },
             {
                 "to": {
-                    "startLine": 1551,
+                    "startLine": 1550,
                     "startColumn": 4,
-                    "startOffset": 119309,
-                    "endLine": 1552,
+                    "startOffset": 119152,
+                    "endLine": 1551,
                     "endColumn": 12,
-                    "endOffset": 119408
+                    "endOffset": 119259
+                },
+                "from": {
+                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 1552,
+                    "startColumn": 4,
+                    "startOffset": 119264,
+                    "endColumn": 85,
+                    "endOffset": 119345
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -6417,10 +6380,9 @@
                 "to": {
                     "startLine": 1553,
                     "startColumn": 4,
-                    "startOffset": 119413,
-                    "endLine": 1554,
-                    "endColumn": 12,
-                    "endOffset": 119512
+                    "startOffset": 119350,
+                    "endColumn": 103,
+                    "endOffset": 119449
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -6428,12 +6390,12 @@
             },
             {
                 "to": {
-                    "startLine": 1555,
+                    "startLine": 1554,
                     "startColumn": 4,
-                    "startOffset": 119517,
-                    "endLine": 1556,
+                    "startOffset": 119454,
+                    "endLine": 1555,
                     "endColumn": 12,
-                    "endOffset": 119638
+                    "endOffset": 119557
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -6441,11 +6403,12 @@
             },
             {
                 "to": {
-                    "startLine": 1557,
+                    "startLine": 1556,
                     "startColumn": 4,
-                    "startOffset": 119643,
-                    "endColumn": 87,
-                    "endOffset": 119726
+                    "startOffset": 119562,
+                    "endLine": 1557,
+                    "endColumn": 12,
+                    "endOffset": 119657
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -6455,21 +6418,10 @@
                 "to": {
                     "startLine": 1558,
                     "startColumn": 4,
-                    "startOffset": 119731,
-                    "endColumn": 107,
-                    "endOffset": 119834
-                },
-                "from": {
-                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 1559,
-                    "startColumn": 4,
-                    "startOffset": 119839,
-                    "endColumn": 99,
-                    "endOffset": 119934
+                    "startOffset": 119662,
+                    "endLine": 1559,
+                    "endColumn": 12,
+                    "endOffset": 119775
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -6479,21 +6431,10 @@
                 "to": {
                     "startLine": 1560,
                     "startColumn": 4,
-                    "startOffset": 119939,
-                    "endColumn": 89,
-                    "endOffset": 120024
-                },
-                "from": {
-                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 1561,
-                    "startColumn": 4,
-                    "startOffset": 120029,
-                    "endColumn": 109,
-                    "endOffset": 120134
+                    "startOffset": 119780,
+                    "endLine": 1561,
+                    "endColumn": 12,
+                    "endOffset": 119879
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -6503,21 +6444,10 @@
                 "to": {
                     "startLine": 1562,
                     "startColumn": 4,
-                    "startOffset": 120139,
-                    "endColumn": 83,
-                    "endOffset": 120218
-                },
-                "from": {
-                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 1563,
-                    "startColumn": 4,
-                    "startOffset": 120223,
-                    "endColumn": 83,
-                    "endOffset": 120302
+                    "startOffset": 119884,
+                    "endLine": 1563,
+                    "endColumn": 12,
+                    "endOffset": 119983
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -6527,21 +6457,10 @@
                 "to": {
                     "startLine": 1564,
                     "startColumn": 4,
-                    "startOffset": 120307,
-                    "endColumn": 53,
-                    "endOffset": 120356
-                },
-                "from": {
-                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
-                }
-            },
-            {
-                "to": {
-                    "startLine": 1565,
-                    "startColumn": 4,
-                    "startOffset": 120361,
-                    "endColumn": 63,
-                    "endOffset": 120420
+                    "startOffset": 119988,
+                    "endLine": 1565,
+                    "endColumn": 12,
+                    "endOffset": 120109
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -6551,9 +6470,9 @@
                 "to": {
                     "startLine": 1566,
                     "startColumn": 4,
-                    "startOffset": 120425,
-                    "endColumn": 105,
-                    "endOffset": 120526
+                    "startOffset": 120114,
+                    "endColumn": 87,
+                    "endOffset": 120197
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -6563,9 +6482,9 @@
                 "to": {
                     "startLine": 1567,
                     "startColumn": 4,
-                    "startOffset": 120531,
-                    "endColumn": 109,
-                    "endOffset": 120636
+                    "startOffset": 120202,
+                    "endColumn": 107,
+                    "endOffset": 120305
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -6575,9 +6494,9 @@
                 "to": {
                     "startLine": 1568,
                     "startColumn": 4,
-                    "startOffset": 120641,
-                    "endColumn": 83,
-                    "endOffset": 120720
+                    "startOffset": 120310,
+                    "endColumn": 99,
+                    "endOffset": 120405
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
@@ -6587,9 +6506,117 @@
                 "to": {
                     "startLine": 1569,
                     "startColumn": 4,
-                    "startOffset": 120725,
+                    "startOffset": 120410,
+                    "endColumn": 89,
+                    "endOffset": 120495
+                },
+                "from": {
+                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 1570,
+                    "startColumn": 4,
+                    "startOffset": 120500,
+                    "endColumn": 109,
+                    "endOffset": 120605
+                },
+                "from": {
+                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 1571,
+                    "startColumn": 4,
+                    "startOffset": 120610,
+                    "endColumn": 83,
+                    "endOffset": 120689
+                },
+                "from": {
+                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 1572,
+                    "startColumn": 4,
+                    "startOffset": 120694,
+                    "endColumn": 83,
+                    "endOffset": 120773
+                },
+                "from": {
+                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 1573,
+                    "startColumn": 4,
+                    "startOffset": 120778,
+                    "endColumn": 53,
+                    "endOffset": 120827
+                },
+                "from": {
+                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 1574,
+                    "startColumn": 4,
+                    "startOffset": 120832,
+                    "endColumn": 63,
+                    "endOffset": 120891
+                },
+                "from": {
+                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 1575,
+                    "startColumn": 4,
+                    "startOffset": 120896,
+                    "endColumn": 105,
+                    "endOffset": 120997
+                },
+                "from": {
+                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 1576,
+                    "startColumn": 4,
+                    "startOffset": 121002,
+                    "endColumn": 109,
+                    "endOffset": 121107
+                },
+                "from": {
+                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 1577,
+                    "startColumn": 4,
+                    "startOffset": 121112,
+                    "endColumn": 83,
+                    "endOffset": 121191
+                },
+                "from": {
+                    "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 1578,
+                    "startColumn": 4,
+                    "startOffset": 121196,
                     "endColumn": 119,
-                    "endOffset": 120840
+                    "endOffset": 121311
                 },
                 "from": {
                     "file": "C:\\Users\\andre\\Documents\\Projetos\\Meu GitHub\\App Blind Beacon\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\values\\values.xml"
