@@ -12,6 +12,7 @@
         android:layout_gravity="center_vertical"
         android:textAlignment="center"
         android:fontFamily="sans-serif"
+        android:layout_marginTop="10dp"
         android:paddingBottom="3dp"
         android:textAllCaps="true"
         android:textSize="15sp"

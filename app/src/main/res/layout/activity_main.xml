@@ -6,11 +6,28 @@
     android:layout_height="match_parent"
     tools:context="borba.com.br.blindbeacon.MainActivity">
 
+    <TextView
+        android:text="Bem vindo ao Blind Beacon"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginRight="8dp"
+        android:layout_gravity="center_vertical"
+        android:textAlignment="center"
+        android:fontFamily="sans-serif"
+        android:paddingBottom="8dp"
+        android:paddingTop="18dp"
+        android:textAllCaps="true"
+        android:textSize="17sp"
+        android:textStyle="bold"/>
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_marginBottom="20dp"
         android:id="@+id/buttonSelecionarPredio"
+        android:background="@color/botaoBack"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:text="Selecione o Setor"
         android:onClick="onClickSelecionarPredio"/>
 
@@ -19,12 +36,18 @@
         android:layout_height="100dp"
         android:layout_marginBottom="20dp"
         android:id="@+id/buttonAjuda"
+        android:background="@color/botaoBack"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:text="Ajuda"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:id="@+id/buttonOuvirNovamente"
+        android:background="@color/botaoBack"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:text="Ouvir Novamente"/>
 
 </LinearLayout>

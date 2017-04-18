@@ -13,6 +13,7 @@
         android:textAlignment="center"
         android:fontFamily="sans-serif"
         android:paddingBottom="3dp"
+        android:layout_marginTop="10dp"
         android:textAllCaps="true"
         android:textSize="15sp"
         android:layout_marginBottom="30dp"
@@ -97,6 +98,9 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:id="@+id/buttonNavegarDestino"
+        android:background="@color/botaoBack"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:text="Navegar"/>
 
 </LinearLayout>
