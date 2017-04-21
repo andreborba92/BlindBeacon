@@ -4,9 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.os.RemoteException;
-import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
 import android.webkit.WebView;
@@ -21,10 +19,12 @@ import org.altbeacon.beacon.BeaconParser;
 import org.altbeacon.beacon.RangeNotifier;
 import org.altbeacon.beacon.Region;
 
+import java.lang.reflect.Array;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.List;
 
 import borba.com.br.blindbeacon.datamodels.DestinoDataModel;
 import borba.com.br.blindbeacon.datamodels.RotaDataModel;
@@ -32,6 +32,7 @@ import borba.com.br.blindbeacon.enums.TipoDestinoEnum;
 import borba.com.br.blindbeacon.models.DestinoModel;
 import borba.com.br.blindbeacon.models.RotaModel;
 import borba.com.br.blindbeacon.utils.BeaconDestinoComparator;
+import borba.com.br.blindbeacon.utils.BeaconNativeComparator;
 import borba.com.br.blindbeacon.viewmodels.BeaconDestinoViewModel;
 import borba.com.br.blindbeacon.viewmodels.RotaDestinoViewModel;
 
@@ -75,8 +76,8 @@ public class RotaActivity extends Activity implements BeaconConsumer {
         beaconManager = BeaconManager.getInstanceForApplication(this);
 
         //Setting tempos de duração dos scans. 8 segundos entre scan
-        beaconManager.setForegroundBetweenScanPeriod(12000L);
-        beaconManager.setForegroundScanPeriod(4000L);
+        beaconManager.setForegroundBetweenScanPeriod(1000L); //12000L
+        beaconManager.setForegroundScanPeriod(3000L);
 
         beaconManager.getBeaconParsers().add(new BeaconParser().setBeaconLayout("m:2-3=0215,i:4-19,i:20-21,i:22-23,p:24-24,d:25-25"));
         beaconManager.bind(this);
@@ -121,6 +122,12 @@ public class RotaActivity extends Activity implements BeaconConsumer {
         beaconManager.unbind(this);
     }
 
+private int contador = 0;
+private Boolean firstSearch = true;
+private Beacon _closerBeaconInIteration, _closerBeaconResult;
+private ArrayList<Beacon> _listBeaconsTesteRange = new ArrayList<>();
+private ArrayList<Beacon> _listBeaconsProximosRange = new ArrayList<>();
+
     @Override
     public void onBeaconServiceConnect() {
 
@@ -131,45 +138,59 @@ public class RotaActivity extends Activity implements BeaconConsumer {
                 MyBeacons = new ArrayList<BeaconDestinoViewModel>();
                 RotasExibicao = new ArrayList<RotaDestinoViewModel>();
 
-                Log.w("TAG_FLUXO", "onBeaconServiceConnect. QTD Localizados: " + beacons.size());
-
                 if (beacons.size() > 0) {
 
-                    ManipularVisibilidadeGIF(false);
-                    //Log.w("TAG_FLUXO", "Quantidade beacons localizados: " + beacons.size());
+                    if(firstSearch){
+                        firstSearch = false;
+                        TTSManager.Speak("Por favor, aguarde enquanto verifico sua localização");
+                    }
 
-                    for(Beacon beaconLocalizado:beacons) {
-//                        Log.w("TAG_FLUXO", "beacon localizado: " + beaconLocalizado.getId1() + "; " +
-//                        beaconLocalizado.getId2() + "; " + beaconLocalizado.getId3());
+                    _listBeaconsTesteRange = new ArrayList<Beacon>();
 
-                        DestinoModel vm = destinoDataModel.getByBeacon(listDestinosExistentesNaRota, String.valueOf(beaconLocalizado.getId1()),
-                                String.valueOf(beaconLocalizado.getId2()), String.valueOf(beaconLocalizado.getId3()));
+                    for(Beacon b:beacons){
+                        //Adiciona na lista apenas beacon mapeados
+                        DestinoModel vm = destinoDataModel.getByBeacon(listDestinosExistentesNaRota, String.valueOf(b.getId1()),
+                                String.valueOf(b.getId2()), String.valueOf(b.getId3()));
 
                         if(vm == null)
                             continue;
 
-                        beaconDestinoViewModel = new BeaconDestinoViewModel(beaconLocalizado, vm);
-
-                        //O código abaixo evita que adicione duas vezes o mesmo beacon na coleção
-//                        int indexOF = VerificaBeaconExistente(MyBeacons, beaconDestinoViewModel);
-//
-//                        if (indexOF == -1) {
-//                            MyBeacons.add(beaconDestinoViewModel);
-//                        } else {
-//                            MyBeacons.remove(indexOF);
-//                            MyBeacons.add(beaconDestinoViewModel);
-//                        }
-                        MyBeacons.add(beaconDestinoViewModel);
+                        _listBeaconsTesteRange.add(b);
                     }
 
-                    if(MyBeacons.size() == 0){
-                        ManipularVisibilidadeGIF(true);
-                        TTSManager.Speak("Não foi possível determinar sua localização, favor caminhar mais um pouco");
+                    Collections.sort(_listBeaconsTesteRange, new BeaconNativeComparator());
+                    _closerBeaconInIteration = _listBeaconsTesteRange.get(0);
+
+                    _listBeaconsProximosRange.add(_closerBeaconInIteration);
+
+                    contador++;
+                    Log.w("TAG_FLUXO", "DEU SCAN: " + contador);
+
+                    if(contador < 4)
                         return;
+
+                    if(contador == 4){
+
+                        //Caso não encontrou nenhum nas 4 iterações, avisa e reinicia
+                        if(_listBeaconsProximosRange.size() == 0){
+                            ManipularVisibilidadeGIF(true);
+                            TTSManager.Speak("Não foi possível determinar sua localização, favor caminhar mais um pouco");
+                            contador = 0;
+                            return;
+                        }
+
+                        _closerBeaconResult = getCloserFromList(_listBeaconsProximosRange);
+
+                        DestinoModel vm = destinoDataModel.getByBeacon(listDestinosExistentesNaRota, String.valueOf(_closerBeaconResult.getId1()),
+                                String.valueOf(_closerBeaconResult.getId2()), String.valueOf(_closerBeaconResult.getId3()));
+
+                        beaconMaisProximo = new BeaconDestinoViewModel(_closerBeaconResult, vm);
+
+                        _listBeaconsProximosRange = new ArrayList<Beacon>();
+                        contador = 0;
                     }
 
-                    Collections.sort(MyBeacons, new BeaconDestinoComparator());
-                    beaconMaisProximo = MyBeacons.get(0);
+                    ManipularVisibilidadeGIF(false);
 
                     Log.w("TAG_FLUXO", "Beacon mais próximo: " + beaconMaisProximo.getDestinoModel().getNome());
 
@@ -203,10 +224,10 @@ public class RotaActivity extends Activity implements BeaconConsumer {
 
                 }
                 else{
-                    Log.w("TAG_FLUXO", "Nao localizou nada. Audio");
+                    //Log.w("TAG_FLUXO", "Nao localizou nada. Audio");
 
-                    ManipularVisibilidadeGIF(true);
-                    TTSManager.Speak("Não foi possível determinar sua localização, favor caminhar mais um pouco");
+//                    ManipularVisibilidadeGIF(true);
+//                    TTSManager.Speak("Não foi possível determinar sua localização, favor caminhar mais um pouco");
                 }
             }
         });
@@ -347,5 +368,105 @@ public class RotaActivity extends Activity implements BeaconConsumer {
 
 
 
+    }
+
+    //Este método irá receber a lista do "melhor de 4" pesquisas de beacon próximos. Irá retornar o Beacon mais próximo pelos seguintes critérios:
+    //Retorna o que apareceu mais vezes na lista. Caso seja 2/2, retorna o com a distancia mais próxima.
+    //A lista sempre tera 4 posíções
+    private Beacon getCloserFromList(ArrayList<Beacon> listaPesquisada){
+        //Validar pelo unique, major e minor. Distance é só para desempate
+        ArrayList<Beacon> _col1 = new ArrayList<>();
+        ArrayList<Beacon> _col2 = new ArrayList<>();
+        ArrayList<Beacon> _col3 = new ArrayList<>();
+        ArrayList<Beacon> _col4 = new ArrayList<>();
+
+        ArrayList<ArrayList<Beacon>> _colecoes = new ArrayList<>();
+        _colecoes.add(_col1);_colecoes.add(_col2);_colecoes.add(_col3);_colecoes.add(_col4);
+
+        int indexBeaconCorrente = 0;
+        ArrayList<Integer> indexJaInserdos = new ArrayList<>();
+
+        for(ArrayList<Beacon> colecaoCorrente:_colecoes){
+            indexBeaconCorrente = 0;
+
+            for(Beacon beaconCorrente:listaPesquisada){
+
+                Boolean beaconJaInserido = false;
+                for(int i = 0; i < indexJaInserdos.size(); i++){
+                    if(indexBeaconCorrente == indexJaInserdos.get(i))
+                        beaconJaInserido = true;
+                }
+
+                if(beaconJaInserido) {
+                    indexBeaconCorrente++;
+                    continue;
+                }
+
+                if(colecaoCorrente.size() == 0){
+                    //Caso não tenha registro, insere
+                    colecaoCorrente.add(beaconCorrente);
+
+                    indexJaInserdos.add(indexBeaconCorrente);
+                    indexBeaconCorrente++;
+                    continue;
+                }
+
+                //Caso a coleção já tenha registros, só insere se o Beacon é igual
+                if(beaconCorrente.getId1().equals(colecaoCorrente.get(0).getId1()) &&
+                        beaconCorrente.getId2().equals(colecaoCorrente.get(0).getId2()) &&
+                        beaconCorrente.getId3().equals(colecaoCorrente.get(0).getId3())) {
+
+                    //Caso o beaconCorrente seja igual ao existente na listaCorrente, adiciona
+                    colecaoCorrente.add(beaconCorrente);
+                    indexJaInserdos.add(indexBeaconCorrente);
+                    indexBeaconCorrente++;
+
+                    continue;
+                }
+
+                indexBeaconCorrente++;
+            }
+        }
+
+
+        int maxSize = getMaxSize(_colecoes);
+
+        ArrayList<ArrayList<Beacon>> listsEquivalentes = new ArrayList<>();
+        if(_col1.size() == maxSize)
+            listsEquivalentes.add(_col1);
+        if(_col2.size() == maxSize)
+            listsEquivalentes.add(_col2);
+        if(_col3.size() == maxSize)
+            listsEquivalentes.add(_col3);
+        if(_col4.size() == maxSize)
+            listsEquivalentes.add(_col4);
+
+        if(listsEquivalentes.size() == 1)
+            return listsEquivalentes.get(0).get(0);
+
+        Beacon _beaconMaisProximoCompare = null;
+
+        for(ArrayList<Beacon> b:listsEquivalentes){
+            if(_beaconMaisProximoCompare == null) {
+                _beaconMaisProximoCompare = b.get(0);
+                continue;
+            }
+
+            if(b.get(0).getDistance() < _beaconMaisProximoCompare.getDistance())
+                _beaconMaisProximoCompare = b.get(0);
+        }
+
+        return _beaconMaisProximoCompare;
+    }
+
+    private int getMaxSize(ArrayList<ArrayList<Beacon>> list){
+        int maxSize = 0;
+
+        for(int i = 0; i < list.size(); i++){
+            if(list.get(i).size() > maxSize)
+                maxSize = list.get(i).size();
+        }
+
+        return maxSize;
     }
 }
