@@ -356,11 +356,11 @@ private ArrayList<Beacon> _listBeaconsProximosRange = new ArrayList<>();
             @Override
             public void run() {
                 if(_exibir){
-                    wView.setVisibility(View.VISIBLE);
+                    //wView.setVisibility(View.VISIBLE);
                     lvRotas.setVisibility(View.INVISIBLE);
                 }
                 else{
-                    wView.setVisibility(View.INVISIBLE);
+                    //wView.setVisibility(View.VISIBLE);
                     lvRotas.setVisibility(View.VISIBLE);
                 }
             }

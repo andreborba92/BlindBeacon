@@ -106,6 +106,55 @@ public class DestinoDataModel {
         Log.w("Database", "DestinoDataModel - End Fake Data");
     }
 
+    public void LoadWithFakeDataUnisinos(){
+        Log.w("Database", "DestinoDataModel - Start Fake Data Unisinos");
+
+        //public DestinoModel( IdDestino, /IdPredio, IdTipoDestino, IdCategoria, Nome, UniqueId, MajorId, MinorId,  Descricao ){
+        this.addDestino(new DestinoModel(1, 1, TipoDestinoEnum.DESTINO.getValue(), CategoriaEnum.SALA_DE_AULA.getValue(),
+                "Sala D06 120", "5affffff-ffff-ffff-ffff-ffffffffffff", "704", "705", "Cel Nando Antigo"));
+
+        this.addDestino(new DestinoModel(2, 1, TipoDestinoEnum.OBSTACULO.getValue(), CategoriaEnum.OUTRO.getValue(),
+                "Porta de Acesso", "699ebc80-e1f3-11e3-9a0f-0cf3ee3bc012", "1", "20681", "beacon branco"));
+
+        this.addDestino(new DestinoModel(3, 1, TipoDestinoEnum.DESTINO.getValue(), CategoriaEnum.SECRETARIA.getValue(),
+                "Posto de Atendimento", "003e8c80-ea01-4ebb-b888-78da19df9e55", "893", "88", "Beacon Cinza 88"));
+
+        this.addDestino(new DestinoModel(4, 1, TipoDestinoEnum.DESTINO.getValue(), CategoriaEnum.SECRETARIA.getValue(),
+                "Sala dos Professores", "003e8c80-ea01-4ebb-b888-78da19df9e55", "893", "2", "Beacon Cinza 2"));
+
+        this.addDestino(new DestinoModel(5, 1, TipoDestinoEnum.DESTINO.getValue(), CategoriaEnum.BANHEIRO.getValue(),
+                "Banheiro Masculino", "003e8c80-ea01-4ebb-b888-78da19df9e55", "893", "148", "Beacon Cinza 148"));
+
+        this.addDestino(new DestinoModel(6, 1, TipoDestinoEnum.DESTINO.getValue(), CategoriaEnum.SALA_DE_AULA.getValue(),
+                "Sala D06 110", "52414449-5553-4e45-5457-4f524b53434f", "6", "5", "Cel Nando"));
+
+
+
+//        this.addDestino(new DestinoModel(6, 1, TipoDestinoEnum.DESTINO.getValue(), CategoriaEnum.SALA_DE_AULA.getValue(),
+//                "Sala D06 108", "2f234454-cf6d-4a0f-adf2-f4911ba9ffa6", "55", "44", "Cel Pai"));
+
+
+
+
+        /*
+        //Disp branco
+        this.addBeacon(new aBeaconModel("699ebc80-e1f3-11e3-9a0f-0cf3ee3bc012","1","20681",1,""));
+
+        //Disp cinzas
+        this.addBeacon(new aBeaconModel("003e8c80-ea01-4ebb-b888-78da19df9e55","893","2",1,""));
+        this.addBeacon(new aBeaconModel("003e8c80-ea01-4ebb-b888-78da19df9e55","893","88",1,""));
+        this.addBeacon(new aBeaconModel("003e8c80-ea01-4ebb-b888-78da19df9e55","893","148",1,""));
+
+        //Cel Nando
+        this.addBeacon(new aBeaconModel("52414449-5553-4e45-5457-4f524b53434f","6","5",1,""));
+
+        //Cel Pai
+        this.addBeacon(new aBeaconModel("2f234454-cf6d-4a0f-adf2-f4911ba9ffa6","55","44",1,""));
+        */
+
+        Log.w("Database", "DestinoDataModel - End Fake Data Unisinos");
+    }
+
     private void closeDataBaseConnection() {
         if (database.isOpen()) {
             database.close();

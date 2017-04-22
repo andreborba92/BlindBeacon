@@ -53,6 +53,20 @@ public class RotaDataModel{
         Log.w("Database", "RotaDataModel - End Fake Data");
     }
 
+    public void LoadWithFakeDataUnisinos(){
+        Log.w("Database", "RotaDataModel - Start Fake Data Unisinos");
+
+        //public RotaModel(int IdPredio, int IdDestino, int Ordem, String OrientacaoF, String OrientacaoT, double Metragem){
+        this.addRota(new RotaModel(1, 1, 1, "Cuidado que terá uma porta em aproximadamente X metros", "Você chegou ao final do prédio", 0));
+        this.addRota(new RotaModel(1, 2, 2, "", "", 8)); //Obstáculo
+        this.addRota(new RotaModel(1, 3, 3, "Siga em frente. Próximo ponto: {NOME}", "Cuidado que terá uma porta em aproximadamente X metros", 15.77));
+        this.addRota(new RotaModel(1, 4, 4, "Siga em frente. Próximo ponto: {NOME}", "Siga em frente. Próximo ponto: {NOME}", 26.85));
+        this.addRota(new RotaModel(1, 5, 5, "Siga em frente. Próximo ponto: {NOME}", "Siga em frente. Próximo ponto: {NOME}", 37.84));
+        this.addRota(new RotaModel(1, 6, 6, "Você chegou ao final do prédio", "Siga em frente. Próximo ponto: {NOME}", 49.2));
+
+        Log.w("Database", "RotaDataModel - End Fake Data Unisinos");
+    }
+
     private void closeDataBaseConnection() {
         if (database.isOpen()) {
             database.close();

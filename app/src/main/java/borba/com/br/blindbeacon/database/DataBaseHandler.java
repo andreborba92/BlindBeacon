@@ -34,7 +34,7 @@ public class DataBaseHandler extends SQLiteOpenHelper {
 
     // Declaracao do banco de dados
     private static final String BLINDBEACON_DATABASE_NAME = "BLINDBEACON_DATABASE";
-    private static final int BLINDBEACON_DATABASE_VERSION = 12;
+    private static final int BLINDBEACON_DATABASE_VERSION = 18;
 
     //DataModels
     private TipoDestinoDataModel _tipoDestinoDataModel;
@@ -84,14 +84,14 @@ public class DataBaseHandler extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + _categoriaDataModel.TABLE_NAME);
         db.execSQL("DROP TABLE IF EXISTS " + _predioDataModel.TABLE_NAME);
 
+        // Recria as tabelas
+        onCreate(db);
+
         Log.w("Database", "Database - Start Fake Data");
-        this.LoadWithFakeData();
+        //this.LoadWithFakeData();
         Log.w("Database", "Database - End Fake Data");
 
         Log.v("Database", "onUpgrade Finish.");
-
-        // Recria as tabelas
-        onCreate(db);
     }
 
     public void LoadWithFakeData(){
@@ -102,8 +102,10 @@ public class DataBaseHandler extends SQLiteOpenHelper {
         this._tipoDestinoDataModel.LoadWithFakeData();
         this._categoriaDataModel.LoadWithFakeData();
         this._predioDataModel.LoadWithFakeData();
-        this._destinoDataModel.LoadWithFakeData();
-        this._rotaDataModel.LoadWithFakeData();
+//        this._destinoDataModel.LoadWithFakeData();
+//        this._rotaDataModel.LoadWithFakeData();
+        this._destinoDataModel.LoadWithFakeDataUnisinos();
+        this._rotaDataModel.LoadWithFakeDataUnisinos();
 
         Log.v("Database", "onLoadWithFakeData Finish.");
     }

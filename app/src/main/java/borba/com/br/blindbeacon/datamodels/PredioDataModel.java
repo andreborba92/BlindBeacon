@@ -39,18 +39,18 @@ public class PredioDataModel {
 
         PredioModel p1 = new PredioModel();
         p1.setId(1);
-        p1.setNome("Centro D 05");
+        p1.setNome("Centro D 06");
         p1.setDescricao("Prédio de Exatas");
 
         PredioModel p2 = new PredioModel();
         p1.setId(2);
-        p2.setNome("Centro D 06");
+        p2.setNome("Centro D 07");
         p2.setDescricao("Prédio de Exatas");
 
         PredioModel p3 = new PredioModel();
         p1.setId(3);
-        p3.setNome("Centro E 07");
-        p3.setDescricao("Prédio de Humanas");
+        p3.setNome("Centro D 08");
+        p3.setDescricao("Prédio de Exatas");
 
         this.addPredio(p1);
         this.addPredio(p2);
